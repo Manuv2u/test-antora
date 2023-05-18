@@ -1,0 +1,11 @@
+name: sample
+title: test
+version: dev
+asciidoc:
+  attributes:
+    source-language: asciidoc@
+#nav:
+#- modules/ROOT/Index.adoc
+#optinal
+#Value registering a navigation file located in the ROOT directory.
+

@@ -1,0 +1,69 @@
+image::kbt.logo.png[]
+
+
+image::kbt.2logo.png[100*100]
+For more Details Click below link. +
+https://kanilebettu.com/[*kanilebettu Technologies.*] +
+
+[NOTE]
+*Asciidoc* +
+//bold *constrained* & **un**constrained
+
+A text processor and toolchain for translating AsciiDoc documents into various formats (called backends), including HTML, DocBook, PDF +
+
+== content
+* List
+. _AWS_
+. DevOps
+. antora
+. asciidoc
+- Asciidoctor.
+
+
+//bold *constrained* & **un**constrained
+*Table formatting* +
+
+. vpc table +
+|===
+|*vpc* | *route table* | *subnet* | *IGW*
+| 10.0.0.0/16
+|      -
+| 10.0.0.0/24
+| igw2e3eolie32383
+|===
+
+== aws ==
+* *Types of pricing models* +
+ . On-Demand instances. +
+. Reserved Instances. +
+. Savings Plans. +
+. Spot Instances.  +
+.  Dedicated Hosts. +
+
+*on-Demand Instances:* With the On-Demand pricing model, you pay for compute capacity by the hour or second, depending on the instance type. This model is flexible and allows you to pay for the resources you use without any long-term commitments.
+
+*Reserved Instances:* Reserved Instances provide a significant discount compared to On-Demand pricing. By making a one- or three-year commitment, you can reserve capacity and receive a lower hourly rate for the instance. Reserved Instances are suitable for predictable workloads.
+
+*Savings Plans:* Savings Plans provide flexibility similar to Reserved Instances, but with broader coverage. Instead of reserving capacity for a specific instance type, Savings Plans offer savings on compute usage across different instance families, sizes, regions, and even services like Lambda.
+
+*Spot Instances:* Spot Instances allow you to bid on unused EC2 instances, providing significant cost savings. The price for Spot Instances fluctuates based on supply and demand, and your instances may be terminated if the Spot price exceeds your bid. Spot Instances are suitable for fault-tolerant, flexible, and time-insensitive workloads.
+
+*Dedicated Hosts:* Dedicated Hosts provide physical servers exclusively for your use, offering visibility and control over the underlying infrastructure. Dedicated Hosts are billed per hour and can be useful for compliance, licensing, or regulatory requirements.
+
+== Different between EFS,EBS and S3.  +
+|===
+|EFS|EBS|S3
+| * EFS is a fully managed, scalable file storage service that is designed to provide shared access to files for multiple EC2 instances. +
+ * It supports the NFS (Network File System) protocol, making it suitable for shared file storage across Linux-based instances. +
+ * EFS is highly available and offers automatic scaling to accommodate growing storage needs. +
+* It is ideal for scenarios where multiple instances need concurrent access to the same file system, such as web hosting, content management systems, and development environments.
+|
+|
+|
+
+|===
+
+
+
+
+
