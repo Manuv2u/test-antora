@@ -1,0 +1,432 @@
+= Employee Handbook
+:outline-title: Employee Handbook
+:doctype: book
+:title-page:
+:title-page-background-image: image:ehtitlebg.png[]
+:revnumber: 1.0
+:toc-title: Contents
+:toc:
+:sectnums:
+
+
+
+== Overview
+
+---
+
+
+As an Employee of Kanilebettu Technologies, you are provided with this Handbook of General Guidelines, as a guide to assist you in becoming familiar with some privileges and obligations of your employment. We believe, setting these ground rules, will help each other in meeting the highest standards of personal and professional ethics and behaviour, expected of all Kanilebettu Technologies employees.   Further, as an employee you are expected to display good judgment, diplomacy, and courtesy in your professional relationships with Kanilebettu Technologies Partners, Employees, Contractors, and Associates.
+
+You are encouraged to consult with the Management for additional information regarding the policies, procedures, and privileges described in this Handbook. Questions about personnel matters also may be reviewed with the Management. Remember, these guidelines are subject to modification, amendment, or revocation by the Management at any time, without advance notice. Whenever in doubt, feel free to start a conversation!
+
+You are expected to read this document thoroughly and submit the signed copy of the accompanying form to the Operations Manager.
+
+== Voluntary "at - will" Employment
+
+---
+
+Your employment at Kanilebettu Technologies, unless otherwise specified, is voluntary and is “at - will”. It means that you are here, by your free will and if you wish to leave the employment with us without a cause, there is not much we can do about it. Likewise, if we at Kanilebettu Technologies feel like ending our relationship, we can do so with or without cause.
+
+== Joining Process
+
+---
+
+You are expected to submit the following documents to the Operations Manager at the time of joining:
+
+. Acceptance of the offer of appointment duly signed.
+. Self-attested photocopies of documents of educational qualifications. The employee must produce original documents for verification, which will be duly returned.
+. 1 scanned passport size photograph and 2 actual passport size photographs.
+. Relieving letter/Experience Letter from previous employer. (If applicable)
+. Salary statement of last three months of employment in previous Company. (If applicable)
+. Proof of address (local & permanent) & Proof of Identity.
+. Provident Fund (PF), account details. (If applicable).
+. Income Tax deduction certificate of previous employer. (If applicable)
+. Personal profile as per the format provided by the Company.
+. ((Form 16)). (Form 16 is a declaration of TDS issued by the previous employer)
+. Duly filled and signed Employee Profile form.
+
+== Equal Employment Opportunity
+
+---
+
+Kanilebettu Technologies is committed to follow the spirit and intent of all the employment laws of the land and is committed to equal employment opportunity.  To that end, we at Kanilebettu Technologies pledge that we will not discriminate against any employee or applicant in a manner that violates the law.
+
+Kanilebettu Technologies is committed to providing equal opportunity for all employees and applicants without regard to race, colour, religion, national origin, sex, age, marital status, sexual orientation, disability, political affiliation, personal appearance, family responsibilities, or any other characteristics protected under the law.  You as an employee shall be evaluated based on personal skill and merit. This policy regarding equal employment opportunity applies to all aspects of employment, including recruitment, hiring, job assignments, promotions, working conditions, scheduling, benefits, wage and salary administration, disciplinary action, termination, and social, educational, and recreational programs.
+
+Any form of unlawful discrimination shall not be tolerated. To that effect, if you experience or witness such discrimination, we strongly encourage you to report to the Management.
+
+If Kanilebettu Technologies determines that a violation of this policy has occurred, it will take appropriate disciplinary action against the offending party, which can include counselling, warnings, suspensions, and termination.  Kanilebettu Technologies is duty bound, to uphold the spirit of this policy against discrimination, that the informing individual is protected against any form retaliation.
+
+If you have any questions regarding this policy, please contact the Management.
+
+== Policy Against Workplace Harassment
+
+---
+
+Kanilebettu Technologies commitment begins with the recognition and acknowledgment that sexual harassment and other types of discriminatory harassment are, of course, unlawful.  We believe that you as a respectable individual can conduct yourself in a professional manner and to show respect for your coworkers, and actively participate in creating a work environment for all employees that is free from sexual harassment and other types of discriminatory harassment.
+
+To reinforce this commitment, Kanilebettu Technologies has developed a policy against harassment and a reporting procedure for employees who have been subjected to or witnessed harassment.  This policy applies to all work related settings and activities, whether inside or outside the workplace, and includes business trips and business related social events.   Use of Kanilebettu Technologies property (e.g. telephones, copy machines, computers, and computer applications such as email and Internet access) to engage in conduct that violates this policy shall attract immediate termination of employment and relevant legal sanctions.
+
+=== Prohibition of Sexual Harassment
+
+Kanilebettu Technologies policy against sexual harassment prohibits sexual advances or requests for sexual favours or other physical or verbal conduct of a sexual nature, when:
+
+. submission to such conduct is made an express or implicit condition of employment.
+. submission to or rejection of such conduct is used as a basis for employment decisions affecting the individual who submits to or rejects such conduct.
+. such conduct has the purpose or effect of unreasonably interfering with an employee’s work performance or creating an intimidating, hostile, humiliating, or offensive working environment.
+
+While it is not possible to list all the circumstances which would constitute sexual harassment, the following are some examples:
+
+. unwelcome sexual advances - whether they involve physical touching or not.
+. requests for sexual favours in exchange for actual or promised job benefits such as favourable reviews, salary increases, promotions, increased benefits, or continued employment.
+. coerced sexual acts.
+
+Depending on the circumstances, the following conduct may also constitute sexual harassment:
+
+.	use of sexual epithets, jokes, written or oral references to sexual conduct, gossip regarding one’s sex life.
+.	sexually oriented comment on an individual’s body, comment about an individual’s sexual activity, deficiencies, or prowess
+.	displaying sexually suggestive objects, pictures, cartoons
+.	unwelcome leering, whistling, deliberate brushing against the body in a suggestive manner.
+.	sexual gestures or sexually suggestive comments
+.	inquiries into one’s sexual experiences.
+.	discussion of one’s sexual activities.
+
+While such behaviour, depending on the circumstances, may not be severe or pervasive enough to create a sexually hostile work environment, it can nonetheless make coworkers uncomfortable.  Accordingly, such behaviour is inappropriate and may result in disciplinary action regardless of whether it is unlawful.
+
+It is also unlawful and expressly against Kanilebettu Technologies policy to retaliate against an employee for filing a complaint of sexual harassment or for cooperating with an investigation of a complaint of sexual harassment.
+
+=== Prohibition of Other Types of Discriminatory Harassment
+
+It is also against Kanilebettu Technologies policy to engage in verbal or physical conduct that denigrates or shows hostility or aversion toward an individual because of his or her race, colour, gender, religion, sexual orientation, age, national origin, disability, or other protected category (or that of the individual’s relatives, friends, or associates) that:
+
+.	has the purpose or effect of creating an intimidating, hostile, humiliating, or offensive working environment.
+.	has the purpose or effect of unreasonably interfering with an individual’s work performance.
+.	otherwise adversely affects an individual’s employment opportunities.
+
+Depending on the circumstances, the following conduct may constitute discriminatory harassment:
+
+.	epithets, slurs, negative stereotyping, jokes, or threatening, intimidating, or hostile acts that relate to race, colour, gender, religion, sexual orientation, age, national origin, or disability.
+.	written or graphic material that denigrates or shows hostility toward an individual or group because of race, colour, gender, religion, sexual orientation, age, national origin, or disability and that is circulated in the workplace, or placed anywhere in Kanilebettu Technologies premises such as on an employee’s desk or workspace or on equipment or bulletin boards.
+
+Other conduct may also constitute discriminatory harassment if it falls within the definition of discriminatory harassment set forth above.
+
+It is also against Kanilebettu Technologies policy to retaliate against an employee for filing a complaint of discriminatory harassment or for cooperating in an investigation of a complaint of discriminatory harassment.
+
+=== Reporting of Harassment
+
+If you believe that you have experienced or witnessed sexual harassment or other discriminatory harassment by any employee of Kanilebettu Technologies, you should report the incident immediately to your supervisor or to the Management, along with an email to admin@kanilebettu.com. Possible harassment by others with whom Kanilebettu Technologies has a business relationship, including customers and vendors, should also be reported as soon as possible so that appropriate action can be taken.
+
+Kanilebettu Technologies will promptly and thoroughly investigate all reports of harassment as discreetly and confidentially as practicable. If deemed necessary, the investigation can be handed to suitable authorities for thorough investigation If Kanilebettu Technologies determines that a violation of this policy has occurred, it will take appropriate disciplinary action against the offending party, which can include counselling, warnings, suspensions, and termination.  Kanilebettu Technologies is duty bound, to uphold the spirit of this policy against discrimination, that the informing individual is protected against any form retaliation.
+
+Compliance with this policy is a condition of each employee’s employment. You as an employee are encouraged to raise any questions or concerns about this policy or about possible discriminatory harassment with the Management.
+
+== Solicitation
+
+---
+
+All Employees are prohibited from soliciting (personally or via electronic mail) for membership, pledges, subscriptions, the collection of money or for any other unauthorized purpose anywhere on Kanilebettu Technologies premises, especially those of sexual, religious, or political in nature. Employees are prohibited from distributing, circulating, or posting (on bulletin boards, refrigerators, walls, etc.) literature, petitions, or other materials at any time for any purpose without the prior approval of the Management. Violation of this policy can attract warnings, suspension or even termination of employment.
+
+== Dress Code
+---
+
+
+Uniform may or may not be provided, depending on the job role. You, as an employee are expected to conform to the local norms and practices. Attires that are prohibited within the premises include, but not limited to:
+
+.	Transparent or see throughs.
+.	Nothing else, but your innerwear.
+.	Nightdress, pajamas.
+.	Shorts.
+.	Torn or ripped clothes.
+.	Cross dressing.
+.	Cosplay.
+.	Sportswear.
+.	Campaigning for your favorite political party.
+.	Wearing anything with lights, apart from smart watch, of course.
+
+In the event, where your attire is in violation of the code, be aware, the policy requirements shall take precedence.
+
+== Contraband
+
+---
+
+=== Non-Vegetarian Food
+We at Kanilebettu Technologies, have our belief system, as you do. We respect your choices, and we expect you to do the same. Our belief of “Work is Worship” extends to the premises as a place of worship. To that effect we prohibit consumption of non-vegetarian food including egg on the premises.
+
+=== Alcohol
+Consumption of alcohol on the premises is prohibited. Also, working under the influence of alcohol is considered as safety hazard, and is cause for immediate termination of employment.
+
+=== Narcotics
+Consumption or carrying narcotics is prohibited and working under the influence of narcotics is deemed serious and dangerous. If you are found to violate this policy, your employment shall be terminated without notice and reported to legal authorities.
+
+=== Weapons
+Carrying any kind of weapon, real or fake, is prohibited. Your employment shall be terminated without notice and reported to legal authorities.
+
+=== Tobacco
+Chewing tobacco in the form of Gutka, Paan etc. or smoking tobacco on the premises is prohibited. You shall be notified and repeated failures to comply may result in termination of employment.
+
+=== Vaping
+Vaping is prohibited. Don’t try it on the premises.
+
+=== Sleeping
+Kanilebettu Technologies prioritizes health and safety of each of its employees. If you feel dizzy or nauseated due to underlying health issue or under the influence of a prescription drug, please contact Operations Manager for immediate help. If you just feel like dozing off, better don’t, we strongly believe taking nap in a productive environment is a safety hazard.
+
+== Hours of Work, Attendance and Punctuality
+
+---
+
+=== Hours of Work
+The normal work week for Kanilebettu Technologies shall consist of six (6), eight (8) hour days.  Ordinarily, work hours are from 9:30 a.m. - 5:30 p.m., Monday through Saturday, including one hour for lunch.  Employees may request the opportunity to vary their work schedules, at the sole discretion of the Management, to better accommodate personal responsibilities.  Subject to Kanilebettu Technologies work assignments and Management approval, the employee’s hours of employment shall be determined that best suits the needs of the work to be done by the individual employee.
+
+=== Attendance and Punctuality
+
+Attendance is a key factor in your job performance.  Punctuality and regular attendance are expected of all employees.  Excessive absences (whether excused or unexcused), tardiness or leaving early reflects poorly on individual conduct.  If you are absent for any reason or plan to arrive late or leave early, you must notify the Management as far in advance as possible and no later than one hour before the start of your scheduled workday.  In the event of an emergency, you must notify your supervisor as soon as possible.
+
+For all absences extending longer than one day, you must telephone your immediate supervisor prior to the start of each scheduled workday.  When reporting an absence, you should indicate the nature of the problem causing your absence and your expected return-to-work date.  A physician’s statement may be required as proof of the need for any illness-related absence regardless of the length of the absence. Except as provided in other policies, an employee who is absent from work for three consecutive days without notification will be considered to have voluntarily terminated his or her employment.  In such an event, you are expected to appear in person to settle your final salary after getting no due certificate from all departments.
+
+Excessive absences, tardiness or leaving early will be grounds for discipline up to and including termination.  Depending on the circumstances, including the employee’s length of employment, Kanilebettu Technologies may counsel employees prior to termination for excessive absences, tardiness or leaving early.
+
+
+== Employment Policies and Practices
+
+---
+
+=== Definition of Terms
+
+==== Employer
+
+Kanilebettu Technologies is the employer of all full-time, part-time, and temporary employees or intern.  An employee is hired, provided compensation and applicable benefits, and has his or her work directed and evaluated by Kanilebettu Technologies.
+
+==== Full-Time Employee
+A Full Time Employee regularly works at least 48 hours per week and is above 18 years of age.
+
+==== Part-Time Employee
+A Part Time Employee regularly works less than 3 hours per week but no less than 16 hours per week and is above 18 years of age.
+
+==== Temporary Employee or Intern
+An individual employed, either on a full-time or part-time basis, for a specific period less than six months.
+
+== Position Description and Salary Administration
+
+---
+
+Each position shall have a written job description. In general, the description will include the:  purpose of the position, areas of responsibilities, immediate supervisor(s), qualifications required, salary range, and working conditions affecting the job, e.g., working hours, use of car, etc.   The Management shall have discretion to modify the job description to meet the needs of Kanilebettu Technologies.
+Salaries shall be credited into the bank account provided by you by 10th day of each month. Itemized compensation package shall be as agreed upon during appointment.
+
+
+== Work Review
+
+---
+
+The work of each employee is reviewed on an ongoing basis to provide a systematic means of evaluating performance. The annual performance review is a formal opportunity for the supervisor and employee to exchange ideas that will strengthen their working relationship, review the past year, and anticipate Kanilebettu Technologies needs in the coming year.  The purpose of the review is to encourage the exchange of ideas to create positive change within Kanilebettu Technologies.  To that end, it is incumbent upon both parties to have an open, and honest discussion concerning the employee’s performance.  It is further incumbent upon the Management to clearly communicate the needs of Kanilebettu Technologies and what is expected of the employee in contributing to the success of Kanilebettu Technologies for the coming year.
+
+We strongly encourage you, as the employee, to attempt to arrive at an understanding regarding the objectives for the coming year. You and the Management will jointly assess your performance and shall record the same in annual performance review form. Which shall be signed by both parties. This is to ensure, that the firm can design suitable training programs or framework to guide you to reach the agreed upon objectives.
+
+== Leave Benefits and Other Work Policies
+
+---
+
+=== Holidays
+All employees are entitled to receive 12 National and Regional Festive holidays per year. The list of holidays shall be provided at the beginning of the year to plan your vacation accordingly.
+
+=== Casual Leave
+One (1) casual leave or CL is provided every month. CL can be availed for a minimum of half a day to a maximum of three days. Beyond this, leaves should be availed as earned leave. If you wish to avail CL for more than one (1) day, then request must be placed to the Management at least three (3) days in advance, else, the leave shall be accounted as Earned Leave (EL). If there is no earned leave available then the absence shall be considered as Loss of Pay.
+
+CL has an expiry date, and it shall expire by the end of the 3rd month.
+
+=== Earned Leave
+Fifteen (15) earned leaves or EL, i.e., 1.25 leave for every month, can be earned within a year. Only 30 EL can roll over to next calendar year and the remainder shall be paid in cash during the month of February of subsequent calendar year. EL is calculated on Basic Wages and Dearness Allowance. If you quit or have been terminated, balance EL shall be paid to you upon providing No Due Certificate from respective departments. And in case of death, the amount shall be paid to your next of kin in two (2) days’ time.
+
+=== Sick Leave
+Upon presentation of certified medical records, you can avail Sick leave (SL) as part of your Casual Leave quota.
+
+=== Maternity Leave
+Provisions of Maternity Benefits Act, 1961 to apply. Refer to the concerned Act for more information.
+
+=== Work from Home
+In the event, wherein, you are unable to visit office, but wish to continue your work, then you are advised to seek permission for limited period work from home facility. It is mandatory for you to attend daily standup, weekly sprint, and other important meetings via internet. You are expected to arrange good internet facility to ensure, the work is uninterrupted. The firm shall not reimburse any expense towards this.
+
+=== Leave without Pay or Loss of Pay
+If you take leave and fail to meet any of the above-mentioned leave category, then each day shall be considered a leave without pay and shall reflect in your pay slip accordingly.
+
+=== Election Day Off
+All Employees are encouraged to exercise their democratic right to vote. In this regard, you can avail paid leave to vote. In the event, your voting constituency is remotely located, we strongly encourage you to use the facility of Postal voting or seek an advance permission to travel and vote.
+
+=== Bereavement Leave
+Employees shall be entitled to bereavement leave with pay of five (5) days in the event of a death in the employee’s immediate family (spouse/life partner, child, or parent) and two (2) days for grandparent, sister or brother, father-in-law, mother-in-law, or grandchildren.   If an employee wishes to take time off due to the death of an immediate family member, the employee should notify the Management immediately.  Approval of bereavement leave will occur in the absence of unusual operating requirements.  You may use, with the Management’s approval, available paid leave for additional time off as necessary and in accordance with operating needs.
+
+=== Severe Weather Conditions
+In such an event wherein it would be extremely difficult to commute to office due to severe weather conditions, you are expected to contact the Management and make arrangements to work from home.
+In such cases, wherein, your work entails laboratory or shopfloor duties, then with the approval of the Management, you can substitute another holiday on behalf of this day off.
+
+=== Social Disturbances
+In such a case wherein, there is a widespread disturbance, which impacts your commute to office, keeping in mind your safety, you are expected to contact the Management and plan to work from home.
+
+In such cases, wherein, your work entails laboratory or shop-floor duties, then with the approval of the Management, you can substitute another holiday on behalf of this day off.
+
+=== Meetings and Conferences
+You as an employee may be given limited time off with pay to participate in educational opportunities related to your current or anticipated work with Kanilebettu Technologies.  An employee serving as an official representative of Kanilebettu Technologies at a conference or meeting is considered on official business and not on leave.
+
+
+== Reimbursement of Expenses
+
+---
+
+Reimbursement is authorized for reasonable and necessary expenses incurred in carrying out job responsibilities.  Mileage or transportation, parking fees, business telephone calls, and meal costs when required to attend a luncheon or banquet, are all illustrative of reasonable and necessary expenses.
+
+Employees serving in an official capacity for Kanilebettu Technologies at conferences and meetings are reimbursed for actual and necessary expenses incurred, such as travel expenses, meal costs, lodging, and registration fees.  When attending approved meetings, employees are reimbursed for travel expenses, course fees, and costs of meals and lodging at the current rates.  Employees may also request a travel advance to cover anticipated expenses approved travel.   Employees also may be granted leave to attend a conference or professional meeting related to their professional development, and/or Kanilebettu Technologies current and anticipated work.  Expenses for these purposes can be paid by Kanilebettu Technologies, if funds are available, and the employee obtains prior written approval of such expenses.
+
+Employees are responsible for transportation costs between the office and home during normal work hours.  Transportation costs are paid by Kanilebettu Technologies for work outside normal work hours if the employee is on official business for Kanilebettu Technologies. Employees authorized to use their personal vehicles for Kanilebettu Technologies business are reimbursed at the amount equal.
+
+Forms are provided to request reimbursement for actual expenses and advance payment for travel.  Receipts must be provided for all expenditures made to claim reimbursement.
+
+== Separation
+
+---
+
+Either Kanilebettu Technologies or the employee may initiate separation. Kanilebettu Technologies encourages employees to provide at least one month written notice prior to intended separation. After receiving such notice, an exit interview will be scheduled by the Management.  The Management has authority to employ or separate all other employees.   Circumstances under which separation may occur include:
+
+. Resignation.
++
+Employees are encouraged to give at least one month of written notice.  Since a longer period is desired, the intention to resign should be made known as far in advance as possible.  Employees who resign are entitled to receive accrued, unused Vacation benefits.
+
+. Termination or Lay-off.
++
+Under certain circumstances, the termination or lay-off of an employee may be necessary.  Employees who are terminated or laid off are entitled to receive accrued, unused Vacation benefits. The Management has authority to discharge an employee from the employ of Kanilebettu Technologies.  As stated above, all employment at Kanilebettu Technologies is "at-will".  That means that employees may be terminated from employment with Kanilebettu Technologies with or without cause, and employees are free to leave the employment of Kanilebettu Technologies with or without cause. Reasons for discharge may include, but are not limited to:
+
+..	Falsifying or withholding information on your employment application that did or would have affected Kanilebettu Technologies decision to hire you (this conduct will result in your immediate termination).
+..	Falsifying or withholding information in other personnel records including personnel questionnaires, performance evaluations or any other records
+..	Performance at work below a level acceptable to Kanilebettu Technologies or the failure to perform assigned duties.
+..	Failure to complete required time records or falsification of such time records.
+..	Insubordination
+..	Refusing to work reasonable overtime.
+..	Negligence in the performance of duties likely to cause or causing personal injury or property damage.
+..	Fighting, arguing, or attempting to injure another personnel.
+..	Destroying or willfully damaging the personal property of another, including Kanilebettu Technologies property.
+..	Breach of confidentiality.
+..	Using or appearing to use for personal gain any information obtained on the job, which is not readily available to the public or disclosing such information that damages the interests of Kanilebettu Technologies or its customers or vendors.
+..	Placing oneself in a position in which personal interests and those of Kanilebettu Technologies are or appear to be in conflict or might interfere with the ability of the employee to perform the job as well as possible.
+..	Using Kanilebettu Technologies property or services for personal gain or taking, removing, or disposing of Kanilebettu Technologies material, supplies or equipment without proper authority.
+..	Gambling in any form on Kanilebettu Technologies property.
+..	Dishonesty
+..	Theft
+..	The possession, use, sale or being under the influence of drugs or other controlled substances or alcoholic beverages during working hours or on the Kanilebettu Technologies premises at any time in violation of Kanilebettu Technologies policies.
+..	Carrying or possessing firearms or weapons on Kanilebettu Technologies property.
+..	Excessive tardiness or absenteeism whether excused or unexcused.
+..	Unauthorized absence from work without proper notice.
+..	Engaging in discriminatory or abusive behavior, including sexual harassment.
+
+At the sole discretion of the Management, the employee may be asked to leave immediately or be given a period of notice.
+
+== Return of Property
+
+---
+
+Employees are responsible for Kanilebettu Technologies equipment, property and work products that may be issued to them and/or are in their possession or control, including but not limited to:
+
+.	Telephone cards,
+.	Credit cards,
+.	Identification badges,
+.	Office/building keys,
+.	Office/building security passes,
+.	Computers, computerized diskettes, electronic/voice mail codes, and
+.	Intellectual property (e.g., written materials, work products).
+
+In the event of separation from employment, or immediately upon request by the Management, Employees must return all Kanilebettu Technologies property that is in their possession or control.  Where permitted by applicable law(s), Kanilebettu Technologies may withhold from the employee’s final paycheck the cost of any property, including intellectual property, which is not returned when required.  Kanilebettu Technologies also may take any action deemed appropriate to recover or protect its property.
+
+== Review of Personnel Action
+
+---
+
+Employees may request a review of a personnel action or an unsatisfactory performance review. Employees are encouraged to discuss their concern but the decision of the Management is final.
+
+== Personnel Records
+
+---
+
+Personnel records are the property of Kanilebettu Technologies, and access to the information they contain is restricted and confidential.  A personnel file shall be kept for each employee and should include the employee’s job application, copy of the letter of employment and position description, performance reviews, disciplinary records, records of salary increases and any other relevant personnel information.  It is the responsibility of each employee to promptly notify the Operations Manager in writing of any changes in personnel data, including personal mailing addresses, telephone numbers, names of dependents, and individuals to be contacted in the event of an emergency.
+
+== Outside Employment
+
+---
+
+Individuals employed by Kanilebettu Technologies are prohibited to hold outside jobs.  Considering any kind of impact that outside employment may have on the ability of the employee to perform their duties at Kanilebettu Technologies, we forbid you to hold any outside employment. Employees may not receive any income or material gain from individuals or organizations for materials produced or services rendered while performing their jobs with Kanilebettu Technologies.
+
+== Non-Disclosure of Confidential Information
+
+---
+
+Any information that an employee learns about Kanilebettu Technologies, or its members or donors, because of working for Kanilebettu Technologies that is not otherwise publicly available constitutes confidential information.  Employees may not disclose confidential information to anyone who is not employed by Kanilebettu Technologies or to other persons employed by Kanilebettu Technologies who do not need to know such information to assist in rendering services.
+
+The protection of privileged and confidential information, including trade secrets, is vital to the interests and the success of Kanilebettu Technologies.  The disclosure, distribution, electronic transmission or copying of Kanilebettu Technologies confidential information is prohibited.  Such information includes, but is not limited to the following examples:
+
+.	Compensation data.
+.	Program and financial information, including information related to donors, and pending projects and proposals.
+.	Designs, drawings, blueprints, algorithms, code etc.
+
+Employees are required to sign a non-disclosure agreement as a condition of employment. Any employee who discloses confidential Kanilebettu Technologies information will be subject to disciplinary action (including possible separation), even if he or she does not actually benefit from the disclosure of such information.
+
+Discussions involving sensitive information should always be held in confidential settings to safeguard the confidentiality of the information. It is strongly discouraged to conduct any casual and carefree conversations regarding confidential information in public.
+
+== Computer and Information Security
+
+---
+
+This section sets forth some important rules relating to the use of Kanilebettu Technologies computer and communications systems.  These systems include individual desktops or laptops provided to employees, centralized computer equipment, all associated software, and Kanilebettu Technologies telephone, voice mail and electronic mail systems.
+
+Kanilebettu Technologies has provided these systems to support its mission. Although limited personal use of Kanilebettu Technologies systems is allowed, subject to the restrictions outlined below, no use of these systems should ever conflict with the primary purpose for which they have been provided, Kanilebettu Technologies ethical responsibilities or with applicable laws and regulations.  Each user is personally responsible to ensure that these guidelines are followed.
+
+All data in Kanilebettu Technologies computer and communication systems (including documents, other electronic files, email, and recorded voice mail messages) are the property of Kanilebettu Technologies.  Kanilebettu Technologies may inspect and monitor such data at any time.  No individual should have any expectation of privacy for messages or other data recorded in Kanilebettu Technologies systems.  This includes documents or messages marked “private or confidential,” which may be inaccessible to most users but remain available to Kanilebettu Technologies.  Likewise, the deletion of a document or message may not prevent access to the item or eliminate the item from the system.
+
+Kanilebettu Technologies systems must not be used to create or transmit material that is derogatory, defamatory, obscene, or offensive, such as slurs, epithets or anything that might be construed as harassment or disparagement based on race, color, national origin, sex, sexual orientation, age, physical or mental disability, medical condition, marital status, or religious or political beliefs.  Similarly, Kanilebettu Technologies systems must not be used to solicit or proselytize others for commercial purposes, causes, outside organizations, chain messages or other non-job-related purposes.
+
+You will be provided with an official email and login credentials to firm’s community platform.  The following activities, which present security risks, should be avoided.
+
+.	Attempts should not be made to bypass, or render ineffective, security facilities provided by the company.
+.	Passwords should not be shared between users.  If written down, ensure it is not easily accessible.
+.	Document libraries of other users should not be browsed unless there is a      legitimate business reason to do so.
+.	Individual users should never make changes or modifications to the hardware configuration of computer equipment.  Requests for such changes should be directed to computer support or the Management.
+.	Additions to or modifications of the standard software configuration provided on   Kanilebettu Technologies computers should never be attempted by individual users.  Requests for such changes should be directed to the Management.
+.	Individual users should never load personal software (including outside email services) to company computers.  This practice risks the introduction of a computer virus into the system.  Requests for loading such software should be directed to computer support or the Management.
+.	Unauthorized programs should never be downloaded onto company computers.  If there is a need for such programs, a request for assistance should be   directed to computer support or Management.
+.	Users should not attempt to boot computers from flash drives.  This practice also risks the introduction of a computer virus.
+.	Kanilebettu Technologies computer facilities should not be used to attempt unauthorized access to  or use of other organizations’ computer systems and data.
+.	Computer games should not be loaded on Kanilebettu Technologies computers.
+.	Unlicensed software should not be loaded or executed on Kanilebettu Technologies computers.
+.	Unauthorized copying of company software (whether developed internally or licensed) is prohibited. Each authored material must be committed to respective GitLab® branches.
+.	Software documentation for programs developed and/or  licensed by the company should not be removed from the company’s offices.
+.	Individual users should not change the location or installation of computer equipment in offices and work areas.  Requests for such changes should be directed to computer support or Management.
+
+There are several practices that individual users should adopt that will foster a higher level of security.  Among them are the following:
+
+.	Turn off your personal computer when you are leaving your work area or office for an   extended period.
+.	Exercise judgment in assigning an appropriate level of security to documents stored on the company’s networks, based on a realistic appraisal of the need for confidentiality or privacy.
+.	Update the operating systems as recommended by the OS provider.
+.	Back up any information to GitLab® repository on a frequent and regular basis.
+
+Should you have any questions about any of the above policy guidelines, please contact the Management.
+
+== Internet Acceptable Use Policy
+
+---
+
+Kanilebettu Technologies has provided access to the Internet for authorized users to support its mission.  No use of the Internet should conflict with the primary purpose of Kanilebettu Technologies, its ethical responsibilities or with applicable laws and regulations. Each user is personally responsible to ensure that these guidelines are followed.  Serious repercussions, including termination, may result if the guidelines are not followed.
+
+Kanilebettu Technologies may monitor usage of the Internet by employees, including reviewing a list of sites accessed by an individual.  No individual should have any expectation of privacy in terms of his or her usage of the Internet.  In addition, Kanilebettu Technologies may restrict access to certain sites that it deems are not necessary for business purposes.
+
+Kanilebettu Technologies connection to the Internet may not be used for any of the following activities:
+
+.	The Internet must not be used to access, create, transmit, print, or download material that is derogatory, defamatory, obscene, or offensive, such as slurs, epithets, or anything that may be construed as harassment or disparagement based on race, color, national origin, sex, sexual orientation, age, disability, medical condition, marital status, or religious or political beliefs.
+.	The Internet must not be used to access, send, receive, or solicit sexually-oriented messages or images.
+.	Downloading or disseminating of copyrighted material that is available on the Internet is an infringement of copyright law.  Permission to copy the material must be obtained from the publisher.  For assistance with copyrighted material, contact computer support or the Management.
+.	Without prior approval of the Management, software should not be downloaded from the Internet as the download could introduce a computer virus onto Kanilebettu Technologies computer equipment.  In addition, copyright laws may cover the software so the downloading could be an infringement of copyright law.
+.	Employees should safeguard against using the Internet to transmit personal comments or statements through email or to post information to news groups that may be mistaken as the position of Kanilebettu Technologies.
+.	Employees should guard against the disclosure of confidential information using Internet email or news groups.
+.	Employees should not download personal email or Instant Messaging software to Kanilebettu Technologies computers.
+.	The Internet should not be used to send or participate in chain letters, pyramid schemes or other illegal schemes.
+.	The Internet should not be used to solicit or proselytize others for commercial purposes, causes, outside organizations, chain messages or other non-job related purposes.
+.	The Internet should not be used to endorse political candidates or campaigns. The Internet provides access to many sites that charge a subscription or usage fee to access and use the information on the site.  Requests for approval must be submitted to the Management.
+
+If you have any questions regarding any of the policy guidelines listed above, please contact your supervisor, or the Management.
+
+
+

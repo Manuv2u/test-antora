@@ -1,0 +1,35 @@
+= Software Tools and Platforms
+
+== Commons
+
+. Asciidoc
+. GitLab
+. AWS
+. Notepad++
+. Draw.io
+. Miro
+. Figma
+
+
+== Application Development and Management
+. Android Studio
+. Arduino IDE
+. AWS ElasticBean
+. Docker
+. GitBash
+. Gradle
+. IntelliJ IDEA
+. Kubernetes
+. Maven
+. Postgresql
+. Postman
+. Retrofit
+. Spring Boot
+
+
+== Language
+. JAVA
+. C
+. OpenAPI (YAML)
+. Linux
+. Markdown

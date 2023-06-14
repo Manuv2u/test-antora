@@ -1,0 +1,47 @@
+@startuml
+
+actor User
+
+rectangle app_frontend {
+    rectangle unaffected {
+        usecase "Variable 2"
+        usecase "Variable 3"
+        usecase "Variable 4"
+        usecase "Variable 5"
+    }
+    usecase "Variable 1" as vrb
+
+}
+
+User --> vrb : CHANGE VALUE
+
+rectangle processList {
+    usecase "Process_1" as p2
+    usecase "Process... " as p3
+    usecase "Process_n" as p1
+}
+
+
+app_frontend -d-> processList
+
+usecase "Has Impact?" as hi
+
+p1 --> hi
+p2 --> hi
+p3 --> hi
+
+usecase "Update Success" as us
+usecase "Update Failed" as uf
+
+hi -l-> us : NO
+hi -l-> uf : YES
+
+us -u-> vrb
+uf -u-> vrb
+
+note "Tell me why?" as comm
+
+uf .. comm
+comm .. User
+
+@enduml

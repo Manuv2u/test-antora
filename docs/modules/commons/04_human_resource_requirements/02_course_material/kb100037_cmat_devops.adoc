@@ -1,0 +1,81 @@
+= KB 100037: Learning Path for DevOps
+:Revision: 1.0
+:revision-date: 20 July 2022
+:author: Byre and Somashekar
+
+:toc:
+:toc-title: Contents
+:toclevels: 5
+:sectnums:
+
+== Scope
+
+This document guides the reader to achieve sufficient proficiency in DevOps. The reader is expected to strictly follow the path and demonstrate the learning within the specified needed time The reader can be certified proficient upon completion of tasks in the task list.
+
+
+
+
+Ops Related Course
+
+
+and then below course
+
+
+
+== Learning Path for Dev
+
+. Basic understanding of Maven (for Android) and Gradle (for sprinboot)
+. Basic understanding of Docker and creation of Docker file
+. Basic understanding of Git banching strategy
+
+.Path for Dev
+[options="header"]
+[cols="a,3a,^2a,^2a"]
+|=======================
+|Step|Course  |Location    | Time Needed (days)
+|1    | Introduction to Git for GitLab projects    | Udemy | 2
+|2    | Learn GitLab CI / CD with Docker & DevOps: obtain valuable DevOps skills. Build pipelines.    | Udemy| 4
+|3    | Learn how to set up a fully functional CICD Pipeline for any Python or Django Application
+(The above should be tried with JAVA (springboot application) and Maven )    |Udemy | 7
+|=======================
+
+
+
+
+== Learning Path for Ops
+
+Please take this course only after completion of sec 2. Learning path for Devs.
+
+.Path for Ops
+[options="header"]
+[cols="a,3a,^2a,^2a"]
+|=======================
+|Step|Course  |Location    |Time Needed (days)
+|1    |AWS for Java Microservice Developers     |Udemy | 14
+|2    | AWS EKS Kubernetes-Masterclass: DevOps, Microservices    |Udemy | 14
+
+|=======================
+
+
+== Task list
+
+. Explain Git Terminologies
+. Explain Git Features
+. Demonstrate on Gitlab
+    - Creating an account
+    - create SSH Keys
+    - Create Repository/ project
+    - Clone Repository
+    - Add Members to project
+    - create branches
+    - merge branches
+    - manage requests
+    - manage permissions
+. Dev Tasks
+. Ops Tasks
+
+. Create JAR and push to EC2
+. Create PDFs and push to S3
+. Notify stakeholders
+
+

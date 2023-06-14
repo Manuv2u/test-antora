@@ -1,0 +1,26 @@
+site:
+  title: KBT-Documentation
+  # the 404 page and sitemap files only get generated when the url property is set
+  #url: https://antora.demo.com/demo/docs-site
+  start_page: Documentation:04_document:pr_100002.adoc
+content:
+  sources:
+    - url: https://gitlab.com/merco_ecosystem/kb_ms_md_doc.git
+      branches: feature/1/manu
+      start_path: docs
+
+
+asciidoc:
+  attributes:
+    exercise_solution: true
+    private-source: true
+    idprefix: custom-prefix
+    idseparator: "-"
+    page-pagination: simple
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable #https://github.com/couchbase/docs-ui/releases/download/prod-166/ui-bundle.zip
+    snapshot: true
+output:
+  clean: true
+  dir: ./public

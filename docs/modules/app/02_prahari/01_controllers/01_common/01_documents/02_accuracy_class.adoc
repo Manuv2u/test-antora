@@ -1,0 +1,117 @@
+= Accuracy Class
+:toc:
+:toc-title: Contents
+:toclevels: 5
+:sectnums:
+
+
+
+== Introduction
+Accuracy of the weighing system are defined in terms of number I, II and III. The following sections would list the conditions for the weighing machines to meet to qualify for the class category.
+
+
+// tag::accuracy-classI[]
+
+== Class I
+
+.IS: 9281 Specifications (Table 2 of Part 3)
+[options="header"]
+|===================
+|Ref |Parameter |Value
+|BIS01|Accuracy|± 0.25% of Rated Output/ Load (RO)
+|BIS02|Non Linearity|± 0.15% of RO
+|BIS03|Drift of no-load output with temperature|± 0.03% of RO/°C
+|BIS04|Drift of no-load output with time after 1 hr|± 0.05% of RO/h
+|BIS05|Drift of full scale output with time after 1 hr|± 0.05% of RO/h
+|BIS06|Response to full scale|3 sec
+|BIS07|Operating Temperature|- 10°C to 70°C
+|BIS08|Warm up periods|60 mins
+|BIS09|Tolerance on Operating Voltage| -20 to 10 % of Operating Voltage
+|===================
+
+.US NIST Handbook 44 Specifications
+[options="header"]
+|===================
+|Ref|Value of Verification Scale Division|Min Scale Div.|Max Scale Div.
+|NIS01|0.1 to 2 g, inclusive|100|10,000
+|NIS02|equal to or greater than 5g|500|10,000
+|NIS03|0.0002 lb to 0.005 lb , inclusive|100|10,000
+|NIS04|0.005 oz to 0.125 oz, inclusive|100|10,000
+|NIS05|equal to or greater than 0.01 lb|500|10,000
+|NIS06|equal to or greater than 0.25 oz|500|10,000
+|===================
+
+
+// end::accuracy-classI[]
+
+
+// tag::accuracy-classII[]
+
+== Class II
+
+.IS: 9281 Specifications (Table 2 of Part 3)
+[options="header"]
+|===================
+|Ref |Parameter |Value
+|BIS01|Accuracy|± 0.25% of Rated Output/ Load (RO)
+|BIS02|Non Linearity|± 0.15% of RO
+|BIS03|Drift of no-load output with temperature|± 0.03% of RO/°C
+|BIS04|Drift of no-load output with time after 1 hr|± 0.05% of RO/h
+|BIS05|Drift of full scale output with time after 1 hr|± 0.05% of RO/h
+|BIS06|Response to full scale|3 sec
+|BIS07|Operating Temperature|- 10°C to 70°C
+|BIS08|Warm up periods|60 mins
+|BIS09|Tolerance on Operating Voltage| -20 to 10 % of Operating Voltage
+|===================
+
+.US NIST Handbook 44 Specifications
+[options="header"]
+|===================
+|Ref|Value of Verification Scale Division|Min Scale Div.|Max Scale Div.
+|NIS01|0.1 to 2 g, inclusive|100|10,000
+|NIS02|equal to or greater than 5g|500|10,000
+|NIS03|0.0002 lb to 0.005 lb , inclusive|100|10,000
+|NIS04|0.005 oz to 0.125 oz, inclusive|100|10,000
+|NIS05|equal to or greater than 0.01 lb|500|10,000
+|NIS06|equal to or greater than 0.25 oz|500|10,000
+|===================
+
+
+// end::accuracy-classII[]
+
+
+// tag::accuracy-classIII[]
+
+== Class III
+
+.IS: 9281 Specifications (Table 2 of Part 3)
+[options="header"]
+|===================
+|Ref |Parameter |Value
+|BIS01|Accuracy|± 0.25% of Rated Output/ Load (RO)
+|BIS02|Non Linearity|± 0.15% of RO
+|BIS03|Drift of no-load output with temperature|± 0.03% of RO/°C
+|BIS04|Drift of no-load output with time after 1 hr|± 0.05% of RO/h
+|BIS05|Drift of full scale output with time after 1 hr|± 0.05% of RO/h
+|BIS06|Response to full scale|3 sec
+|BIS07|Operating Temperature|- 10°C to 70°C
+|BIS08|Warm up periods|60 mins
+|BIS09|Tolerance on Operating Voltage| -20 to 10 % of Operating Voltage
+|===================
+
+.US NIST Handbook 44 Specifications
+[options="header"]
+|===================
+|Ref|Value of Verification Scale Division|Min Scale Div.|Max Scale Div.
+|NIS01|0.1 to 2 g, inclusive|100|10,000
+|NIS02|equal to or greater than 5g|500|10,000
+|NIS03|0.0002 lb to 0.005 lb , inclusive|100|10,000
+|NIS04|0.005 oz to 0.125 oz, inclusive|100|10,000
+|NIS05|equal to or greater than 0.01 lb|500|10,000
+|NIS06|equal to or greater than 0.25 oz|500|10,000
+|===================
+
+
+// end::accuracy-classIII[]
+
+

@@ -1,0 +1,14 @@
+
+List of objects
+
+. saleorder
+.. freight
+.. tonnage
+. item
+. salepad
+. bid
+. weight
+. sales bill
+. summary
+. sales invoice
+

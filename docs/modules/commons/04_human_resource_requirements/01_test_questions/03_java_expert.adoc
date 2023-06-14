@@ -1,0 +1,44 @@
+= JAVA:  Technical Interview Questions – L3
+
+:Revision: 1.0
+:revision-date: 22 June 2022
+:toc:
+:toc-title: Contents
+:toclevels: 6
+:sectnums:
+
+
+.	Although inheritance is a popular OOPs concept, it is less advantageous than composition. Explain.
+.	What is the difference between ‘>>’ and ‘>>>’ operators in java?
+.	What are Composition and Aggregation? State the difference.
+.	How is the creation of a String using new() different from that of a literal?
+.	How is the ‘new’ operator different from the ‘newInstance()’ operator in java?
+.	Is exceeding the memory limit possible in a program despite having a garbage collector?
+.	Why is synchronization necessary? Explain with the help of a relevant example.
+.	In the given code below, what is the significance of ... ?
+.	What will be the output of the below java program and define the steps of Execution of the java program with the help of the below code?
+.	Define System.out.println().
+.	Can you explain the Java thread lifecycle?
+.	What could be the tradeoff between the usage of an unordered array versus the usage of an ordered array?
+.	Is it possible to import the same class or package twice in Java and what happens to it during runtime?
+.	In case a package has sub packages, will it suffice to import only the main package? e.g. Does importing of com.myMainPackage.* also import com.myMainPackage.mySubPackage.*?
+.	Will the finally block be executed if the code System.exit(0) is written at the end of try block?
+.	What do you understand by marker interfaces in Java?
+.	Explain the term “Double Brace Initialisation” in Java?
+.	Why is it said that the length() method of String class doesn't return accurate results?
+.	What is the output of the below code and why?
+.	What are the possible ways of making object eligible for garbage collection (GC) in Java?
+.	In the below Java Program, how many objects are eligible for garbage collection?
+.	What is the best way to inject dependency? Also, state the reason.
+.	How we can set the spring bean scope. And what supported scopes does it have?
+.	What are the different categories of Java Design patterns?
+.	What is a Memory Leak? Discuss some common causes of it.
+.	Assume a thread has a lock on it, calling the sleep() method on that thread will release the lock?
+.	Check if a given string is palindrome using recursion.
+.	Write a Java program to check if the two strings are anagrams.
+.	Write a Java Program to find the factorial of a given number.
+.	Write a Java program to create and throw custom exceptions.
+.	Write a Java program to reverse a string.
+.	Write a Java program to rotate arrays 90 degree clockwise by taking matrices from user input.
+.	Write a java program to check if any number given as input is the sum of 2 prime numbers.
+.	Write a Java program for solving the Tower of Hanoi Problem.

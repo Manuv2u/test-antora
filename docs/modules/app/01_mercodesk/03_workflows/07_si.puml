@@ -1,0 +1,82 @@
+@startuml
+
+<style>
+     ' define a new style, using CSS class syntax
+     .appStyle {
+        BackGroundColor #3083A7
+        FontColor White
+        FontStyle Bold
+     }
+</style>
+!theme vibrant
+skinparam NoteBackgroundColor papayawhip
+skinparam NoteFontColor black
+skinparam NoteFontStyle Bold
+
+    start
+    <<appStyle>>:Mercodesk Home;
+    :Select Sales Summary;
+    :Select from Vehicle List;
+    :Get Freight Rental Info;
+    :Enter Unloading and Weighing Charges;
+
+    note
+    Coolie Voucher
+    ----
+    //Towards: // Coolie
+    //Ref:// Sales Bill Number
+    //Paid To: // Username
+    //Method: // Mode and Paid By
+    //Status: // Closed or Open
+    end note
+
+    split
+    :Read Main Summary;
+    split again
+    :Select from Sellers List;
+    :Read Sub Summary;
+    end split
+
+    if (Revise Rental distribution?) then (<b> Yes)
+        repeat :Enter Amount;
+         if (Is Total Rental Balanced?) then (<b> Yes)
+            (A)
+            kill
+         else (<b> No)
+            :Show Alert;
+         endif
+
+        repeat while -> <b> No
+    else (<b> No)
+    endif
+
+    (A)
+
+    if (Add Expense Vouchers?) then (<b> Yes)
+        :Select Voucher;
+    else (<b> No)
+    endif
+
+    if (Deduct Payable Receipts?) then (<b> Yes)
+        :Select Receipt;
+    else (<b> No)
+    endif
+
+    :Update Payable;
+
+
+    :Close Sales Invoice: Total Payable;
+    note
+     SI Voucher
+     ----
+     //Towards: // Sales Invoice
+     //Ref:// Sales Invoice Number
+     //Paid to: // Sellers
+     //Method: // Mode and Paid By
+     //Status: // Closed or Open
+     end note
+    :Print;
+
+    stop
+
+@enduml

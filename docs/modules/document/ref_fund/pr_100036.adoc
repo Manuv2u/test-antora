@@ -1,0 +1,111 @@
+= PR 100036: Serial Communication Protocol
+:Revision: 1.0
+:revision-date: 20 July 2022
+:author: Srikanth
+
+:toc:
+:toc-title: Contents
+:toclevels: 5
+:sectnums:
+
+== Scope
+
+This document describes the Serial Communication Protocol to be used on the Prahari Controllers.
+
+== Ribhu
+
+=== Version 1 (PR100018)
+
+. The Serial Communication Protocol operates by default (reset factory setting) at 9600 baud, 1 stop bits, no parity.
+. The controller continuously sends out the measured weight on the serial port in ASCII format.
+
+==== Configuration elements
+The PR100018 has a set of configuration elements, each of which has a number or id.  The following table shows the parameters.
+
+.Configuration Elements
+[options="header"]
+|=======================
+|Parameter      |Number
+|Load Cell Capacity    |1
+|Accuracy     |2
+|Password    |3
+|Calibration Weight|4
+|=======================
+
+
+==== Configuration command over serial port.
+. The PR100018 also accepts commands from the serial port.  The commands are all in ASCII format and should end with a carriage return (CR, or ‘\r’).
+. Each command is 3 letters and is followed by 4 letters of the password, and then by the command content, and then the timestamp  , and finally a ‘\r’.
+. If the correct password is NOT present in the command,  the command will simply be discarded.
+. If the password is correct, the controller will accept the command, store the configuration value, and beep once.
+. In addition the string “OK\r” is sent as response.
+. The timestamp is in YYMMDDHHmmSS format.
+. The command is prefixed with a “!”  .  So, in general a command will look like
+*!CMDPPPPXXXXXXYYMMDDHHmmSS\r*.
+.. In this CMD is the command, PPPP is the password, XXXXXX   is the command content (which varies in length depending on the command)
+.. YYMMDDHHmmSS is the timestamp,
+.. and finally there is a \r.
+. An exception to this command format is the CF? command which is used to read out the configuration elements, and whose format is *!CF?PPPP\r*.
+. Another exception is the !CNL command which is used to set the No load ADC offset value, and whose format is *!CNLPPPPYYMMDDHHmmSS\r*.
+.. !CNLPPPP220509153820\r  : When this command is  received, the controller reads the ADC value and stores it in non volatile memory as the no load offset value.
+.. As an example, with a system whose password is 1357, the command will be CNL1357YYMMDDHHmmSS \r.
+.. The user has to clear the platform/pan before issuing this command, so that the correct dead weight or no load weight is taken.
+.. The string 220509153820  represents the timestamp of May 9 2022, 3:38:20 pm.
+. *!CALPPPPXXXXXXYYMMDDHHmmSS\r* : when this command is received the controller reads the ADC value and stores it in non volatile memory as the value pertaining to a weight of XXXXXX grams.
+.. For example, if the command is CAL1357030000YYMMDDHHmmss\r  , the above controller will take the ADC value as corresponding to a weight of 030000 grams, or 30 kg.
+.. The weight has to be given in a 6 digit number with leading zeros.
+.. The user has to place the correct calibration weight before issuing this command, say , for example, he has to place 30 kg calibration weight and then issue the command.
+. *!ACCPPPPXXXXXXYYMMDDHHmmSS\r* : when this command is received the controller stores the value XXXXXX as the desired accuracy.
+.. For example, if the command is ACC1357000001\r, the above controller will take the accuracy as 1 gram.
+.. Another  example, if the command is ACC1357000010YYMMDDHHmmss\r, the above controller will take the accuracy as 10 gram  .
+.. The accuracy has to be given in a 6 digit number with leading zeros.
+. *!PWDPPPPNNNNYYMMDDHHmmSS\r* : when this command is received the controller stores the value NNNN as the desired new password.
+.. For example, if the command is PWD13578765\r, the above controller will take the new password as 8765.
+.. Please note that after this command, all subsequent communication from the controller will require this new password.
+. *!FNMPPPPFFFFFFYYMMDDHHmmSS\r* : when this command is received the controller stores the value FFFFFF   as the desired firm name.
+.. For example, if the command is FNM1357KBTWS1\r, the above controller will take the firmname as KBTWS1.
+. *!CAPPPPPXXXXXXYYMMDDHHmmSS\r*: when this command is received the controller stores the value XXXXXX as the load cell capacity.
+.. For example, if the command is CAP1357000300\r, the above controller will take the load cell capacity as 300 kg.  Another  example, if the command is CAP1357000100\r, the above controller will take the capacity as 100 kg.
+.. The load cell capacity has to be given as a 6 digit number with leading zeros.
+. *!CF?PPPP\r*  : When this command is  received, the controller sends out strings with all the current stored configuration values.
+.. For example, the response will be :
+
+ CAP=000100\r
+ ACC=000001\r
+ PWD=1357\r
+ FNM=ABCDEF\r
+ CAL=030000\r
+
+==== Storage of command logs in non volatile memory.
+. When any serial port command is completed successfully, the PR100018 controller will respond with OK\r, and beep once.
+. It also stores the command log in a non volatile FIFO event log whose maximum length is 1000 elements (numbered 1 to 1000).
+. This event log will include an event counter (000 to 999), the configuration parameter ID, the date and time of the change, and the new value.
+. There is no event log stored for the CNL command which is used for setting the no load ADC offset, as there is no value to be sent to the controller in this command.
+. The format of the log is as follows (each character is stored as ascii, with the length of each record being 20 bytes:
+PPVVVVVVYYMMDDHHmmSS
+
+ where
+  PP is the parameter number (please refer table 1)
+  VVVVVV is the value in the command
+  YYMMDDHHmmSS is the timestamp contained in the command.
+  For the password command, VVVVVV = 00PPPP (ie, 2 leading zeros are padded for password value).
+
+
+
+==== Reading the configuration log entries over serial port
+
+. The controller also provides for commands to read out the log entries.   The command for this is as follows :
+*!LOGPPPP  \r*.
+. If there are log entries the controller will respond with the number of event logs.
+. Then  the entire log is read and transmitted out over serial port.
+. The logs are read out in chronological order.
+.  For example, if there are no logs, then the controller will respond with 000\r.
+. If there are 3 logs (first one is ACCuracy, second one is Firmname, and third one is Capacity), then the controller will respond as follows :
+
+ 000003\r
+ 02000010220511185000\r
+ 04ABCDEF220511185100\r
+ 01300000220511185200\r
+
+. Above example assumes Accuracy has been set to 000010, Firmname is set to ABCDEF, and the load cell capacity is set to 300000.
+

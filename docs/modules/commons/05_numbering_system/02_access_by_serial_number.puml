@@ -1,0 +1,70 @@
+@startuml
+
+    start
+
+     split
+      :Prahari Service Technician \n (PST);
+
+      :Parahari App;
+     :Scan QR Code
+      on Weighing Scale;
+
+     split again
+      :Customer;
+
+      :Mercodesk;
+
+     end split
+
+     :Cognito;
+     note
+        Authentication
+        ----
+        User Credentials
+        Entity Credentials
+     end note
+
+
+     if (Login Authenticated) then (<b> True)
+
+        :Device Manager;
+        note
+            Authentication
+            ----
+            Entity Credentials
+            Weighing Scale Serial Number
+        end note
+
+
+        if (Device Authenticated) then (<b> True)
+           split
+           :Retrieve Controller S/N
+           + Device Name
+           + Configuration Settings
+           + Password;
+           :Retrieve Bluetooth S/N \n + Password;
+           :To Prahari App;
+
+           split again
+           :Retrieve Controller S/N \n + Device Name \n + Configuration Settings;
+           :Retrieve Bluetooth S/N \n + Password;
+           :To Mercodesk;
+
+           end split
+
+
+        :Connect to Weighing Scale;
+        else (<b> False)
+            :Exit;
+            Kill
+        endif
+
+     else (<b> False)
+        :Exit;
+        Kill
+
+     endif
+    kill
+
+
+@enduml

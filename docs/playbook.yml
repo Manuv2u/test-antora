@@ -1,0 +1,25 @@
+site:
+  title: KBT-Documentation
+  start_page: Documentation-prod::Intoduction_to_docker.adoc
+
+content:
+  sources:
+    - url: https://github.com/Manuv2u/antora-demo.git
+      branches: master
+      start_path: docs
+
+asciidoc:
+  attributes:
+    experimental: true
+    idprefix: custom-prefix
+    idseparator: '-'
+    page-pagination: simple
+
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+
+output: 
+  clean: true 
+  dir: ./public

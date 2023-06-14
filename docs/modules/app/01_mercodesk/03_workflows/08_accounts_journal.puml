@@ -1,0 +1,42 @@
+@startuml
+
+<style>
+     ' define a new style, using CSS class syntax
+     .appStyle {
+        BackGroundColor #3083A7
+        FontColor White
+        FontStyle Bold
+     }
+</style>
+!theme vibrant
+skinparam NoteBackgroundColor papayawhip
+skinparam NoteFontColor black
+skinparam NoteFontStyle Bold
+
+
+    start
+        <<appStyle>>:Mercodesk Home;
+        :Select Accounts Journal;
+        
+        split
+            :Receivables (Receipt);
+        split again
+            :Payable (Voucher);
+        end split
+        
+        :Choose Sub Category;
+        
+        split
+            :Select Existing;
+        split again
+            :Create New;
+            :Enter Receiver or Payer;
+            :Enter Note;
+        end split
+
+        :Enter Amount;
+        :Enter Mode of Payment;
+        :Update Balance;
+    stop
+
+@enduml

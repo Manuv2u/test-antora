@@ -1,0 +1,937 @@
+= Product Requirement Specifications for Controllers
+:toc:
+:toc-title: Contents
+:toclevels: 5
+:sectnums:
+
+
+
+== Introduction
+
+=== Purpose
+
+Prahari Engineering aims to integrate the hardware of weighing scale with the Merco Ecosystem of Kanilebettu Technologies, to provide a seamless data digitization process. The purpose of this document is to describe the technical and operational requirements for developing the system that meets the requirement for data digitization of measurement of weight.The weighing system shall integrate to various external scale or balance, of different capacities, but of the same class accuracy.
+
+
+=== Intended Audience and Reading Suggestions
+
+- Product Team
+- Development Team (Hardware, Software)
+- Testers
+- PCB designer
+- Consultants
+- Business Owners
+
+
+=== Project Scope
+
+Digital weighing scales have been used in conjunction with an accounting software. The process has been limited to a wired system and a need for a trained resource to record the transaction. The inadequacy of this method has ensured a persistent use of paper documents to record and maintain the measured data. The goal of PRAHARI family system is to ensure a seamless integration of digitally recorded data to a tailor made accounting suite, while simultaneously eliminating the need for trained resources, spatially constrained devices or paper documentation.
+
+The Prahari system can operate seamlessly without much manual intervention. Significant savings can be made by eliminating erroneous inputs and data duplication efforts. Remote collation of transaction data enables users to access reports from anywhere at any point in time. Prahari family devices are intended to be used independently and also in conjunction with the custom accounting software suite developed for Auction trade, wholesale and retail businesses.
+
+
+
+== Overall Description
+
+=== Product Perspective
+
+The PRAHARI family systems are a new, self-contained electronic devices connected to COTS components and placed in a mechanical structure to work cohesively to meet the scope. Products defined in this document are listed below:
+
+1. Prahari Ribhu Family
+* **PERCxSx**
+
+2. Prahari Vibhu Family
+* **PEVCxSx**
+
+Ribhu is the starter version of the family for Prahari Engineering. Vibhu is the advanced version of Ribhu. The Class (C) to be defined along with the version number (S). The product features are listed below.
+
+
+
+// tag::feature-perc3s01[]
+
+=== Product Features of PERC3S01
+
+1. Accuracy Class III
+2. Connect to Variety of Load Cells
+3. Remotely Configurable
+4. High Resolution
+5. Connect to Variety of Displays
+6. Connect to Variety of Keypads
+7. Broadcasting Information
+8. Display Instructions Received from Remote
+9. Audio Alert Inline with Received Message
+10. Identity and Secure Access
+11. Zero Setting and Tare
+12. Power and Tare Buttons
+13. Power Source Management
+14. Availability per Charge
+15. Device Compactness
+16. Modular Assembly
+
+// end::feature-perc3s01[]
+
+
+
+=== Features of PERV3S01
+1. PERC3Sx Compliant
+2. Money-Value Computing Device
+3. Product Look-up Manager
+4. Billing Manager
+5. Thermal Printer Compatability
+6. Built-in Camera
+7. USB based Scanner Interface
+
+
+
+=== User Classes and Characteristics
+
+The lowest denomination of the user base, who would be operating the device are considered to have zero knowledge about electronic and computing devices.
+
+The usage of the devices must be factored to measure minimum of 6000 units weighed per day.
+
+The access to device calibration and settings is limited to authorized personnel only.
+
+- Employee: Access to Measure
+- Owner: Access to Measure, Settings and Reports
+
+
+
+=== Operating Environment
+
+1. Device must be compliant with IS9281 Standards
+2. Device mounted within weighing scale is subjected for usage of
+ Harsh usage
+ Frequent wobbling and shocks during loading and unloading of weights
+
+
+=== Design and Implementation Constraints
+
+**TBD**
+
+
+
+=== Assumptions and Dependencies
+
+* End user is equipped with a smartphone with internet connection
+* COTS components and reusable components conform to **IS9281** specifications
+* End user uses either SI or Imperial units, but never a combination of both
+* Minimum setting for unit price in Money-value computing scale is set to *100 gm* conforming to **NIST Handbook 44** standards
+* End user shall use the device on level platform
+
+**Technical assumptions**
+
+* Standard Bluetooth/BLE communication protocals are supported
+* Standard electronic components are used. Avoid component which is proprietary or available in limited production capacities
+* ISO standards applicable for PCB design is considered
+
+
+
+
+== System Features of Prahari Ribhu PERC3S01
+
+
+
+![Inline image](img/PERCXSX_blockdiagram.jpg)
+
+
+
+![Inline image](img/PERCXSX_blockdiagram_components.jpg)
+
+
+
+=== Accuracy Class III
+
+==== Description and Priority
+
+Weighing scales are divided based on Accuracy classes. Based on the Class, many other operational parameters are defined. PERC3S01 is designed to be **CLASS III** accuracy device. In India, IS:9281 is the prescribed standard. But it would be critical to adhere to US NIST Handbook 44 standard definition.
+
+
+**Priority:**  *High*
+
+
+==== **Functional Requirements**
+
+Class III weighing scales are to conform to IS:9281 specifications listed below
+
+**IS: 9281 Specifications** (Table 2 of Part 3)
+
+
+| Ref |Parameter | Value |
+|:-----------|:-----------|:-----------:|
+| BIS01| Accuracy | ± 0.25% of Rated Output/ Load (RO) |
+| BIS02| Non Linearity | ± 0.15% of RO |
+| BIS03| Drift of no-load output with temperature | ± 0.03% of RO/&deg;C |
+| BIS04| Drift of no-load output with time after 1 hr | ± 0.05% of RO/h |
+| BIS05| Drift of full scale output with time after 1 hr | ± 0.05% of RO/h |
+| BIS06| Response to full scale | 3 sec |
+| BIS07| Operating Temperature | - 10&deg;C to 70&deg;C   |
+| BIS08| Warm up periods | 60 mins |
+| BIS09| Tolerance on Operating Voltage | -20 to 10 % of Operating Voltage |
+
+
+
+
+**US NIST Handbook 44 Specifications**
+
+
+| Ref   |Value of Verification Scale Division | Min Scale Div. | Max Scale Div.|
+|:-----------|:----------------|:-----------:|:-----------:|
+| NIS01| 0.1 to 2 g, inclusive | 100 | 10,000|
+| NIS02| equal to or greater than 5g  | 500 | 10,000|
+| NIS03| 0.0002 lb to 0.005 lb , inclusive | 100 | 10,000|
+| NIS04| 0.005 oz to 0.125 oz, inclusive  | 100 | 10,000|
+| NIS05| equal to or greater than 0.01 lb | 500 | 10,000|
+| NIS06| equal to or greater than 0.25 oz  | 500 | 10,000|
+
+
+
+=== Connect to Variety of Load Cells
+
+==== Description and Priority
+
+Various load cells are applicable for the given target market. It's imperative that PERC3S01, a Class III weighing system, is perfectly matched to the load cell to obtain accurate measurement. The target market for PERC3S01 is in the capacity range of 0~300 kg.
+
+![Inline image](img/Types_of_load_cell.jpg)
+
+The principle factor that affects accuracy is the ADC of PERC3S01. Analyzing the errors of load cell and ensuring reproducibility of measurement with accuracy is of great importance, which is the direct indication of long term stability of the weighing system. These two factors which dictates the quality of performance of a weighing system, derives from linearity, temperature influence and long term drift of electronics.
+
+
+**Priority:** High
+
+
+
+==== Functional Requirements
+
+
+A good coupling between the weighing electronics and the load cell depends on the following parameters,
+
+* **Excitation Technique**
+
+    The sensor needs an accurate and a highly stable excitation source. Many pressure sensor designs use the same common reference for the excitation circuitry and the ADC for better accuracy, (around 1.5 - 2.5 mV/V).
+
+
+* **Signal conditioning**
+
+    The load cell signal output is extremely low, and hence, a stabilized amplification is needed to provide extremely high dc precision and noise performance at low frequency range. PERC3S01 is required to be precise, low drift and with auto - zero methods.
+
+
+* **Signal Acquisition and Processing**
+
+PERC3S01 must lean towards high resolution, along with low temperature and offset drifts suitable for Weighing scale application.
+
+
+
+
+**IS:9281 Specifications** (Table 1 of Part 3)
+
+For Class III, load cell specifications are given by IS 9281. PERC3S01 must be able to self align or be configurable to the connected load cell, which are within the regulated specifications.
+
+|REF| PARAMETER |UNITS| VALUE|
+|:-----------|:-----------|:-----------:|:-----------:|
+|BIS10| Rated Load (RL)| kg| _as specified_|
+|BIS11|Mode of operation| Compression/ Tension/ Universal| |
+|BIS12| Input resistance/ impedance| Ohms | _as specified_|
+|BIS13| Output resistance/ impedance| Ohms | _as specified_|
+|BIS14| Input voltage/ current | V/A |  _as specified_|
+|BIS15| Input voltage/ current _(Max)_ | V/A |  _as specified_|
+|BIS16| Overload, safe | % of RL | 150
+|BIS17| Overload, ultimate | % of RL | 200
+|BIS18 | Accuracy | % of RO | ± 0.1
+|BIS19 | Rated Output Voltage, _Sensitivity_ | mV/V/RL| _as specified_
+|BIS20 | Tolerance on rated output | % of RO | ± 0.05
+|BIS21 | No Load output | % of RO | ± 2.0
+|BIS22 | Drift in no load output (Zero Drift) after 1 hr of warm up period | % RO/h | ± 0.02
+|BIS23 | Instability of RO after 1 hr of warm up period | % RO/h | ± 0.02
+|BIS24 | Non Linearity |  % of RO | ± 0.5
+|BIS25 | Hysteresis  | % of RO | 0.05
+|BIS26 | Non-repeatability of Zero output | % of RO | ± 0.1
+|BIS27 | Non-repeatability of rated output | % of RO | ± 0.1
+|BIS28 | Creep at rated load after 30 mins | % of RO | ± 0.1
+|BIS29 | Creep recovery after 10 mins | % of RO | ± 0.1
+|BIS30 | Side load, safe | % of RL | 10
+|BIS31 | Side load, ultimate | % of RL | 20
+|BIS32 | Temperature effect on no load output | % RO/ &deg;C/h | ± 0.03
+|BIS33 | Temperature effect on rated output | % RO/ &deg;C/h | ± 0.03
+
+*which ever is applicable to Prahari device*
+
+
+
+=== Remotely Configurable
+
+==== Description and Priority
+
+PERC3S01 needs the ability to be remotely configured, through secured means, for both calibration and also operational requirements.
+
+Configurations can be classified as
+
+- Factory Setting
+- Max Rated Load / Span adjustment
+- Calibration
+- Value of division units
+- System Messages
+
+- User Setting
+- Unit Selection
+
+
+All remotely operated devices are sealed in accordance to US NIST Handbook 44 specification, (Sec 2.24 Table S.1.3)
+
+
+**Priority:** High
+
+
+
+
+==== **Functional Requirements**
+
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT01 | Max Rated Load | Setting of Max Rated load or adjusting the span based on the given Load cell specification|
+| PRT02 | Calibration | Based on the Dead Load (Zero load) and Max Rated Load for the given load cell, the calibration is to be made in situ and in accordance to IS 9281 Standards, through application of axial loading of 30%, 70% and 100% of the rated load. The errors in parameters such as linearity, hysteresis and other are to be evaluated for certification|
+| PRT03 | Value of division units | The value of a division is expressed in a unit of weight equal to a decimal multiple or submultiple of 1, 2 or 5. The setting is made based on the accuracy of rounding off needed in the application|
+| PRT04 | System Messages | The system error codes and also application based messages are to remotely updated|
+| PRT05 |  Unit Selection | Ability to change the unit of measurement between SI (kg or gm) and Imperial (lb or oz)|
+| PRT06 | Event Logger | In accordance with NIST Handbook 44 Standards, Sec 2.24 Methods of Sealing, all Prahari family devices are considered category 3 devices. Hence, an event logger is to be maintained embedded within the device, which include an event counter (000 to 999), the parameter ID, the date and time of he change, and the new value of the parameter |
+
+
+
+
+
+=== High Resolution
+
+
+==== Description and Priority
+
+
+Since the application requirements currently do not involve Counting as a feature. The resolution must still lead to a higher value, but limited by the cost factor.
+Resolution of the weighing system is defined as the smallest load (post 50% load application), that would give a detectable and measurable value in the output.
+
+Choosing the right ADC with on chip low noise programmable gain amplifer (PGA) communictates in SPI mode prefereable sigma delta A/D convertor gives effective resolution without signal amplication. Additionally the ADC should exhibits the characteritics
+-  Dynamic range and internal counts
+-  Gain and Offset
+-  Noise-Free resolution
+
+
+**Priority:** Medium
+
+
+==== Functional Requirement
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT07 | Resolution as a function of Span | Since the Resolution is dependent on the Span (50%), PERC3Sxx are to be used in applications wherein the max capacity varies from 15 kg ~300 kg. OR is it independent of the Span and just an electrical function|
+
+
+
+
+=== Connect to Variety of Displays
+
+
+==== Description and Priority
+
+
+The display units commonly used in the weighing scale are
+
+* Green Vacuum Fluorescent Display (VFD)
+* Seven Segment Display (7SD)
+* 128×64 Mono LCD
+
+Considering the above, the PERC3Sxx are expected to encounter VFD and 7SD of various sizes.
+
+**Priority:** High
+
+
+
+
+
+==== Functional Requirement
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT08 | Standardised Display for PERC3Sxx | Considering cost and performance, display for PERC3Sxx must be set to one standard unit. |
+
+
+
+
+=== Connect to Variety of Keypads
+
+==== Description and Priority
+
+The target applications have membrane keypads. But the layout of the keypads vary, from 4 buttons to fully numeric keypads with preset and function keys.
+
+**Priority:** High
+
+
+
+
+
+==== Functional Requirement
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT09 | Standardised Keypad for PERC3Sxx | Considering cost and performance, keypad for PERC3Sxx must be set to one standard unit. |
+
+
+
+
+
+=== Broadcasting Information
+
+==== Description and Priority
+
+PERC3S01 has to connect to remote device and broadcast information mentioned below.
+
+1. Measured measured weight data
+2. System information
+
+**Priority:** High
+
+
+
+
+
+==== Functional Requirement
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:----------|:------|
+| PRT10 | Broadcast Measured Weight Data | Broadcasting measured values in accordance to the format **KKK.GGG**  K = kilogram or lb  G = gram or oz |
+| PRT11 | Display Configured Units | Always display the configured units of measurement |
+|PRT12|Broadcast System Information | Broadcasting system related information such as  a. Machine Id  b. Error Codes  c. Health Status |
+
+
+
+
+
+=== Display Instructions Received from Remote
+
+==== Description and Priority
+
+PERC3S01 connected to a remote device, recieves instructions for settings and information to be displayed.
+
+Since, PERC3S01 is remotely configurable, the user setting information has to be displayed during the operation.
+
+**Priority:** High
+
+
+
+
+
+==== Functional Requirement
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT13 | Display Configured User Settings | Display information regarding the selection of mode of measurement *(kg, g, lb, oz)*   |
+| PRT14 | Display System Messages | Display Messages  a. Welcome Message  b. Remote Connection Status Message  c. Transaction Status Message  d. Battery Low status message  e. ***-ve*** symbol for Tare value |
+
+
+
+
+
+=== Audio Alert Inline with Received Message
+
+==== Description and Priority
+
+Auditory alerts according to the messages received, by using a buzzer or beeper.
+
+**Priority:** Medium
+
+
+
+
+
+==== Functional Requirement
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT15 | Auditory Alert | Buzz or Beep in specific pattern for select messages received from remote connection   |
+
+
+
+
+
+
+=== Identity and Secure Access
+
+==== Description and Priority
+
+Each PERC3S01 device must have unique indentity, that is broadcast. It can also be the Serial Number for the device. The device must also be equipped with controls for secured access.
+
+**Priority:** High
+
+
+
+
+
+==== Functional Requirement
+
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT16 | Device Identity | The device must be encoded with a unique identifier, coupling as a Serial Number of the device. The format of the identifier must be  **PE{F}C{C}S{S}MMYYXXXX**  *where*  *PE: Prahari Engineering*  *F: Family (R: Ribhu, V: Vibhu)*  *C: Accuracy Class (I, II, III)*  *S: Development Version*  *MM: Month of manufacture*  *YY: Year of manufacture*  *XXXX: Production number*  |
+| PRT17 | Secured Access | A control for secured access for Factory configurations |
+
+
+
+
+
+
+=== Zero Setting and Tare
+
+
+==== Description and Priority
+
+
+PERC3S01 device must automatically set to zero through subtraction of dead load value. Error must be recorded and broadcast in the case where the value of dead load deviates from calibrated value or it's continually fluctuating.
+
+Tare must be 100% subtractive. The value of division (d) for Tare must be decimal multiple or submultiple of 1. If the value of division of measured weight is different from the tare value, then all the measurements must be considered at d value of tare. To illustrate, consider the example below:
+
+|Parameter | Actual | Rounded |
+|:------|------:|------:|
+|Measured Value (@ d = *5*)  Tare = 0| *38.47 kg* | *38.5 kg*|
+|Measured Value (@ d = *5*)  Tare = *1.23* (@ d = 1)| *38.47 kg*   *- 1.23 kg*  |  *38.47 kg*   *- 1.23 kg* |
+| Gross Weight | *37.24 kg* |  *37.24 kg* |
+
+
+
+**Priority:** High
+
+
+
+
+
+==== Functional Requirement
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT18 | Zero Setting | Measure dead load output and store the value. Subtract the same for Zero setting |
+| PRT19 | Zero Setting Error | Deviation from the stored value or fluctuating dead load output is recored and broadcast |
+| PRT20 | Tare | 100% Subtractive tare at d = 1  When applied, the **d** for measurements are to be set to 1 |
+| PRT21 | Tare limits  - Errors | a. Tare value cannot exceed 5% of the Max Rated Load  b. Gross value ***(measured value - dead load value - tare value)*** cannot exceed Max Rated Load |
+
+
+
+
+=== Power and Tare Buttons
+
+==== Description and Priority
+
+Separate button for switching ON/OFF and a separate button for setting Tare weight is to be accomodated. Both buttons are to be separted from the standard keypad.
+
+**Priority:** Medium
+
+
+
+
+
+==== Functional Requirement
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT22 | ON/OFF Switch | Dedicated power button. |
+| PRT23 | Tare Switch |  Record weight if greater than dead load weight |
+
+
+
+
+
+
+
+=== Power Source Management
+
+==== Description and Priority
+
+Device must operate on DC (battery), but also manage AC source if the case presents.
+
+**Priority:** High
+
+
+
+
+
+==== Functional Requirement
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT24 | Power Source Management | A power adaptor must be incorporated to operate under both AC/DC power sources  |
+
+
+
+
+
+
+=== Availability per Charge
+
+==== Description and Priority
+
+The power consumption of the devices must be managed to ensure 24000 units weighed per charge.
+
+**Priority:** Medium
+
+
+
+
+
+==== Functional Requirement
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT25 | Availability per Charge | Power consumption management of devices such broadcast module, display and the measurement must accommodate 24000 measured items within a single cycle of 100%  to 20% of battery power availability |
+| PRT25.1 | Power Saving Mode | Switch to sleep mode when not in operation |
+
+
+
+
+
+=== Device Compactness
+
+==== Description and Priority
+
+The physical dimensions of PERC3S01 must remain compact
+
+**Priority:** Medium
+
+
+
+
+==== Functional Requirement
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT26 | Compactness | Physical dimensions of the device must remain compact    |
+
+
+
+=== Modular Assembly
+
+==== Description and Priority
+
+PERC3S01 must be designed to keep modularity in mind. A well organized layout without cluttering the indicator unit, and also interconnected to other peripherals, prioritizng plug and play for easy maintenance.
+
+**Priority:** Medium
+
+
+
+
+
+==== Functional Requirement
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT27 | Modular Assembly | Well organized, decluttered and easy plug and play of peripherals to the device.  |
+
+
+
+
+
+
+
+
+=== Stimulus/Response Sequences
+
+
+| REF | ACTION | RESPONSE| ERROR CODE |
+|:--- |:----------   | :--- | :---: |
+| PST01 | Power ON | Welcome Message  Non Zero display @ t > 3 sec |  E01|
+|PST02 | Power ON with excess load |  Display excess load with reference to Dead load output | |
+|PST03 | Tare load > 5% RL |  Error: Excess Tare weight | E02 |
+|PST04 | Load + Tare > Max RL | Error: Max Load Exceeded | E03 |
+|PST05 | Remote Call: Connected | Beep: Acknowledgment |  |
+|PST06 | Remote Call: Data Captured| Beep: Acknowledgement| |
+|PST07|Remote Call: Not Reloaded| Error: Relaod Failure | E04 |
+|PST08 | Remote Call: Mode Changed | Change Settings  Beep: Acknowledgement |  |
+
+
+
+
+== System Features of Prahari Vibhu PEVC3S01
+
+![Inline image](img/PEVCXSX_blockdiagram.jpg)
+
+
+
+![Inline image](img/PEVCXSX_blockdiagram_components.jpg)
+
+== PERC3Sx Compliant
+
+=== Description and Priority
+
+**All features of PERC3Sx** is realized as the mandatory required basic feature of PEVC3Sx devices.
+
+**Priority:** High
+
+
+
+=== Functional Requirements
+
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT28 | PERC3Sx Compliance | All features of PERC3Sx are realized |
+
+
+
+
+== Money-Value Computing Device
+
+=== Description and Priority
+
+PEVC3S01 are computing devices with money-value indications of net weight, unit price, total price, product name or code number and tare weight.
+
+**Priority:** High
+
+
+
+== Functional Requirements
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT29 | Money-Value Computation | Upon selection of Product Code, based on the unit price and gross weight, calculate and display the total price |
+
+
+
+
+
+
+== Product Look-up Manager
+
+== Description and Priority
+
+PEVC3S01 are equipped to contain PLU table, containing Product code, Product name, unit price. The updates of each parameter is achieved through remote and also through physical keypad upon secure access.
+
+**Priority:** High
+
+
+
+== Functional Requirements
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT30 | PLU Update | Update the table upon secure access, either through remote connection or using physical keypad. |
+| PRT31 | PLU Price Override | Special key to override PLU price table manually |
+
+
+
+
+== Billing Manager
+
+== Description and Priority
+
+PEVC3S01 must be able to sum all selected money-value units and total the value in the form of a Bill of Sale as shown below.
+
+|Name of Firm  Location|||
+|:-------------|:--:|:---:|
+|**Item Name**| **Rate** | **Amount**|
+||||
+||||
+||**Total**|xxxxx|
+||||
+
+
+
+**Priority:** High
+
+
+
+== Functional Requirements
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT32 | Bill of Sale | Select/ add measured items  using special key and using another special key to sum the total and display the amount |
+| PRT33 | Bill Cancellation | Using Special key cancel the bill manually |
+
+
+
+
+== Thermal Printer Compatability
+
+== Description and Priority
+
+PEVC3S01 must be able to interface with thermal printer (of standard specification) to print from the Billing Manager.
+
+**Priority:** High
+
+
+
+== Functional Requirements
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT34 | Thermal Printer Interface | Connect thermal printer of standardized specification to print from the Billing Manager |
+
+
+
+
+=== Built-In Camera
+
+=== Description and Priority
+
+PEVC3S01 must be able to interface with a built-in camera. Which is focussed on the weighing pan. The device must be able to take image and transfer the same along with measured data and/or billing data to the remote connection.
+
+**Priority:** High
+
+
+
+=== Functional Requirements
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT35 | Camera Interface In-built| operate in-built camera to take images and associate with the measured data and/or billing data. Upload the package to remote connection |
+
+
+
+
+
+=== USB based Scanner Interface
+
+=== Description and Priority
+
+PEVC3S01 must be able to provision usb based scanner interface. The device must be able to scan 2D Barcodes and/or QR codes, used to select PLU codes to associate the measured data.
+
+
+
+**Priority:** High
+
+
+
+=== Functional Requirements
+
+| REF | PARAMETER | OBJECTIVE|
+|:----|:------|:------|
+| PRT35 | USB Scanner | operate external scanner interfaced through USB to scan 2d Barcode and/or QR Code, to obtain PLU codes, which are used to associate the measured data|
+
+
+
+
+
+
+
+=== Stimulus/Response Sequences
+
+
+| REF | ACTION | RESPONSE| ERROR CODE |
+|:--- |:----------   | :--- | :---: |
+| PST09 | Incompatible Scanner Connected | Error: Connected Device Failure |  E05|
+| PST10 | Non compatible scan | Error: Invalid PLU Code |  E06|
+
+
+
+
+
+== Functional Requirements
+
+
+== Other Nonfunctional Requirements
+
+=== **PCB Specification**
+
+The specification is listed based on industry standards and reference templates.
+
+
+```
+Consider in general applicable to Prahari
+```
+1. Thermal Requirements / Temperature range
+
+    + Max operating temperature, Tg of PCB Material
+
+2. Technoloy / Material
+
+   + Type of PCB (Rigid / Flex / Rigid-Flex)
+   + PCB according IPC600
+   + Dimension (LxW) used for panel layout
+   + Thickness (measure of PCB thickness)
+3. Vias (number of vias, diameter etc)
+4. Any Mechanical Treatment (number of drills, drilling process)
+5. Compliancy Requirements
+6. Surface finish/Identifications (Surface, Pads, marking, logo etc)
+
+== **PCB Qualitification Attributes**
+
+- **Tracks**
+- Routing
+- The GND shall be as wide as possible and connected to the components in a star-shaped topology .
+- The inputs of OPAMPs as well as basis/gate pins of transistors shall be as short as possible, because undesired noise/crosstalk will be amplified
+as well.
+- Unused IC gate inputs must be set to a defined potential (GND or VCC, preferably using pullup/pulldown resistors).
+- The tracks should be routed directly and orthogonally (right-angled) and preferably using 45° angles for direction changes.
+
+- Track width
+- minimum track width depends on PCB technology and copper thickness and needs to be confirmed with the supplier of the PCB.
+- A minimum track width of 0.15mm should be ok for most PCBs with copper thickness up to 70 μm.
+- Track spacing
+- the spacing between tracks should be as big as possible to avoid disturbance caused by capacitive coupling with other tracks.
+- A minimum distance of 1mm should be kept between tracks and board outline.
+
+- **Pads**
+- Pad Connections
+- Tracks shouldn't be connected to pads at a sharp angle.
+- The pad shall not be connected with a track which is wider than the pad itself
+- Rest ring
+- Rest ring width is of great importance while selecting the suitable pads.The rest ring width must be at least 0.3 mm for component pads.
+- Pin 1 marking
+- For better identification of the polarity and the mounting direction of components, distinctive square pads are used for many components in the database
+
+Based on the reference from PCB quality standards
+- **No blisterings**
+
+![Inline image](img/blistering.png)
+
+① Blistering
+② Delamination
+
+- **Drill holes patterns**
+
+![Inline image](img/Drillholes.png)
+
+
+①  < 25% Blistering/Delamination
+
+② > 25% Blistering/Delamination between plated-through drill holes
+
+**Acceptable Class 1**: Blistering/Delamination does not exceed more than 25% of the distance between plated-through drill holes or inner conductive paths.
+
+**Unacceptable Class 1**: Blistering/Delamination exceeds more than 25% of the distance between plated-through drill holes or inner conductive paths.
+
+**Unacceptable Class 2, 3**: Clear visible Blistering/Delamination between plated-through drill holes or inner conductive paths.
+
+
+
+- **Laminat Damage**
+
+![Inline image](img/LaminatDamage.png)
+
+State of the surface of the base material when you can see a gauze texture although the unbroken glass fibres are completely covered with resin.
+
+Acceptable Class 1, 2, 3: Change in gauze texture is an acceptable state which nevertheless is often mixed up with uncovered gauze. For clarification polished cut images can be used.
+
+
+=== Performance Requirements
+
+**TBD**
+
+
+=== Safety Requirements
+
+**TBD**
+
+=== Security Requirements
+
+Sealing method as per NIS Standards and IS:9281 standards
+
+== Appendix A: Glossary
+**TBD**
+
+== Appendix B: Reference Documents
+
+1. Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, NIST Handbook 44, 2021
+2. Indian Standard Specification for Electronic Weighing Systems, IS:9281 (Part 1) - 1979
+3. Indian Standard Specification for Electronic Weighing Systems, IS:9281 (Part 2) - 1979
+4. Indian Standard Specification for Electronic Weighing Systems, IS:9281 (Part 3) - 1981
+5. Indian Standard Specification for Electronic Weighing Systems, IS:9281 (Part 4) - 1983
+6. Indian Standard Basic Environmental Testing Procedures for Electronic and Electrical Items, IS:9000 (Part 1) - 1988
+
+**TBD**
+
+

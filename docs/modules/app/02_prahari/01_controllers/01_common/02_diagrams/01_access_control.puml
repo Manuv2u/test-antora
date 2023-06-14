@@ -1,0 +1,87 @@
+@startuml
+    start
+    fork
+    :Govt Approval Process;
+    :Set Temp Approval Pwd = TAP;
+    :Keypad (1) + Power;
+    :Enter Password;
+        if (Password = TAP) then (<b> True)
+
+        else (<b> False)
+        :Exit;
+        Kill
+
+        endif
+
+
+
+
+    fork again
+    :Production;
+    :Set Serial Access Pwd = SAP [alphanumeric];
+
+        fork
+        :Access by Keypad;
+        :Keypad (1) + Power;
+
+            :Display Configuration;
+            :Use Keypad (2) and (3) \n to Navigate through Settings;
+            :Power OFF to Exit;
+            kill
+
+
+
+
+
+        fork again
+        :Access by Prahari APP;
+        if (User Login Authorized) then (<b> True)
+            :Allow Access;
+        else (<b> False)
+            :Exit;
+            Kill
+        endif
+
+        :Get Device ID [QR Code Scan];
+        :Look up SAP;
+
+        split
+        :Registration / Calibration;
+        :Request OTP;
+        if (OTP Approved) then (<b> True)
+
+        else (<b> False)
+            :Exit;
+            Kill
+        endif
+
+        split again
+        :Factory Reset;
+        :Request Admin Permission;
+        if (Admin Approved) then (<b> True)
+            :Look up AAP;
+            :Complete Reset \n in Background;
+            kill
+
+
+        else (<b> False)
+            :Exit;
+            Kill
+        endif
+        end split
+
+
+
+
+        end fork
+
+
+    end fork
+
+    :Configuration Menu;
+
+    stop
+
+
+
+@enduml

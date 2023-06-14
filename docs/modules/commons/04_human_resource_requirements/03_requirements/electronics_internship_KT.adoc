@@ -1,0 +1,100 @@
+== Embedded Electronics Engineering Internship @ Kanilebettu Technologies
+....
+Location: Bangalore
+
+Start date: Immediate
+
+Duration: 6 Months
+
+Pay: INR 10,000/ month
+
+....
+
+=== *About Kanilebettu Technologies*
+
+
+
+Kanilebettu Technologies is a start-up based in Bangalore. We are a product development company focussed on developing a SAAS based product for our customers. Our product is focussed on data digitization through IoT device, process control and management, and CRM.
+
+
+
+=== *About the Internship*
+
+
+
+_Intern's day-to-day activities include:_
+
+. Participate in design and development of embedded devices.
+. Interaction with Chief Designer to define and verify test plans, set up test rigs and document results.
+. Adhering to ESD compliant protocols for lab and lab equipments.
+. Involved in procurement and maintenance of components needed for embedded device development.
+. Collaborating with cross-functional teams in improving device and SAAS application.
+. Work in an agile environment (adhering to SCRUM)
+. Understand Low-level designs (Sequence Diagram, Class Diagram)
+
+
+Participate in design and development of embedded devices.
+Interaction with Chief Designer to define and verify test plans, set up test rigs and document results.
+Adhering to ESD compliant protocols for lab and lab equipments.
+Involved in procurement and maintenance of components needed for embedded device development.
+Collaborating with cross-functional teams in improving device and SAAS application.
+Work in an agile environment (adhering to SCRUM)
+Understand Low-level designs (Sequence Diagram, Class Diagram)
+
+
+
+
+=== *Skills Required*
+
+
+- PCB designing
+- Soldering through hole and SMT
+- Circuit testing and fault-finding
+- C Programming
+- Serial Port Communication (RS232)
+- Aware of Bluetooth or BLE Protocols
+- Knowledge of Microcontrollers and Microprocessor
+- Hands-on experience with Arduino or Raspberry PI
+
+
+
+
+
+=== *Who can apply?*
+
+_Candidates who..._
+
+. are available to work at office during internship.
+. are available for 6 months duration.
+. have relevant skill and interests.
+. want to restart their careers.
+
+
+
+=== *Other Requirements*
+
+
+. Bachelor or Diploma degree in electronics or equivalent.
+. Students in their final year degree can also apply.
+. Good debugging and analytical skills.
+. Good Communication and inter-personnel skills.
+
+
+
+=== *Perks*
+
+- Certificate
+- Letter of recommendation
+- Flexible working hours
+- Informal dress code
+
+
+
+=== *How to Apply?*
+
+[cols="a,a"]
+[frame="topbot",grid="none"]
+|=============================================
+|include::04_contact.adoc[tags=bdm-contact]
+|include::04_contact.adoc[tags=location-contact]
+|=============================================

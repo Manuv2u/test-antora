@@ -1,0 +1,64 @@
+= PR 100002: Product Requirement Specification for Weighing Scale Controllers
+:Revision: 1.0
+:revision-date: 14 June 2022
+:toc:
+:toc-title: Contents
+:toclevels: 5
+
+
+
+== Definition
+This document defines the requirement specification for Weighing Scale Controller to be developed by Prahari Engineering.
+
+
+== Introduction
+
+=== Purpose
+
+The purpose of this document is to describe the aim, goals and standards for developing the controllers for weighing scales with bi-directional communication and other capabilities.
+
+
+=== Intended Audience and Reading Suggestions
+
+- Product Team
+- Development Team (Hardware, Software)
+- Testers
+- PCB designer
+- Consultants
+- Business Owners
+
+
+
+=== Project Scope
+
+Digital weighing scales have been used in conjunction with an accounting software. The process has been limited to a wired system and a dedicated software application. Such a system requires a need for a dedicated immobile personal computer and a trained personnel to operate the software. The inadequacy of this method has ensured a persistent use of paper documents to record and maintain the measured data.
+
+Controllers, which are the main processing unit in the digital weighing scale, acquires and processes data from load cell. These controllers are calibrated to predefined weights. These controllers are intended to communicate with a cloud based SaaS application.
+
+The aims of the Prahari family Controllers are
+
+// tag::pr100002-aims[]
+. Securely Calibrate the device using mobile application through wireless communication.
+. Send measured weights to the mobile application wirelessly.
+. Compute data based on the measured weights, such as count, rate etc.
+. Print the computed values using an attached printer.
+. Send computed values to the mobile application wirelessly.
+. Record image of the weighed item and tag it to the measured and input PLC.
+. Send the image along with the measured value and the input PLC to the mobile application.
+
+// end::pr100002-aims[]
+
+=== Product Description
+
+To achieve the aims defined in the project scope, families of products are to be developed. Based on the needs of the intended business usage, the products are developed to meet certain or all the aims mentioned in the scope. The family of products to be developed are listed in table 1.
+
+[cols ="a,a"]
+[options="header"]
+.Prahari Engineering Controllers
+|========
+|Part Number| Product Name
+|PR 100017| Ribhu Class III
+|PR 100018| Vibhu Class III
+|========
+
+

@@ -1,0 +1,198 @@
+= Test Cases for Mercodesk Master
+:toc:
+:toc-title: Contents
+:toclevels: 1
+:sectnums:
+
+toc::[]
+
+== Creating a Commodity in Mercodesk Master
+
+++++
+<table class=test>
+++++
+
+
+++++
+<tr><td class=test-source valign="top">
+++++
+
+.Test On
+....
+Swagger
+....
+
+++++
+</td><td class=test_result-render valign="top">
+++++
+
+.Procedure
+
+. POST: create a commodity *[New]*
+
+    {
+        "name": "JAGGERY",
+        "resource": "ms_commodity/jaggery/"
+    }
+
+
+. POST: create a commodity *[Duplicate]*
+
+    {
+        "name": "JAGGERY",
+        "resource": "ms_commodity/jaggery/"
+    }
+
+
+. POST: create a commodity *[Case change]*
+
+    {
+        "name": "JaGGERY",
+        "resource": "ms_commodity/jaggery/"
+    }
+
+
+++++
+</td><td class=test_result-render valign="top">
+++++
+
+.Results
+. New Commodity Created - *YES*
+. Showed Duplication Error - *NO*
+. Showed Duplication Error regardless of Case - *NO*
+
+.Interpretation
+
+Service *FAILED*
+
+++++
+</td></tr><tr><td></td><td></td><td></td></tr>
+++++
+
+++++
+</table>
+++++
+
+
+
+== Creating a Sub Commodity in Mercodesk Master
+
+++++
+<table class=test>
+++++
+
+
+++++
+<tr><td class=test-source valign="top">
+++++
+
+.Test On
+....
+Swagger
+....
+
+++++
+</td><td class=test_result-render valign="top">
+++++
+
+.Procedure
+
+. POST: create a commodity *[New]*
+
+    for Commodity id
+    {
+      "name": "large",
+      "resource": "ms_commodity_subtype/small/"
+    }
+
+
+. POST: create a commodity *[Duplicate]*
+
+    for Commodity id
+    {
+      "name": "large",
+      "resource": "ms_commodity_subtype/small/"
+    }
+
+. POST: create a commodity *[Case change]*
+
+    for Commodity id
+    {
+      "name": "large",
+      "resource": "ms_commodity_subtype/small/"
+    }
+
+
+++++
+</td><td class=test_result-render valign="top">
+++++
+
+.Results
+. New Sub Commodity Created - *YES*
+. Showed Duplication Error - *NO*
+. Showed Duplication Error regardless of Case - *NO*
+
+.Interpretation
+
+Service *FAILED*
+
+++++
+</td></tr><tr><td></td><td></td><td></td></tr>
+++++
+
+++++
+</table>
+++++
+
+== Deleting a Commodity in Mercodesk Master
+
+++++
+<table class=test>
+++++
+
+
+++++
+<tr><td class=test-source valign="top">
+++++
+
+.Test On
+....
+Swagger
+....
+
+++++
+</td><td class=test_result-render valign="top">
+++++
+
+.Procedure
+
+. DELETE: delete a commodity
+
+    for Commodity id
+    {
+      "name": "large",
+      "resource": "ms_commodity_subtype/small/"
+    }
+
+
+
+++++
+</td><td class=test_result-render valign="top">
+++++
+
+.Results
+. New Sub Commodity Created - *YES*
+. Showed Duplication Error - *NO*
+. Showed Duplication Error regardless of Case - *NO*
+
+.Interpretation
+
+Service *FAILED*
+
+++++
+</td></tr><tr><td></td><td></td><td></td></tr>
+++++
+
+++++
+</table>
+++++

@@ -1,0 +1,85 @@
+@startuml
+state "Service Desk" as sd {
+
+        sd: User: Service Personnel
+        sd: Create Service Tickets
+        sd: Assign Technician to carryout tasks
+        sd: Initiate activity as response
+
+
+        state "Service Assignment" as sa #cyan{
+            sa: Input: Request Type [List]
+            sa: Input: Part Number
+            sa: Input: Quantity
+            sa: Input: Serial Number (if Exists)
+            sa: Input: Assignee ID
+            sa: Input: Promise Date
+            sa: Input: Description
+            sa: \n
+            sa: Output: Request ID
+        }
+
+       state Installation #lightblue{
+            Installation : User: Service Technician
+            Installation : \n
+            Installation: Input: Sales Invoice ID
+            Installation: Input: Assembly Serial Number
+            Installation: Input: Device Name
+            Installation: Input: Calibration Weight
+            Installation: \n
+            Installation: Output: Acknowledgement
+       }
+
+       state Calibration #lightblue{
+           Calibration : User: Service Technician
+           Calibration : \n
+           Calibration : Input: Request ID
+           Calibration : Input: Assembly Serial Number
+           Calibration : Input: Calibration Weight
+           Calibration : \n
+           Calibration : Output: Acknowledgement
+
+       }
+
+       state Replacement #lightblue{
+           Replacement : User: Service Technician
+           Replacement : \n
+           Replacement : Input: Request ID
+           Replacement : Input: Assembly Serial Number
+           Replacement : Input: Component Serial Number
+           Replacement : Input: Replacement Serial Number
+           Replacement : \n
+           Replacement : Output: Acknowledgement
+       }
+
+       state Miscellaneous #lightblue{
+           Miscellaneous : User: Service Technician
+           Miscellaneous : \n
+           Miscellaneous : Input: Request ID
+           Miscellaneous : \n
+           Miscellaneous : Output: Acknowledgement
+       }
+
+      state "Buyer Registration" as Registration #cyan{
+        Registration: Input: Buyer Name
+        Registration: Input: Address
+        Registration: Input: Phone No
+        Registration: Input: Taxation Details
+        Registration: \n
+        Registration: Output: Buyer ID
+      }
+
+       Miscellaneous -l-> Calibration: If Required \n  1 .... 1
+       Installation -d-> Calibration : 1 .... 1
+       sa -l-> Installation : Delivery \n1 .... 1
+       sa -l-> Calibration : 1 .... 1
+       sa -u-> Miscellaneous : 1 .... 1
+       sa --> Replacement : 1 .... 1
+       sa -u-> Registration : 1 .... 1
+       Replacement --> Calibration: If Required \n  1 .... 1
+     }
+
+
+
+
+@enduml

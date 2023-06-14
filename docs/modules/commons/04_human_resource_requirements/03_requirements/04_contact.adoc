@@ -1,0 +1,37 @@
+
+
+=== Business Development Head
+// tag::bdm-contact[]
+[caption="Contact"]
+[NOTE]
+
+=====================================================================
+[big red]#Pavan H C#
+
+Business Development Head
+
+94830 10031 | 98860 85200
+
+pavan@kanilebettu.com
+
+=====================================================================
+// end::bdm-contact[]
+
+
+
+=== Address
+// tag::location-contact[]
+[caption="Address"]
+[NOTE]
+
+=====================================================================
+[big teal]#Kanilebettu Technologies#
+
+No 58, 3rd Main Road,
+AECS Layout, RMV 2nd Stage,
+Bangalore 560094
+
+www.kanilebettu.com
+
+=====================================================================
+// end::location-contact[]

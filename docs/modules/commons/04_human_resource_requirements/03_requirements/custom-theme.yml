@@ -1,0 +1,4 @@
+header:
+  recto:
+    right:
+      content: 'image::./knamesmall.jpg[width="50"]'

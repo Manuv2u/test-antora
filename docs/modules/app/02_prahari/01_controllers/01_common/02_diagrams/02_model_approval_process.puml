@@ -1,0 +1,20 @@
+@startuml
+    start
+    :Keypad (1) + Power;
+    :Enter Password;
+        if (Password = TAP) then (<b> True)
+         :Calibration Menu;
+         :Load Cell Capacity Setting;
+         :Accuracy Setting;
+         :Firm Name Setting;
+
+        else (<b> False)
+        :Exit;
+        Kill
+
+        endif
+
+    Stop
+
+
+@enduml

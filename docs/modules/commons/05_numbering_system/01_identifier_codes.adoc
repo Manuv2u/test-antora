@@ -1,0 +1,123 @@
+= Identifier Codes
+:Revision: 1.0
+:revision-date: 14 June 2022
+
+----
+Glossary
+
+
+----
+
+== Document Codes
+Each document Number has two parts
+
+. First two characters represent the document type 
+. Rest four characters represent the document number
+
+[cols="a,a,2a"]
+[options = "header"]
+.Document Codes
+|=====
+|Type Code| Document Number | Type of Document
+|01| 0000 |Product Requirement Specification
+|02| 0000| Customer Spec
+|03| 0000|Design Spec
+|04|0000|Test Spec
+|05|0000|Part Drawing
+|06|0000|Silkscreen Drawing
+|07|0000|PCB Artwork
+|08|0000|Cable/Harness Dwg
+|09|0000|Wiring from - to list
+|11|0000|PROM Truth Table
+|12|0000|Assemble Dwg/Parts List
+|13|0000|Logic Diagram
+|14|0000|Padmaster/solder master
+|15|0000|Schematic
+|16|0000|Software Program
+|17|0000|PROM/EPROM Spec
+|18|0000|Process Spec
+|19|0000|Material Spec
+|21|0000|Spec Control Drawing
+|22|0000|Source Control Drawing
+|23| 0000| Routing/Process Sheets
+|24 |0000| Illustrations for Process
+|25 |0000| Tool/Fixture Drawing
+|26| 0000| Inspection Process
+|27 |0000| CAM Programs
+|28| 0000 |Test Equip Drawing
+|29| 0000 |Field Instruction/Bulletin/Kit
+|31| 0000| Illustrated Parts Catalog
+|32| 0000 |Product Description Manual
+|33| 0000| Maintenance Manual
+|34| 0000| Spare Parts List
+|35| 0000| Spares kit
+|36| 0000| Installation Instructions
+|=====
+
+
+== Item Codes
+
+Items are identified using item codes and suffixed by variant. Item codes are to be referred by two components
+
+. Lead abbreviation
+. Number
+
+=== Lead abbreviations
+
+to be used as mentioned in table 2.
+[cols="a,2a"]
+[options = "header"]
+.Lead Abbreviations
+|=====
+|Abbreviation|Meaning
+|C| Controller
+|S| Scale
+|BT| Bluetooth
+|BA| Battery
+|TF| Transformer
+|SW| Switch
+|BU| Button
+|DS| Display
+|KP| Keypad
+|CA| Cable
+|LC| Load Cell
+|CN| Connector
+|LD| LED
+|H| Head Unit
+|MV| Mount Vertical
+|MH| Mount Horizontal
+|FS| Fasteners
+|=====
+
+=== Items and their codes
+
+[cols="a,a,2a"]
+[options = "header"]
+.Item Codes
+|=====
+|Lead Abbr|Number| Item
+|C|001|Ribhu Controller
+|C|002|Vibhu Controller
+|S|001|Tusker
+|S|002|Stallion
+|S|003|Gaur
+|BA|01|Lead Acid
+|BA|02|Ni Cad
+|BA|03|Li Ion
+|DS|01|Segment LED
+|DS|02|LCD Panel
+|=====
+
+=== Variants
+Variants are to be as mentioned below
+[cols="a,2a"]
+[options = "header"]
+.Lead Abbreviations
+|=====
+|Code| Variant
+|00| Baseline
+|01 - ZZ| Versions
+|=====
+
+
+

@@ -1,0 +1,99 @@
+= Product Perspective
+:toc:
+:toc-title: Contents
+:toclevels: 5
+:sectnums:
+
+
+== Introduction
+
+
+The PRAHARI family Controllers are a new, self-contained electronic devices connected to commercially off the shelf components and placed in a mechanical structure to work cohesively to meet the scope. Products in the scope of development are listed below.
+
+    * RIBHU (**PERCxSx**)
+
+    * VIBHU (**PEVCxSx**)
+
+Ribhu is the starter version of the controller for Prahari Engineering. Vibhu is the advanced version of Ribhu.
+
+The naming convention for the controllers shall be specified as per the guidelines mentioned below.
+
+
+.Controller Naming Convention
+****
+*PER R/V Cx Sx*
+
+
+*_"PE":_*  Prahari Engineering
+
+*_"R":_*  Ribhu
+*_or_*
+*_" V":_*  Vibhu
+
+*_"C":_*  Class -> *_"x":_*  1, 2 or 3
+
+*_"S":_*  Version -> *_"x":_*  01, 02 or n
+****
+
+
+== User Types
+
+The lowest denomination of the user base, who would be operating the device are considered to have zero knowledge about electronic and computing devices.
+
+The access to device calibration and settings is limited to authorized personnel only.
+
+.User and Requirement
+[options="header"]
+|======
+|User| Requirement
+|Employee| Measure
+|Owner | Measure
+
+Settings
+
+Reports
+
+|Authorized Personnel| Calibration
+
+Settings
+
+Reports
+|======
+
+
+
+== Usage
+
+The usage of the devices must be factored to measure minimum of 6000 units weighed per day and operate within the conditions mentioned below.
+
+. Device must be compliant with IS9281 Standards
+. Device mounted within weighing scale is subjected to
+.. Harsh usage
+.. Frequent wobbling
+.. Shocks during loading and unloading of items
+
+
+== Design and Implementation Constraints
+
+**TBD**
+
+
+
+== Assumptions and Dependencies
+
+=== Oprational Assumptions
+
+. End user is equipped with a smartphone with internet connection
+. COTS components and reusable components conform to **IS9281** specifications
+. End user uses either SI or Imperial units, but never a combination of both
+. Minimum setting for unit price in Money-value computing scale is set to *100 gm* conforming to **NIST Handbook 44** standards
+. End user shall use the device on level platform
+
+=== Technical Assumptions
+
+. Standard Bluetooth/BLE communication protocals are supported
+. Standard electronic components are used. Avoid component which is proprietary or available in limited production capacities
+. ISO standards applicable for PCB design is considered
+
+
+

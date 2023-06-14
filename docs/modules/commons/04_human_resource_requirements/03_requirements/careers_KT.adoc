@@ -1,0 +1,291 @@
+= Careers @ Kanilebettu Technologies
+:toc:
+:toc-title: Positions Available
+:toclevels: 3
+:revdate:   June 01, 2022
+:revnumber: 1.0.0
+
+
+'''
+{nbsp}
+
+== Contact Information
+
+include::04_contact.adoc[tag=bdm-contact]
+'''
+
+include::04_contact.adoc[tag=location-contact]
+
+
+'''
+<<<
+
+'''
+
+== Software Engineer - Java and Springboot
+
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^| Experience
+| 1 - 2 Years
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Job Description
+| include::01_software_engineering.adoc[tag=se-java-jd-exp]
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Proficiency
+|include::01_software_engineering.adoc[tag=se-java-prof-exp]
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Roles & Responsibilities
+|include::01_software_engineering.adoc[tag=se-java-rr-exp]
+
+|===========================
+
+<<<
+
+'''
+
+== Software Engineer - Java and Springboot (Fresher)
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^| Experience
+| 0 - 1 Year
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Job Description
+|include::01_software_engineering.adoc[tag=se-java-jd-fresh]
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Proficiency
+|include::01_software_engineering.adoc[tag=se-java-prof-fresh]
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Roles & Responsibilities
+|include::01_software_engineering.adoc[tag=se-java-rr-fresh]
+
+|===========================
+
+<<<
+
+'''
+
+== Software Engineer - Android UI Development
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^| Experience
+| 1 - 2 Years
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Job Description
+|include::01_software_engineering.adoc[tag=se-android-jd-exp]
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Proficiency
+|include::01_software_engineering.adoc[tag=se-android-prof-exp]
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Roles & Responsibilities
+|
+include::01_software_engineering.adoc[tag=se-android-rr-exp]
+
+|===========================
+
+<<<
+
+'''
+
+== Software Engineer - Android UI Development (Fresher)
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^| Experience
+| 0 - 1 Year
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Job Description  |
+include::01_software_engineering.adoc[tag=se-android-jd-fresh]
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Proficiency |
+include::01_software_engineering.adoc[tag=se-android-prof-fresh]
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Roles & Responsibilities |
+include::01_software_engineering.adoc[tag=se-android-rr-fresh]
+
+|===========================
+
+
+<<<
+
+'''
+
+== Software Engineer - Web Designer
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^| Experience
+| 1 - 2 Years
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Job Description  |
+include::01_software_engineering.adoc[tag=se-flutter-jd-exp]
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Proficiency |
+include::01_software_engineering.adoc[tag=se-flutter-prof-exp]
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Roles & Responsibilities |
+include::01_software_engineering.adoc[tag=se-flutter-rr-exp]
+
+|===========================
+
+<<<
+
+'''
+
+== Software Engineer - Web Designer (Fresher)
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^| Experience
+| 0 - 1 Year
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Job Description  |
+include::01_software_engineering.adoc[tag=se-flutter-jd-fresh]
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Proficiency |
+include::01_software_engineering.adoc[tag=se-flutter-prof-fresh]
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Roles & Responsibilities |
+include::01_software_engineering.adoc[tag=se-flutter-rr-fresh]
+
+|===========================
+
+<<<
+
+'''
+
+== Software Engineer - DevOps
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^| Experience
+| 2 - 3 Years
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Job Description  |
+include::01_software_engineering.adoc[tag=se-devops-jd]
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Proficiency |
+include::01_software_engineering.adoc[tag=se-devops-prof]
+
+|===========================
+
+[frame="topbot", grid="cols"]
+[cols="1h,2a"]
+|===========================
+<.^|Roles & Responsibilities |
+include::01_software_engineering.adoc[tag=se-devops-rr]
+
+|===========================
+
+
+

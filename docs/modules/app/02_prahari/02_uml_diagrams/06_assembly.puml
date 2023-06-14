@@ -1,0 +1,51 @@
+@startuml
+state Legend{
+    state Cyan #cyan
+    Cyan: Web App
+}
+
+    state Assembly {
+        Assembly: Production of Assembly
+        Assembly: User: Shop floor Personnel
+
+        state "Production" as prd #cyan{
+            prd : Input: Component Serial Numbers
+            prd : \n
+            prd : Output: Component ID
+            prd : Output: Production Series
+            prd : Output: Serial Number [String]
+            prd : Output: Date            
+        }
+
+        state "Inward Ticket" as pinvt #cyan{
+            pinvt : Input: Request ID
+            pinvt : Input: Acknowledgement
+        }
+
+        state "Outward Ticket" as poutt #cyan{
+            poutt : Input: Request Type [List]
+            poutt : Input: Part Number
+            poutt : Input: Quantity
+            poutt : Input: Serial Number (if Exists)
+            poutt : Input: Respondent
+            poutt : \n
+            poutt : Output: Request ID
+        }
+
+        state "Quality Control" as qc #cyan {
+            qc : Input: Response to Questionnaire
+            qc : \n
+            qc : Output: Pass or Reject Status
+        }
+
+        pinvt --> prd
+        prd -l-> poutt
+        prd --> qc
+        qc -r-> poutt
+    }
+
+    Inventory --> Assembly: Outward of Component \nn .... 1
+    Assembly --> Inventory: Requisition for Component\n1 .... n
+    Assembly --> Inventory: Delivery of Assembly \nn .... 1
+
+@enduml

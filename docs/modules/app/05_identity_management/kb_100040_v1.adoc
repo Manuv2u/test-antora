@@ -1,0 +1,268 @@
+= KB 100040: Identity and Access Management
+:Revision: 1.0
+:revision-date: 08 Aug 2022
+:sectnums:
+:toc:
+:toc-title: Contents
+:toclevels: 5
+:author: Sridhar K L
+
+
+== Glossary
+
+Authenticate::
+A process wherein, the credentials of a User is validated and certified as authentic.
+
+
+Authorize::
+A process wherein the privileges of a User is validated to authorize access to resources.
+
+
+Entity::
+A firm or business organisation, that can be recognized individually and can function independently.
+
+Mercotrace::
+It is an mobile application distributed free, and acts as the entry gateway for all users and entities.
+
+Mercodesk::
+It is a mobile and web application, which functions on paid subscription. The app is used to manage the business entity.
+
+OpenID Provider::
+The identity provider which is authenticating the user, such as *Keycloak* or *AWS Cognito and IAM*.
+
+Prahari::
+It is the hardware manufacturing entity of Kanilbettu. A management app will be deployed on mobile and web to assist production, manage inventory and maintenance.
+
+
+Relying Party::
+The application which is relying on the OpenID Connect Provider to verify the identity of the End User.
+
+Role::
+A role can any user setting that the user is assigned to conduct activity within the websphere. The user can have more than one role across the entities. And can have a composite role within the same entity. Examples of roles +
+. Owner
+. Accountant
+. Cashier
+. Writer
+. Shopfloor Supervisor
+. Service Technician etc.
+
+
+User or End User::
+A User is an individual who can access the applications within the scope of the role assigned.
+
+
+
+== Scope
+This document is intended to guide the reader on the fundamentals of Identity Access and Management (IAM) used for  Kanilebettu Ecosystem.
+
+.Kanilebettu Ecosystem
+[plantuml, kb_websphere, png]
+----
+include::./02_kb_websphere.puml[]
+----
+
+As shown in Figure 1, IAM acts as the secured gateway between the user and the applications. To achieve the following applications were explored,
+
+. AWS Cognito and IAM
+. Keycloak
+
+Keycloak offers good features to quickly build the required system. And hence Keycloak has been considered as the IAM suite for Kanilebettu Ecosystem.
+
+== OAuth 2.0 and OpenID Connect
+IAM  standards being used is the OAuth 2.0 for Authentication and OAuth OpenID Connect is used for Authorization.
+
+== Proposed Plan 1
+
+=== Strategy
+
+As shown in Figure 1, User accesses the ecosystem via Mercotrace Application. If the user is authorized to access feature resources such as Mercodesk or Prahari, then, Keycloak verifies the authorization to permit access. Figure 2, elaborates the strategy of using Keycloak for authentication and authorization.
+
+.Keycloak Strategy
+[plantuml, kystrat, png]
+----
+include::./01_keycloak_workflow.puml[]
+----
+
+=== Realm, Users, Roles, Groups and Clients - Keycloak Terms
+Within the context of Keycloak, a Realm, is a bounded universe. No information can be allowed to transpire across the realm boundaries. There are Users who can be members of Groups and can have defined Roles. Roles permit the User to access the Client with the allowed scopes mapped to the roles.
+
+Figure 3 describes the concept.
+
+.Keycloak Realm
+
+image::../../01_images/Merco Ecosys - Realm.jpg[]
+
+
+----
+Here,
+
+Realm: KB India
+Client: Mercotrace
+Groups: Entities
+Roles: User roles within Entity
+Scopes: Read, Write access to resources
+----
+
+=== Realm Settings
+
+
+
+=== Client Settings
+
+=== HTTP Endpoints
+
+Keycloak provides the following HTTP endpoints for relevant usages.
+
+. Issuer
+
+ http://{url}:{port}/realms/kbind
+
+. Auth Code Request
+
+ http://{url}:{port}/realms/kbind/protocol/openid-connect/auth
+
+. Token Request
+
+ http://{url}:{port}/realms/kbind/protocol/openid-connect/token
+
+. Userinfo
+
+  http://{url}:{port}/realms/kbind/protocol/openid-connect/userinfo
+
+
+
+. Logout
+
+  http://{url}:{port}/realms/kbind/protocol/openid-connect/logout
+
+
+=== PKCE Flow
+
+PKCE stands for Proof Key for Code Exchange. This method shall be used for both authentication and authorization. The parameters to be used are listed below.
+
+.PKCE Auth Code Request Params
+----
+response_type:code
+client_id:
+state:
+scope:
+redirect_uri:
+code_challenge_method:S256
+code_challenge:
+----
+
+
+
+.PKCE Token Request Params
+----
+grant_type:authorization_code
+client_id:
+client_secret:
+scope:
+redirect_uri:
+code:
+code_verifier:
+----
+
+The `state` is a user defined alphanumeric string. The `code_challenge` and `code_verifier` are to be generated for each auth code request using `code_challenge_method`.
+
+
+=== User Registration and Authentication
+There are two ways a user is registered in KB Realm.
+
+. Self Registration
+
+. Third Party Registration
+
+Each method shall be explained below.
+
+Figure 4 shows the concept of registration process.
+
+.User Registration
+
+image::../../01_images/Merco Ecosys - User Registration.jpg[]
+
+As seen in Figure 4, the user can be registered both by an authorized Mercodesk User and the user can register themselves as Mercotrace User. A Mercodesk User is implicitly a Mercotrace User.
+
+==== Mobile Number as Username
+
+Mobile number based access can be made available. Currently, there are only few experimental approaches available to implement the method using Keycloak Service Provider Interfaces (SPI).
+
+As per this plan, it is intended to use Mobile numbers as the Username for each user. Username is used to identify the user within the Realm, but within the application, a UUID key attribute shall be enabled to identify the user.
+
+.Login Page
+
+image::../../01_images/login_page.jpg[]
+
+
+
+==== Self Registration
+
+A user registers into the application by clicking on Register link as shown in Figure 5.
+The action leads to the registration form to create an account as shown in Figure 6. The user provides the following information.
+
+. First Name
+. Last Name
+. Mobile Number
+. Password
+
+.Create Account
+
+image::../../01_images/create_account.jpg[]
+
+
+==== Keycloak custom theme
+
+To enable self registration, the Keycloak registration form is modified. The new `register.ftl` file and the `login.ftl` are modified and are to be loaded in a new folder under themes. They are to be borrowed from the `base` file, as the methods are implemented from it.
+
+All messaging, css and relevant properties files are suitably modified to meet the new requirements.
+
+To deploy keycloak as docker image, the new themes have to be built into the JAR.
+
+==== Third Party Registration
+
+A Mercodesk authorized user can register the user as part of the workflow. The Client performs the following operation in sequence to register a new user.
+
+===== Type the Mobile Number (since USERNAME = Mobile Number)
+
+----
+ GET User data with Username
+
+http://{url}:{port}/admin/realms/kbind/users
+
+Content-Type:application/json
+Authorization:Bearer {access token}
+
+----
+
+===== If found: displays Name, else Asks for Name
+
+----
+POST User data with Username and First Name
+
+http://{url}:{port}/admin/realms/kbind/users
+
+Content-Type:application/json
+Authorization:Bearer {access token}
+
+Body:
+{ "username":{Mobile Number}, "enabled":"true", "first_name":{Name}, "attributes": {"UUID":{Value}} }
+----
+
+===== Add
+
+
+==== UUID Key Attribute
+
+==== SMS Integration
+
+==== Issues
+
+. Since `username` is modified to receive the Mobile Number. A new validator has to be implemented in the Keycloak SPI, to enforce a phone number format.
+
+. The mobile number received must be patched into the User setting as attribute or a mechanism has to be incorporated to send OTP via SMS using AWS SNS. No built-in solution is available for this purpose yet.
+
+. Business point of view for the display Name of the realm
+
+
+

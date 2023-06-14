@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Open App;
+:Login Page;
+if (New User) then (YES)
+  :Sign Up;
+  :Enter Phone Number;
+  :Enter Name;
+  :Get OTP;
+    if (Phone Number Exists) then (YES)
+        :Receive Existing Name;
+        if (Name Incorrect) then (YES)
+          :Edit Name in Profile Page;
+        else (NO)
+          :Continue;
+        endif
+    else (NO)
+        : Register User;
+    endif
+
+  else (NO)
+    :Sign In;
+    :Enter Phone Number ;
+    :Get OTP;
+  endif
+
+:Login to App;
+stop
+
+@enduml

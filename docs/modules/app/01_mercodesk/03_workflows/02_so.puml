@@ -1,0 +1,82 @@
+@startuml
+<style>
+     ' define a new style, using CSS class syntax
+     .appStyle {
+        BackGroundColor #3083A7
+        FontColor White
+        FontStyle Bold
+     }
+</style>
+!theme vibrant
+
+start
+
+<<appStyle>> :Mercodesk Home;
+
+:Select Sales Order;
+if (Sale Order Action) then (<b> New)
+    :Create New Sale Order;
+
+else (<b> Existing)
+    :Select Sale Order;
+
+
+endif
+
+fork
+    partition Vehicle_Information {
+    :Vehicle Registration Number * ;
+    :Vehicle Origin location;
+    :Driver Details;
+    }
+
+    fork again
+    partition Tonnage_Information* {
+        :Goods loaded Vehicle Weight;
+        :Goods Unloaded Vehicle Weight;
+        :Net weight of Goods;
+        }
+
+    fork again
+
+    partition Freight_Rental_Information* {
+        :Type of Freight Rental \n By Weight \n By Count \n By Fixed Amount/Lumpsum ;
+        :Rate/ Freight Charges;
+        :Specification Quantum;
+        }
+
+   floating note right
+       Freight Voucher
+       ----
+       //Towards: // Freight Charges
+       //Ref:// Vehicle Number
+       //Paid to: // Contact Info
+       //Method: // Mode and Paid By
+       //Status: // Closed or Open
+   end note
+
+
+    fork again
+    partition  Goods_Information* {
+        :Seller Details ;
+        :Commodity and Package Details;
+        :Lot Details;
+        }
+
+       floating note right
+           Seller Voucher
+           ----
+           //Towards: // Sales Proceeds
+           //Ref:// Vehicle Number
+           //Paid to: // Seller
+           //Method: // Mode and Paid By
+           //Status: // Closed or Open
+       end note
+
+
+    end fork
+
+
+stop
+
+@enduml

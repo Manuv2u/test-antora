@@ -1,0 +1,34 @@
+= Clarification Checklist for Ribhu Controller
+
+
+[options="interactive"]
+* [ ] What are the kind of faults that can be detected
+
+    Change in the desired output which is greater than e.
+
+* [ ] How does the controller indicate or react in the event of such faults
+* [ ] What is the maximum tare effect? Is it Subtractive or Additive
+
+    Maximum Tare effect (T = +....., T = -.....)
+    It is the maximum capacity of the scale that includes the tare value. Max permissible value that can be used for Tare without affecting the total capacity of the scale.
+
+* [ ] Zero setting : is there an explicit mechanism to set zero each time (zeroing minute errors) or used only during calibration.
+* [ ] Zero tracking : as we set the scale to auto-zero within small changes, can this be considered as zero tracking.
+* [ ] What is the maximum safe load limit
+* [ ] What is the rated operating condition in terms of
+    . temperature
+    . electrical requirements
+    . platform level
+    . humidity?
+    . external electrical influence
+    . external mechanical influence
+
+
+* [ ] As per Govt rule, there shall be no indication of above MAx + 9e
+
+    This yields: 9 x 50 = 450 g
+    Max: 300 kg
+    Indication limit = Max + 9e = 340
+
+
+

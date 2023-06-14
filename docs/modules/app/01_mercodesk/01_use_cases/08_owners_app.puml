@@ -1,0 +1,56 @@
+@startuml
+
+actor Owner as ow
+
+
+package employees {
+    actor Accountant as acc
+    actor Cashier as cas
+    actor Writer as wrt
+}
+
+package app{
+    rectangle sales {
+        usecase "Inward Goods" as ig
+        usecase "Record Auction Bids" as rb
+        usecase "Record Weights" as rw
+        usecase "Create Sales Bill" as sb
+        usecase "Create Sellers Invoice" as si
+    }
+
+    rectangle accounts {
+        usecase "Manage Expenses" as mexp
+        usecase "Maintain Accounts" as macc
+    }
+    usecase "Manage Employees" as memp
+}
+
+ow --> memp
+memp --> employees
+
+ig -d-> rb
+rb -d-> rw
+rw -d-> sb
+sb -d-> si
+
+macc --> mexp
+
+ow --> sales
+
+acc --> ig
+wrt --> rb
+wrt --> rw
+acc --> sb
+acc --> si
+
+ow --> accounts
+acc --> macc
+cas --> mexp
+
+
+
+
+
+
+
+@enduml

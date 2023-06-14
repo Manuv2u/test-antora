@@ -1,0 +1,27 @@
+@startuml
+state Legend{
+    state Green #lightgreen
+    Green: Swagger UI
+}
+    state Part{
+
+        Part: Generate Part Number
+        Part: User: KB Management
+        Part: No Deletion or Modification allowed
+
+        state "Part Number" as pn #lightgreen{
+          pn: Input: Part Type [Pre-defined List]
+          pn: Input: Name [String]
+          pn: Input: Shelf Life
+          pn: \n
+          pn: Output: Part No [String]
+          pn: Output: Date
+        }
+
+        [*] --> pn
+
+    }
+
+Component -u-> Part : Specification Requisition \n 1...1
+
+@enduml

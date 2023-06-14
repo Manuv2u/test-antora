@@ -1,0 +1,403 @@
+:doctype: book
+:icons: font
+:icon-set: fas
+
+= PR 100003: Product Requirement Specification for Ribhu Class III Controller
+:Revision: 2.0
+:revision-date: 17 April 2023
+:toc:
+:toc-title: Contents
+:toclevels: 6
+:sectnums:
+
+<<<
+== Definition
+This document defines the requirement specification for *RIBHU* weighing scale controller with *Class III* accuracy.
+
+
+== Introduction
+
+=== Purpose
+
+The purpose of this document is to describe the technical and operational requirements for developing the *RIBHU Class III* controller for weighing scales.
+
+=== Intended Audience and Reading Suggestions
+
+- Product Team
+- Development Team (Hardware, Software)
+- Testers
+- PCB designer
+- Consultants
+- Business Owners
+
+
+=== Project Scope
+
+The controllers have to meet the aims listed below,
+
+. Conform to OIML Standards
+. Remotely Configurable
+. Calibrated both manually and remotely
+. Remotely acquire measured data
+
+
+== Overall Description
+
+=== Product Features
+
+. Accuracy Class III
+. Connect to C3 class Load Cells
+. Remotely Configurable
+. Connect to 6 digit 7 Segment display
+. Connect to 4 Button Keypad
+. Broadcasting Information
+. Audio Alerts
+. Visual Alerts
+. Zero Setting and Tare
+. Power and Tare Buttons
+. Power Source Management
+. Device Compactness
+. Modular Assembly
+
+
+
+=== User Classes and Characteristics
+
+Users of this device are expected to be with very limited or no knowledge about electronic and computing devices. And the weighing scale with this controller are expected to make a minimum of 6000 measurements daily.
+
+
+=== Operating Environment
+
+. Must be compliant with *OIML* Standards (-10
+&#176;C to 70 &#176;C)
+. Must endure rough handling
+. Must be able to sustain frequent wobbling and shocks during loading and unloading of weights
+. Must function in dust prone environment
+
+
+=== Design and Implementation Constraints
+
+. No forced cooling system will be available
+. Controller shall be placed within a metallic container
+. All connections are to be sturdy but must be easier to assemble or disassemble
+. Must be able to handle fluctuating AC input
+. Controller must output to two displays
+. Controller must establish bidirectional communication with Mobile phone
+. Wireless connection is established to the range of 30 ft (9 m) from the device.
+
+
+
+=== Assumptions and Dependencies
+
+
+==== General Assumptions
+
+. COTS components and reusable components conform to *OIML* specifications
+. End user uses either SI or Imperial units, but never a combination of both
+. End user shall use the device on level platform
+
+==== Technical Assumptions
+
+. Standard Bluetooth/BLE communication protocols are supported
+. Standard electronic components are used. Avoid component which is proprietary or available in limited production capacities
+. ISO standards applicable for PCB design is considered
+
+
+
+== System Features of Ribhu Class III
+
+.Ribhu Block Diagram
+image::../00_images/ribhu_block_dgm.png[]
+
+
+.Ribhu Functional Block Diagram
+image::../00_images/ribhu_functional_dgm.png[]
+
+
+<<<
+
+=== Accuracy Class III
+
+==== Description and Priority
+
+Weighing scales are divided based on Accuracy classes. Operational parameters are defined based on the Class. Controllers are designed to be **CLASS III** accuracy device.
+
+
+==== Setting Accuracy
+
+The following procedure is used to determine the accuracy of the weighing scale. The accuracy of weighing scale is defined by the Number of Verification scale as shown in the table below.
+
+.Accuracy Class wrt Verification Scale
+|====
+.2+^.^|_Accuracy Class_ .2+^.^|_Verification scale interval e_ 2+^.^|_Number if verification scale intervals n = Max/e_ .2+^.^|_Minimum capacity_
+^.^|_minimum_ ^.^|_maximum_
+
+^.^|Special I|0.001 g &#8804; e ^.^| 50 000^*^ ^.^| -- ^.^|100e
+.2+^.^|High II|0.001 g &#8804; e &#8804; 0.05 g ^.^| 100 ^.^| 100 000 ^.^|20e
+|0.1 g &#8804; e  ^.^| 50 000^*^ ^.^| 100 000 ^.^|50e
+.2+^.^|Medium III|0.1 g &#8804; e &#8804; 2 g ^.^| 50 000^*^ ^.^| 10 000 ^.^|20e
+|5 g &#8804; e ^.^| 50 000^*^ ^.^| 10 000 ^.^|20e
+^.^|Ordinary IV|5 g &#8804; e ^.^| 50 000^*^ ^.^| 1000 ^.^|10e
+|====
+
+Wherein *_Max_* is the maximum weight to be measured. Hence, considering a scales with max capacities ranging from 50 kg to 500 kg and to fit within the requirement of *_Accuracy Class III_*, different verification scale interval is calculated. Table below lists the minimum and maximum limits for each capacity.
+
+.Number of verification scale interval limits for various max capacities
+[cols="^.^,^.^s,^.^s,^.^s,^.^s,^.^s,^.^s"]
+|====
+| *_e_* (g) |50 |100|150|200|300|500
+|5|10 000| | | | |
+|10||10 000 | | | |
+|20|| | 7500 |10 000 |  |
+|30|| | | |  10 000|
+|50|| | | | 6000 | 10 000
+|100|500| | | | |
+|200|| 500 | |||
+|300|| | 500  |||
+|400|| | |500||
+|600|| | | | 500|833|
+|====
+
+[.portrait]
+<<<
+
+==== Action Items
+// tag::pr100003-accuracy-chk[]
+
+[%header, cols=".^2a,^.^,^.^"]
+|====
+|Action Item| User | Mode
+|Set Max capacity of the Weighing Scale| Factory | Bluetooth
+|Set Verification Scale Interval|Factory|Bluetooth
+|====
+// end::pr100003-accuracy-chk[]
+
+=== Tare and Zero Setting
+
+==== Tare
+For the Ribhu based weighing scale, *_Subtractive Tare_* is considered.
+
+==== Zero Setting
+
+The dead pan weight is captured during each startup. It is registered as *ZERO*. The new slope is calculated with the calibrated *LOAD* value to obtain the slope post start up.
+
+
+=== Security Requirements for Configurations Setting
+==== Configuration Settings
+Configurations listed below has to be set for the functioning of the weighing scale as designed. The access to controller to set the configuration must be secured from unauthorized access.
+
+. Maximum Capacity of the Weighing Scale
+. Verification Scale Interval *_e_* of the Scale
+. Designate Controller Serial Number
+. Download Events
+. Factory Reset
+
+
+==== Security
+Any person access to the controller can edit the values to change the designed characteristics of the Weighing Scale. Any erroneous data entered here can result in the failure of the device to deliver accurate results. Securing these variables is paramount. Each Configuration Change Event must be recorded in the Event Logger. The format for the record in the Event logger must be as shown below
+
+ event count (000 to 999) , parameter ID ,  date and time ,  new value of the parameter
+
+==== Manual Access
+The controller can be accessed via 4 button keypad. But for configuration settings, *_manual access is disallowed_*.
+
+==== Wireless Access
+Wireless Access is achieved via Bluetooth. The controller is accessed via BT module. The Controller Serial Number is to be used as BT Broadcast ID. To securely access all the levels mentioned in the table below must be cleared.
+
+.Wireless Access Security broadview
+[options="header", cols="^.^,^.^2a,.^4a"]
+|====
+^|Layer ^| Event ^| Challenge
+s| 1 | User Login | User is Authorized through Prahari APP
+s| 2 | BT Passkey | BT Passkey of BT Module broadcast id  matches data stored in DB
+|====
+
+==== Action Items
+
+// tag::pr100003-config-access[]
+[%header, cols=".^2a,^.^,^.^"]
+|====
+|Action Item| User | Mode
+|Record Configuration Change Event in Event Logger|--| Internal
+|Broadcast Controller S/N|--|Bluetooth
+|====
+
+// end::pr100003-config-access[]
+
+=== Security Requirements for Calibration
+==== Calibration Settings
+For the weighing scale to perform accurately, it has to be calibrated to known weight conditions. Any load on the receptor is then either interpolated or extrapolated from the initial conditions. The calibration setting is paramount to the accuracy of the weight measurement. The following procedure should be used to calibrate the Ribhu based Weighing scales.
+
+. Enter Calibration Mode
+. Clear the Pan for No Load or Zero setting
+. Set a known standardized weight on the pan
+. Enter the weight
+. Record Calibration Date
+. Exit Calibration
+
+
+==== Security
+Any person access to the calibration, erroneous entries leads to false results. Hence, to calibrate the device, security has to be in place, to monitor and control the access to this setting. Both manual and wireless access is allowed to calibrate the device.
+
+==== Manual Access
+For Manual access, the following steps are to be followed to calibrate the device.
+
+. Break the Seal to access the Controller.
+. Push the spring button on Controller PCB to enter calibration mode
+. Enter the 6 digit Passkey via 4 button keypad
+
+
+
+==== Wireless Access
+Accessed by authorized User via Prahari App.
+
+==== Action Items
+// tag::pr100003-calibration-access[]
+
+[%header, cols=".^2a,^.^,^.^"]
+|====
+|Action Item| User | Mode
+|Break the Seal| User| Physical
+|Push Button Status for Manual Calibration| User | Physical
+|6 digit Passkey to access calibration mode|User| Physical
+|Alphanumeric Passkey to access calibration mode |User |Bluetooth
+|Record No Load|User| Keypad/ BT
+|Record Load| User| Keypad/ BT
+|Record Calibration Event in Event Logger|--| Internal
+|====
+// end::pr100003-calibration-access[]
+
+
+=== Communication Requirements
+The weighing scale has to communicate with the user via the following modes.
+
+* Bluetooth
+* 6 Digit 7 Segment Display
+* LED
+* Beeper
+* 4 Button Keypad
+** &#9776;(MENU)
+** &#8963; (UP)
+** &#8964; (DOWN)
+** &#10004; (OK)
+
+The following table shows the communications to be achieved between the weighing scale and the human user.
+[options="header", cols=".^,.^,.^,^.^,^.^,^.^"]
+|====
+^|Event ^| Bluetooth ^| 7 Segment Display ^| LED  ^| Beeper  ^| Key
+|Power ON | -- | Flash all segments | GREEN |  | --
+| On Charge | Display Battery Charge Status | -- | RED | 1 Short Beep | --
+| Full Charge | Display Battery Charge Status | -- | OFF | -- |--
+|Menu Scroll NEXT |--|Display Items|--|1 Short Beep s| &#8963;
+|Menu Scroll PREVIOUS |--|Display Items|--|1 Short Beep s| &#8964;
+|Option SELECT |--|Display Items|--|1 Long Beep s| &#10004;
+|Number INCREASE |--|Display Items|--|1 Short Beep s| &#8963;
+|Number DECREASE |--|Display Items|--|1 Short Beep s| &#8964;
+|EXIT to Previous Menu |--|Display Items|--|1 Long Beep s| &#9776;
+|Low Battery |Display Battery Charge Status| "LoBat"|--|--|--
+|Random or no value |Err 02|Err 02|Blink RED and GREEN| --|
+|Scale Overload |Scale Overload|Max OL|Blink RED| 2 Short Beeps + 1 sec interval| --
+|====
+
+==== Menu items
+When in Manually accessed Calibration mode, the menu items to be displayed on the 6 Digit 7 Segment displays are as follows,
+
+. System Configuration Settings
+- Max Capacity
+- Verification Scale Interval
+- Serial Number
+
+. Last Calibration Settings
+- Last Calibration Date
+- Calibrate
+* Set Zero
+* Set Load
+** Enter Weight
+
+==== Action Items
+// tag::pr100003-communications[]
+
+[%header, cols=".^2a,^.^,^.^"]
+|====
+|Action Item| User | Mode
+|Use Rocker switch to Power ON| User | Physical
+|Battery Charge Status on Weighing Scale| User | LED
+|Battery Charge Status on App| User | Bluetooth
+|Menu on Weighing Scale| User | Physical
+|Navigate Menu on Weighing Scale | User | Keypad
+|Error on Weighing Scale| User | 7 Segment display, LED and Beeper
+|Error on App| User | Bluetooth
+
+|====
+// end::pr100003-communications[]
+
+
+=== Serial Number Convention
+Each component is given a serial number for traceability. Components are classified as either proprietary of  Kanilebettu Technologies or commercially bought out items.
+
+==== General Naming Convention
+----
+ PR 100018 S001 2200 000x
+
+Where,
+
+    PR          Component Classification
+    100018      Part Number
+    S001        Vendor Code
+    22          Year of Manufacture
+    00          Series of Manufacture (00 - ZZ)
+    000x        Running Number (0001 to 9999)
+
+----
+
+
+==== Controller Serial Number
+Part Number for Ribhu Controller is
+
+ PR 100018
+
+The remainder of the numbers shall be issued during production by Kanilebettu Technologies.
+
+
+==== Bluetooth Module Serial Number
+
+Part Number for the bluetooth module is
+
+ CS 100022
+
+The remainder of the numbers shall be issued during production by Kanilebettu Technologies.
+
+
+==== Action Items
+// tag::pr100003-device-sn[]
+
+[%header, cols=".^2a,^.^,^.^"]
+|====
+|Action Item| User | Mode
+|Record Device Serial Number| Factory | Flash via Bluetooth
+|Broadcast Controller Serial Number | Factory | Flash via Bluetooth
+|====
+// end::pr100003-device-sn[]
+
+
+== Checklist
+A list of all action items mentioned in this document.
+
+.Accurcay Class
+include::pr_100003.adoc[tag=pr100003-accuracy-chk]
+
+.Tare and Zero Setting
+include::pr_100003.adoc[tag=pr100003-tare-zero]
+
+.Access to Configurations
+include::pr_100003.adoc[tag=pr100003-config-access]
+
+.Access to Calibration
+include::pr_100003.adoc[tag=pr100003-calibration-access]
+
+.Communications
+include::pr_100003.adoc[tag=pr100003-communications]
+
+.Serial Numbers
+include::pr_100003.adoc[tag=pr100003-device-sn]
+

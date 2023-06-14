@@ -1,0 +1,159 @@
+@startuml
+
+state Legend{
+    state Green #lightgreen
+    state Blue #lightblue
+    state Cyan #cyan
+
+    Green: Swagger UI
+    Blue: Mobile App
+    Cyan: Web App
+
+}
+    state Part{
+
+        Part: Generate Part Number
+        Part: User: KB Management
+        Part: No Deletion or Modification allowed
+        Part: [[03_part.puml]]
+
+        state "Part Number" as pn #lightgreen{
+            pn: Specifications
+        }
+    }
+
+    state Component {
+
+        Component: Instance of a Part
+        Component: User: Shop Floor Supervisor
+        Component: No Deletion or Modification allowed
+        Component: Update Component Status from Inventory
+        Component: [[04_component.puml]]
+
+        state Generation #lightgreen
+        state "Serial Number" as sn #lightgreen
+        state "Component State" as cs #lightgreen
+        state "Request Ticket" as pt  #lightgreen
+
+        Generation --> sn: 1 ... 1
+        cs --> sn: 1 .... 1
+        pt -l-> Generation : Initiate Production \n1 .... n
+        pt --> cs
+
+    }
+
+   
+    Component -u-> Part: Specification Requisition\n1 .... 1
+
+    state Inventory {
+
+        Inventory: Reference Part Number
+        Inventory: Net Quantity in Stock
+        Inventory: User: Warehouse Supervisor
+        Inventory: Log changes in Component State
+        Inventory: [[05_inventory.puml]]
+
+        state "Component Book" as cb #lightgreen
+        state "Inward Ticket" as invt #lightgreen
+        state "Outward Ticket" as outt #lightgreen
+        state "Storage" as stor #lightgreen
+
+        cb --> outt
+        invt --> stor
+        stor -l-> cb
+    }
+
+    Component --> Inventory: Inward of Component \n1 .... 1
+    Inventory --> Component: Requisition for Component \n 1 .... n
+
+
+    state Assembly {
+        Assembly: Production of Assembly
+        Assembly: User: Shop floor Personnel
+        Assembly: [[06_assembly.puml]]
+
+        state "Production" as prd #cyan
+        state "Inward Ticket" as pinvt #cyan
+        state "Outward Ticket" as poutt #cyan
+        state "Quality Control" as qc #cyan
+
+        pinvt --> prd
+        prd -l-> poutt
+        prd --> qc
+        qc -r-> poutt
+    }
+    }
+
+    Inventory --> Assembly: Outward of Component \nn .... 1
+    Assembly --> Inventory: Requisition for Component\n1 .... n
+    Assembly --> Inventory: Delivery of Assembly \nn .... 1
+
+
+     state "Customer Care" as cc #cyan
+
+
+     state "Service Desk" as sd {
+
+       sd: User: Service Personnel
+       sd: Create Service Tickets
+       sd: Assign Technician to carryout tasks
+       sd: Initiate activity as response
+       sd: [[08_service_desk.puml]]
+
+       state "Service Assignment" as sa #cyan
+       state Installation #lightblue
+       state Calibration #lightblue
+       state Replacement #lightblue
+       state Miscellaneous #lightblue
+       state "Buyer Registration" as Registration #cyan
+
+       Miscellaneous -l-> Calibration: If Required \n  1 .... 1
+       Installation -d-> Calibration : 1 .... 1
+       sa -l-> Installation : Delivery \n1 .... 1
+       sa -l-> Calibration : 1 .... 1
+       sa -u-> Miscellaneous : 1 .... 1
+       sa --> Replacement : 1 .... 1
+       sa -u-> Registration : 1 .... 1
+       Replacement --> Calibration: If Required \n  1 .... 1
+
+     }
+
+
+    state Sales{
+
+        Sales: User: Sales Rep
+        Sales: Create Sales Invoice to Buyer
+        Sales: Close Receipt upon payment to initiate production
+        Sales: Partial Payments allowed
+        Sales: [[07_sales.puml]]
+
+        state "Sales Invoice" as si #lightblue
+        state "Sales Receipt" as sr #lightblue
+
+        cc --> Sales: Sale Initiation \n1 .... 1
+        si --> sr: Sale Closure \n1 .... n
+
+    }
+
+    [*] -d-> cc : Receive Request
+
+    cc -d-> sd : Service Initiation \n1 .... 1
+    Sales --> Inventory : Request for Component \n1 .... n
+
+    Inventory --> sd: Confirmation to Dispatch \nn .... 1
+
+
+    Miscellaneous : User: Service Technician
+    Installation : User: Service Technician
+    Calibration : User: Service Technician
+    Replacement : User: Service Technician
+    cc : User: Customer Care Representative
+
+
+
+Legend -[hidden]-> sd
+
+
+
+
+@enduml

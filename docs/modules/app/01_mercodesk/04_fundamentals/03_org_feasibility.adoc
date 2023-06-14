@@ -1,0 +1,296 @@
+= Organisational Feasibility
+:toc:
+:toc-title: Contents
+:toclevels: 5
+:sectnums:
+
+== Introduction
+The most important question to be answered is "Will the Customer use our application?". it would be difficult to ascertain a concrete answer to this question. Although, questions might be asked and research user requirements, it would still be very inconclusive. But there is considerable reasoning in taking an educated risk to continue and deliver this project. The following passages of arguments must present itself to firmly accept the development, and also be a guiding principle for the project.
+
+The following questions are explored, both intuitively and through observations.
+
+. Is this a completely new product?
+. What is the learning curve for the user?
+. What arguments can be placed to accept or reject the product?
+
+== Role based Novelty
+The product offers features for variety of roles within a firm on a common platform. In the current scenario, the use of software to improve productivity is nothing new. But the manner in which it is used is of importance. The table below answers the question more descriptively.
+
+
+
+[options="header, footer",cols="^s,<,<,<"]
+|====
+|ROLE| Current Practice| Why to use| Why not to use
+
+|Owner| Paper Trail| Instant access to information
+
+Accuracy
+
+Reduced Errors - leads to savings
+
+Increased speed of operations
+| Afraid of messing up
+|Accountant| PC based software| No ambiguities
+
+Instant access to information| Restricts manipulation
+
+Increased dependency
+
+Increased Accountability - Cannot blame app inadequacy
+|Cashier|Paper Trail|Traceable
+
+Instant access to information
+| Traceable
+|Writer|Paper Trail|Reduces Errors
+
+Speeds up operations|Restricts manipulation
+|ROLE ^s| Current Practice ^s| Why to use ^s| Why not to use
+|====
+
+
+== Owner's Concerns
+
+
+As an Owner, the concerns that hinder them from committing to use the application are addressed below.
+
+---
+
+=== What if an error is made?
+
+If an error is made, the application must be able to do the following,
+
+*Aim: User must not worry to commit mistake.*
+
+*Goals*:
+
+. Allow reasonable tolerance to rectify errors committed.
+. Get to it and correct it in minimum number of steps.
+. Correct the mistake without re-entering too many data all over again.
+
+---
+=== Is it easily rectifiable?
+Making corrections depends on the extent of impact they can have on the cascading data. A clear communication to  clarify the impact, can remove any ambiguities and provide confidence to the user in committing to such corrections. Further, by making the process of correction as a simple data replacement, it can further boost the confidence of the user.
+
+*Aim: User can easily understand the cascading effect and has simple amendment process.*
+
+*Goals*:
+
+. Remove all ambiguities for the user of intended corrections.
+. Clear communication when correction is restricted or disallowed.
+. Having a simplified process of selecting and modifying the data directly is paramount.
+
+.Error Correction
+[plantuml, Text, png]
+----
+include::./../../01_mercodesk/01_use_cases/07_error_corrections.puml[]
+----
+
+
+=== Will I have to learn how to operate a software application?
+
+To learn any new skill is understandably overwhelming. In order to reduce the anxiety and ease the user towards usage of the app, it is imperative that the app is made simpler and modular. Since the user is adept at the underlying business logic, the focus is only to help in wielding the tool to the maximum benefit of the user.
+
+As seen in Figure 2, the application built modularly can be easily designated as the current practice exist. As an owner it is expected to have access to all modules regardless of the usage.
+
+
+*Aim: User must be able to easily correlate business activity with the app.*
+
+*Goals*:
+
+. Keywords must be relatable.
+. Processes must be relatable.
+. Workflow must mimic reality, with minimal deviation or detours.
+. App must cater to roles, hence divided into clearly defined functional modules for easy delegation.
+. It must be easy for the user to master any functional module independently.
+
+.Role Based Functional Modules
+[plantuml, Text1, png]
+----
+include::./../../01_mercodesk/01_use_cases/08_owners_app.puml[]
+----
+---
+=== Will it cost me more? What is my return on investment?
+Yes, in comparison to the currently used applications, the cost of the application is on the higher side.
+
+The savings accrued from eliminating losses due to erroneous inputs and also various other features aiding the business activity would be a significant return on investment. For detailed explanation for the return on investment see sections *3.12* to *3.15*.
+
+*Aim: To make the application worthy of its investment. The savings must offset the cost of subscription significantly.*
+
+*Goals*:
+
+. Application must be used seamlessly across the roles .
+. Achieve high productivity.
+. Significantly reduced labor dependency with functional modules with simpler learning curve.
+. Reduce or eliminate losses due to erroneous inputs or manipulations, through traceability and data concurrency.
+
+---
+
+=== What advantages will this provide over the current practice?
+
+Comparisons of the current and new practices are diagrammatically shown below. Within the *Current Practice*, paper trail are generated at many business processes. Data from these paper documents are then transferred to computer application, which is further used for finalization of the sales activity.
+
+Whereas, in the *New Practice*, data generated from almost all business processes are directly transferred to the computer application. Although, the Sales Pad can be directly be generated using computer application, paper document is still encouraged because no computer application is still developed enough to accommodate the speed and error resilience of a pen on paper!
+
+
+
+[cols="a,a"]
+[options="header"]
+|===
+|Current Practice
+|New Practice
+|.Current Practice
+[plantuml, Text2, png]
+----
+include::./../../01_mercodesk/01_use_cases/09_practices_current.puml[]
+----
+
+|.New Practice
+[plantuml, Text3, png]
+----
+include::./../../01_mercodesk/01_use_cases/10_practices_new.puml[]
+----
+|===
+
+Using the comparison between figure 3 and 4, the *Goals* to achieve, using the *New Practice* are,
+
+. Reduction in errors creeping in to the system during data transfer from paper to system.
+. Reduction in time taken to transfer data, and hence increase in productivity. This also includes the time taken to recheck data between the transfers.
+. Achieving data concurrency, which allows
+.. Real time monitoring
+.. Rapid information access
+.. Instant Resolution
+
+
+---
+
+=== Will it allow manipulation?
+
+Data manipulation is possible, but traceability is to be achieved. The objective is to be unambiguous about the manipulation process.
+
+*Aim: To make the application, flexible to allow data manipulation, yet at same time, robust to trace the process.*
+
+*Goals*:
+
+. Identify variables that are subject to manipulation.
+. Assignment of roles to allow for manipulation.
+. Every data manipulation must be waterfall, hence no backward influence.
+. Logs to be available to trace,
+.. What data is manipulated?
+.. Who manipulated?
+.. When was it manipulated?
+
+---
+
+=== Can that manipulation be subject to external scrutiny?
+
+All the data generated is owned by the User. And it is the prerogative of the user to produce documents of their will and intent to external scrutiny. No data shall be accessed or provided by the Firm to any external requests.
+
+*Aim: To establish beyond doubt regarding the security of the data stored on the repository.*
+
+*Goals*:
+
+. To show the data is secured and cannot be accessed externally.
+. To ensure that, only select data can be fetched by the user as they intend.
+
+---
+
+=== Do I have to hire trained labor?
+No. Among the principal goal of the application is to eliminate the dependency on skilled labor.
+
+*Aim: To make the application simplified for the user, but intelligent to auto generate accurate reports.*
+
+*Goals*:
+
+. To ensure the user can operate the application based on the logics of the business.
+. To automatically generate reports for accounting purposes and sales summaries.
+
+---
+
+=== Do I have to invest in additional hardware?
+Yes. The investment shall be a part of the subscription process. The list of new hardware compatible to the application are listed below,
+
+. A thermal printer
+. A compatible weighing scale
+
+User should ensure, internet is available on devices such as mobile phone and desktop PC.
+
+*Aim: To ensure that the one time installation cost should never become deal-breaker.*
+
+*Goals*:
+
+. To ensure a well worked out package for subscription, that can balance the cost of new installation and the application management.
+. To ensure, the marketing can convince the user, that the cost of installation is well justified.
+
+---
+
+=== Can I get instant resolution, if anything goes wrong?
+Despite glaring issues with the current application, Users are continuing the patronage for two reasons.
+
+. *Low Cost:* Valued less because of glaring shortfalls.
+. *Quick Response:* It is the response to issues that are addressed but not the resolution.
+
+
+*Aim: To establish a well-organised support system to provide quick response and also timely  and accurate resolutions.*
+
+*Goals*:
+
+. To develop a Response System, to address the User's concerns.
+. To develop a process to provide and document Resolutions.
+
+---
+=== My customers are my effort, using a common database, will it be shared with others?
+
+---
+=== How will it help me earn directly?
+
+---
+=== How will it help me earn indirectly?
+
+---
+=== How can it help my business directly?
+
+---
+=== How can it help my business indirectly?
+
+---
+=== What if there is no internet?
+
+---
+=== What if the application crashes?
+
+---
+=== What if someone hacks?
+
+---
+=== What information can I store?
+
+---
+=== I have multiple firms, how can this help manage all?
+
+---
+=== I have employees working across my firms, how will they manage switching between them?
+
+---
+=== What if the hardware fails?
+
+---
+=== Is there a replacement plan if the hardware fails?
+
+---
+=== What if the data gets deleted?
+
+---
+=== How can this system be sabotaged?
+
+---
+
+[NOTE]
+====================
+What lovely war.
+
+
+if the
+====================
+
+
+

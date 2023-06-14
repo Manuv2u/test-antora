@@ -1,0 +1,14 @@
+@startuml
+        start
+
+        :Keypad (1) + Power;
+
+
+            :Display Configuration;
+            :Use Keypad (2) and (3) \n to Navigate through Settings;
+            :Power OFF to Exit;
+            kill
+
+
+
+@enduml

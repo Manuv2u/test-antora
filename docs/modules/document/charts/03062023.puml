@@ -1,0 +1,140 @@
+@startgantt
+<style>
+ganttDiagram {
+	task {
+		FontName Helvetica
+		FontColor maroon
+		FontSize 14
+		FontStyle bold
+		BackGroundColor GreenYellow
+		LineColor blue
+	}
+	milestone {
+		FontColor blue
+		FontSize 25
+		FontStyle italic
+		BackGroundColor yellow
+		LineColor red
+	}
+	note {
+		FontColor DarkGreen
+		FontSize 10
+		LineColor OrangeRed
+	}
+	arrow {
+		FontName Helvetica
+		FontColor red
+		FontSize 18
+		FontStyle bold
+		BackGroundColor GreenYellow
+		LineColor blue
+		LineStyle 8.0;13.0
+		LineThickness 3.0
+	}
+	separator {
+		BackgroundColor lightGreen
+		LineStyle 8.0;3.0
+		LineColor red
+		LineThickness 1.0
+		FontSize 16
+		FontStyle bold
+		FontColor purple
+		Margin 5
+		Padding 20
+	}
+	timeline {
+	    BackgroundColor lightblue
+	}
+	closed {
+		BackgroundColor pink
+		FontColor red
+	}
+}
+</style>
+Project starts the 2023-06-01
+
+[Mobile: Sale Order] lasts 10 days
+sunday are closed
+
+note bottom
+  memo1 ...
+  memo2 ...
+  explanations1 ...
+  explanations2 ...
+end note
+
+[Task2] lasts 20 days
+[Task2] starts 10 days after [Mobile: Sale Order]'s end
+
+
+[IAAC - Service Desk] lasts 2 days
+[Shop Manager -Ticketing System] lasts 2 days
+[Shop Manager -Ticketing System] starts 1 day after [IAAC - Service Desk]'s end
+[IAM -Login Page customization] lasts 2 days
+[IAM -Registration Page] lasts 2 days
+[IAAC - API Gateway] lasts 2 days
+[IAM - RBAC] lasts 2 days
+[IAM - RBAC] starts 1 day after [IAAC - API Gateway]'s end
+[Sale Order - Mobile App - Development] lasts 2 days
+[Sale Order - Mobile App - Testing] lasts 2 days
+[Sale Order - Mobile App - Testing] starts 1 day after [Sale Order - Mobile App - Development]'s end
+
+[Sale Order - Web App - development] lasts 2 days
+[Sale Order - Web App - Testing] lasts 2 days
+[Sale Order - Web App - Testing] starts 1 day after [Sale Order - Web App - development]'s  end
+
+[Sale Order - Mobile App - Release] lasts 2 days
+[Sale Order - Web App - Release] lasts 2 days
+[Sales Pad -  Mobile App  -  Development] lasts 2 days
+[Sales Pad -  Web App  -  development] lasts 2 days
+[Sales Pad -  Mobile App  -  Testing] lasts 2 days
+[Sales Pad -  Web App  -  Testing] lasts 2 days
+[Sales Pad -  Mobile App  -  Release] lasts 2 days
+[Sales Pad -  Web App  -  Release] lasts 2 days
+[Writers Pad -  Mobile App  -  Development] lasts 2 days
+[Writers Pad -  Web App  -  development] lasts 2 days
+[Writers Pad -  Mobile App  -  Testing] lasts 2 days
+[Writers Pad -  Web App  -  Testing] lasts 2 days
+[Writers Pad -  Mobile App  -  Release] lasts 2 days
+[Writers Pad -  Web App  -  Release] lasts 2 days
+[Sales Bill -  Mobile App  -  Development] lasts 2 days
+[Sales Bill -  Web App  -  development] lasts 2 days
+[Sales Bill -  Mobile App  -  Testing] lasts 2 days
+[Sales Bill -  Web App  -  Testing] lasts 2 days
+[Sales Bill -  Mobile App  -  Release] lasts 2 days
+[Sales Bill -  Web App  -  Release] lasts 2 days
+[Sales Summary -  Mobile App  -  Development] lasts 2 days
+[Sales Summary -  Web App  -  development] lasts 2 days
+[Sales Summary -  Mobile App  -  Testing] lasts 2 days
+[Sales Summary -  Web App  -  Testing] lasts 2 days
+[Sales Summary -  Mobile App  -  Release] lasts 2 days
+[Sales Summary -  Web App  -  Release] lasts 2 days
+[Sales Invoice -  Mobile App  -  Development] lasts 2 days
+[Sales Invoice -  Web App  -  development] lasts 2 days
+[Sales Invoice -  Mobile App  -  Testing] lasts 2 days
+[Sales Invoice -  Web App  -  Testing] lasts 2 days
+[Sales Invoice -  Mobile App  -  Release] lasts 2 days
+[Sales Invoice -  Web App  -  Release] lasts 2 days
+[Journal -  Mobile App  -  Development] lasts 2 days
+[Journal -  Web App  -  development] lasts 2 days
+[Journal -  Mobile App  -  Testing] lasts 2 days
+[Journal -  Web App  -  Testing] lasts 2 days
+[Journal -  Mobile App  -  Release] lasts 2 days
+[Journal -  Web App  -  Release] lasts 2 days
+[Report -  Mobile App  -  Development] lasts 2 days
+[Report -  Web App  -  development] lasts 2 days
+[Report -  Mobile App  -  Testing] lasts 2 days
+[Report -  Web App  -  Testing] lasts 2 days
+[Report -  Mobile App  -  Release] lasts 2 days
+[Report -  Web App  -  Release] lasts 2 days
+[IAAC - Resource Optimization] lasts 2 days
+<style>
+	separator {
+	    LineColor black
+		Margin 0
+		Padding 0
+	}
+</style>
+
+-- end --
+@endgantt

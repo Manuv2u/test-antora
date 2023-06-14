@@ -1,0 +1,60 @@
+= Planning of Mercodesk
+:toc:
+:toc-title: Contents
+:toclevels: 5
+:sectnums:
+
+
+
+== Introduction
+
+This document provides detailed information to explain
+
+"Why Mercodesk application is being built and How the team shall build the application"
+
+Figure 1 shows the target business overview.
+
+
+
+
+
+
+.Business Overview
+[plantuml, Text, png]
+----
+include::./../../01_mercodesk/01_use_cases/01_business_overview.puml[]
+----
+
+
+== Business Requirements
+
+. Every activity within the trading firm generates a *_paper trail_*.
+. Each paper document is *_susceptible to errors_*, either through negligent or deliberate omission or commission.
+. *_Commission Agent or the Trader_* suffers the resulting losses.
+. Work is *_repeated_* from transferring data from one paper document to another.
+. Enormous effort under limited time *_leads to duress_*, thereby susceptible to erroneous data entries.
+. Current softwares aiding the Trader are *_constrained_* to standalone PCs.
+
+
+== Mercodesk: Creating Business Value
+
+. Paper trails are significantly *_reduced_* by subscribing to a single repository.
+. Digital data acquisition leading to *_elimination_* of erroneous data entries.
+. Cloud based data repository *_eliminates_* repetitive data entries.
+. Automation of key procedures *_minimizes_* human input in data processing, *_reducing_* effort for the given time constraint.
+. *_Globally accessibly_* allows user to access information and conduct business from anywhere.
+. Allowing  *_multiple users_* to contribute and participate.
+. Simplified and minimal learning curve to *_eliminate dependency_* on specialized labor.
+. Achieving *_Reduced_* incurred losses due to erroneous inputs.
+. Achieving *_Reduced_* cost of labor
+. Achieving *_Higher_* productivity with minimal human intervention in data processing.
+. Achieving *_Higher_* turnaround times with mobility.
+.
+
+
+
+
+
+
+
+

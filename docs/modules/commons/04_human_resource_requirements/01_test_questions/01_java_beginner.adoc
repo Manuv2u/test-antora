@@ -1,0 +1,52 @@
+= JAVA:  Technical Interview Questions – L1
+
+:Revision: 1.0
+:revision-date: 22 June 2022
+:toc:
+:toc-title: Contents
+:toclevels: 6
+:sectnums:
+
+
+. Why is JAVA a platform independent language?
+. Difference between Heap and Stack Memory in JAVA. And how JAVA utilizes this.
+. What do you understand by an instance variable and a local variable?
+. What do you mean by data encapsulation?
+. Tell us something about JIT compiler.
+. Can you tell the difference between equals() method and equality operator (==) in JAVA?
+. How is an infinite loop declared in JAVA?
+. Briefly explain the concept of constructor overloading
+. Can the main method be Overloaded?
+. Comment on method overloading and overriding by citing relevant examples.
+. Explain the use of final keyword in variable, method and class.
+. Do final, finally and finalize keywords have the same function?
+. Is it possible that the ‘finally’ block will not be executed? If yes then list the case.
+. Identify the output of the JAVA program and state the reason.
+
+----
+01  public class InterviewBit
+02 {
+03	 public static void main(String[] args) {
+04	 	 final int i;
+05		 i = 20;
+06		 int j = i+20;
+07		 i = j+30;
+08	     System.out.println(i + " " + j);
+09	 }
+10 }
+----
+
+[start=15]
+. When can you use super keyword?
+
+. Why is the main method static in JAVA?
+
+. Difference between static methods, static variables, and static classes in JAVA.
+. What is the main objective of garbage collection?
+. What is a ClassLoader?
+. What part of memory - Stack or Heap - is cleaned in garbage collection process?
+. What are shallow copy and deep copy in JAVA?
+.	What is a singleton class in Java? And How to implement a singleton class?
+
+
+

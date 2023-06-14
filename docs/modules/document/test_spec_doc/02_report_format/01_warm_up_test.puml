@@ -1,0 +1,20 @@
+@startsalt
+title Warm Up Test
+header TS-03-XXXX-YYMMDD
+
+{+
+  .
+  Date:| ......................
+  Verification Scale Interval (e):| .............
+  Duration of disconnection before Test:| .............
+  Login    | "MyName   "
+  Password | "****     "
+  [Cancel] | [  OK   ]
+.
+.                                                                    .
+}
+
+
+
+
+@endsalt

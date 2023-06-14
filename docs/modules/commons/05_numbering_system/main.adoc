@@ -1,0 +1,10 @@
+= Numbering System for Prahari Engineering Products
+:Revision: 1.0
+:revision-date: 14 June 2022
+
+
+[plantuml, comptree, png]
+----
+include::../05_numbering_system/01_component_tree.puml[float="right",align="center"]
+----
+

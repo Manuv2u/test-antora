@@ -1,0 +1,70 @@
+@startuml
+
+skinparam nodesep 4
+!include <archimate/Archimate>
+sprite $bProcess jar:archimate/business-process
+sprite $aService jar:archimate/application-service
+sprite $aComponent jar:archimate/application-component
+sprite $Component jar:archimate/component
+sprite $techdevice jar:archimate/technology-device
+
+
+rectangle "Arrival Book" as avak <<$Component>>
+rectangle "Daily Cash Book" as cb <<$Component>>
+rectangle "Sales Pad" as sp <<$Component>>
+rectangle "Writers Pad" as wp <<$Component>>
+rectangle "Sales Bill" as bsb <<$Component>>
+rectangle "Sellers Invoice" as si <<$Component>>
+archimate #Technology "Billing App" as bils <<technology-device>>
+
+Business_Process(ig, "Inward Goods")
+Business_Process(pf, "Pay Freight")
+Business_Process(ab, "Auction-Bids")
+Business_Process(rw, "Record Weights")
+Business_Process(sel, "Pay Sellers")
+Business_Process(buy, "Receive from Buyers")
+
+
+ig --> pf
+ig --> ab
+ab --> rw
+
+ig ..> sp
+ab ..> sp
+rw ..> wp
+
+
+
+pf ..> cb
+ab ..> cb : record token advance
+ig ..> avak
+
+avak --> bils
+sp --> bils
+wp --> bils
+
+bils --> bsb
+bils --> si
+
+si ..> sel
+sel ..> cb
+bsb ..> buy
+buy ..> cb
+
+
+legend left
+Legend
+====
+<$bProcess> :business process
+====
+<$Component> : paper document
+====
+<$techdevice> : Computer Application
+endlegend
+
+@enduml
+
+
+
+
+

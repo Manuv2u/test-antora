@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Add New User;
+:Enter Phone Number;
+:Enter Name;
+:Request Analysis;
+
+if (Authorized Firm) then (YES)
+  if (Authorized User) then (YES)
+    if (Phone Number Exists) then (YES)
+        :Receive Existing Name;
+    else (NO)
+        :Register User;
+        :Send link to download and install Mercotrace;
+    endif
+  else (NO)
+    :Access Denied;
+  endif
+else (NO)
+    :Access Denied;
+endif
+
+
+
+stop
+
+@enduml

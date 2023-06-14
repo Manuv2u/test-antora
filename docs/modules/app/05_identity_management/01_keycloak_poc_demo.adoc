@@ -1,0 +1,123 @@
+= Keycloak Proof of Concept Demo
+:revision-date: 23 Sep 2022
+:sectnums:
+:toc:
+:toc-title: Contents
+:toclevels: 5
+:author: Sridhar K L
+
+
+=== About
+
+Use this document as reference to implement POC plan for Keycloak.
+
+=== POC: 1
+
+[NOTE]
+===============================
+*Temporarily Deployed Container*
+
+Request IP address prior to launch.
+Subjected to change without notice.
+===============================
+
+Method used is *Auth Code Flow*.
+
+
+==== Realm and Client Settings
+
+----
+Realm: KB-India
+Client: mercotrace
+----
+
+==== Client Secret
+
+----
+id: mercotrace
+secret: psCj7mFmowd3BdL8mV1E2e9Y9vlWiG7p
+----
+
+==== Flow
+
+----
+OTP based login
+
+No Registration allowed
+
+Users Registered from Backend
+----
+
+==== Endpoints
+
+.Code Request
+
+----
+Method: GET
+
+https://13.232.119.229:8443/realms/kb-india/protocol/openid-connect/auth
+----
+----
+response_type:code
+client_id:mercotrace
+state:oput385ng23d
+scope:openid profile entitygroup entity:role
+redirect_uri:http://13.232.119.229/callback
+----
+---
+
+.Token Request
+
+----
+Method: POST
+
+https://13.232.119.229:8443/realms/kb-india/protocol/openid-connect/token
+----
+----
+grant_type:authorization_code
+client_id:mercotrace
+client_secret:psCj7mFmowd3BdL8mV1E2e9Y9vlWiG7p
+code:
+redirect_uri:http://13.232.119.229/callback
+----
+---
+
+.Userinfo
+
+----
+Method: GET
+
+https://13.232.119.229:8443/realms/kb-india/protocol/openid-connect/userinfo
+----
+----
+Content-Type:application/x-www-form-urlencoded
+Authorization:Bearer {JWT}
+----
+
+.Result
+----
+{
+    "sub": "3130cd50-08bd-4968-8b29-fb719d93561c",
+    "companies": [
+        "/NTC"
+    ],
+    "resource_access": {
+        "mercotrace": {
+            "roles": [
+                "NTC:Cashier",
+                "SO:Read"
+            ]
+        }
+    },
+    "email_verified": false,
+    "name": "Sridhar K L",
+    "preferred_username": "9663382287",
+    "given_name": "Sridhar",
+    "family_name": "K L"
+}
+
+----
+
+
+
+---

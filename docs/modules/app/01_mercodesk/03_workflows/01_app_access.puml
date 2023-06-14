@@ -1,0 +1,50 @@
+@startuml
+<style>
+     ' define a new style, using CSS class syntax
+     .appStyle {
+        BackGroundColor #3083A7
+        FontColor White
+        FontStyle Bold
+     }
+</style>
+!theme vibrant
+
+start
+ :Install Mercotrace;
+:Login;
+:Open Mercodesk;
+
+if (Mercodesk Account Exists) then (<b> YES)
+   :Select Firm;
+   label home
+   <<appStyle>>:Mercodesk Home;
+   fork
+    :Sales Order;
+
+   fork again
+    :Sales Pad;
+
+   fork again
+    :Writers Pad;
+
+   fork again
+    :Sales Bill;
+
+   fork again
+    :Sales Summary;
+
+   fork again
+    :Sellers Invoice;
+
+   fork again
+    :Accounts Journal;
+
+   end fork
+   :Log off;
+   stop
+else (<b> NO)
+   :Contact Sales for more information;
+   kill
+endif
+
+@enduml

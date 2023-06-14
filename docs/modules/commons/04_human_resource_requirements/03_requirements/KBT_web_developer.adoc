@@ -1,0 +1,29 @@
+== App Developer (Web)
+
+
+=== Job Description
+
+// tag::se-flutter-jd-exp[]
+Candidate is expected to design and develop  webpages using the latest web stack.
+
+
+// end::se-flutter-jd-exp[]
+
+
+// tag::se-flutter-jd-fresh[]
+
+Candidate is expected to develop  webpages using the latest web stack.
+
+// end::se-flutter-jd-fresh[]
+
+
+
+// tag::se-flutter-prof-exp[]
+
+. Candidate is expected to be proficient in Angular, JavaScript, HTML 5, CSS3,  Git and GitLab.
+. Basic Understanding of REST API, JSON.
+.	Candidate is expected to have thorough understanding of MVC, MVVM and experience with Responsive design frameworks (Bootstrap)
+. Good understanding and experience in creating Cross-Platform application (Android, iOS)
+.	Must be comfortable in using IntelliJ IDEA.
+. Good knowledge in Automation of UI testing, User Acceptance Testing.
+. Understanding Continuous Integration.

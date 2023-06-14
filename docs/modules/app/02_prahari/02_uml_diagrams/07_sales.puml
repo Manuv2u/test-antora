@@ -1,0 +1,44 @@
+@startuml
+state Legend{
+    state Blue #lightblue
+
+    Blue: Mobile App
+}
+
+    state Sales{
+
+        Sales: User: Sales Rep
+        Sales: Create Sales Invoice to Buyer
+        Sales: Close Receipt upon payment to initiate production
+        Sales: Partial Payments allowed
+
+
+        state "Sales Invoice" as si #lightblue{
+            si: Input: Buyer ID
+            si: Input: Model ID
+            si: Input: Quanity
+            si: Input: Rate
+            si: Input: Shipping Address
+            si: Input: Promise Date
+            si: \n
+            si: Output: Sales Invoice ID
+            si: Output: Open Receipt as Payable
+        }
+
+        state "Sales Receipt" as sr #lightblue{
+            sr: Input: Sales Invoice ID
+            sr: Input: Amount Received
+            sr: Input: Balance
+            sr: Input: Mode of Payment
+            sr: \n
+            sr: Output: Production Initiation*
+        }
+        si --> sr : Sales Closure \n 1....n
+    }
+
+    state "Customer Care" as cc
+
+    cc --> Sales : Sales Initiation \n1....n
+    Sales --> Inventory : Request for Component \n1 .... n
+
+@enduml

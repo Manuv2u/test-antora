@@ -1,0 +1,65 @@
+@startuml
+state Legend{
+    state Green #lightgreen
+    Green: Swagger UI
+}
+
+    state Component {
+        Component: Procure or Produce Instances of a Part
+        Component: User: Shop Floor Supervisor
+        Component: No Deletion or Modification allowed
+        Component: Update Component Status from Inventory
+
+        state Generation #lightgreen{
+            Generation: Input: Part Number [String]
+            Generation: Input: Quantity [Int]
+            Generation: Input: Vendor Code [String]
+            Generation:\n
+            Generation: Output: Component ID
+            Generation: Output: Serial Number [String]
+            Generation: Output: Production Series
+            Generation: Output: Date
+        }
+
+
+        state "Serial Number" as sn #lightgreen {
+
+        sn: Input: Serial Number [String]
+        sn:\n
+        sn: Output: Component ID
+        sn: Output: Part Number [String]
+        sn: Output: Production Series
+        sn: Output: Vendor Code [String]
+        sn: Output: Date
+        sn: Output: Component State [List]
+        }
+
+        Generation --> sn: 1 ... 1
+
+
+        state "Component State" as cs #lightgreen{
+            cs: Input: Component ID [String]
+            cs: \n
+            cs: Output: Received by Inventory Date
+            cs: Output: Usage Status (In-use, Disposed etc.) [String]
+            cs: Output: Parent Serial Number [String]
+            cs: Output: Date of Expiry
+            }
+
+       cs --> sn: 1 .... 1
+
+       state "Ticket" as pt  #lightgreen{
+
+            pt: Input: Request ID
+            pt: Input: Acknowledgement
+       }
+
+       pt -l-> Generation : Initiate Production \n1 .... n
+       pt --> cs
+    }
+
+ Component -u-> Part : Specification Requisition \n 1....1
+ Component --> Inventory: Inward of Component \n1 .... 1
+ Inventory --> Component: Requisition for Component \n 1 .... n
+
+@enduml

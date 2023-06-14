@@ -1,0 +1,387 @@
+= PR 100024: Test Specification Document - OIML/ ASTM/ NIST
+:Revision: 1.0
+:revision-date: 14 June 2022
+:toc:
+:toc-title: Contents
+:toclevels: 6
+:sectnums:
+:stem: latexmath
+:eqnums: AMS
+
+
+
+
+****
+*References*
+
+''''
+
+*OIML R 76-1 Edition 2006(E)*
+
+_Non-automatic weighing instruments_
+
+_Part 1: Metrological and technical requirements - Tests_
+
+
+''''
+
+*ASTM E898 − 88 (Reapproved 2013)*
+
+_Standard Test Method of Testing Top-Loading, Direct-Reading Laboratory Scales and Balances_
+
+''''
+
+*NIST Handbook 44 2022*
+
+_Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices_
+
+
+''''
+
+*OIML R 76-2 Edition 1993(E)*
+
+_Non-automatic weighing instruments_
+
+_Part 2 : Pattern evaluation report_
+
+
+
+****
+
+== Terminology
+
+=== Terms and Definitions
+
+==== Accuracy
+The degree of agreement of the measurement with the true value of the quantity measured.
+
+==== Capacity
+The maximum weight load specified by the manufacturer. In most instruments, the maximum possible reading will exceed the capacity by a small amount.
+
+==== Full-scale calibration
+The indicated reading when a standard weight equal to the full scale indication of the scale is placed on the sample pan after the device has been correctly zeroed. Usually some means is provided by the manufacturer to adjust the full scale indication to match the weight of the standard.
+
+==== Linearity
+The degree to which a graph of weight values indicated by a scale vs. the true values of the respective test weights approximates a straight line. For a quantitative statement of linearity errors, the concept of terminal-based non-linearity is recommended, such as, the maximum deviation of the calibration curve (average of the readings at increasing
+and decreasing test load, respectively) from a straight line drawn through the upper and lower endpoints of the calibration curve.
+
+==== Off-center errors
+Differences in indicated weight when a sample weight is shifted to various positions on the weighing area of the sample pan.
+
+==== Hysteresis
+Difference in weight values indicated at a given test load depending on whether the test load was arrived at by an increase or a decrease from the previous load on the scale.
+
+==== Repeatability
+Closeness of agreement of the indicated values for successive weighings of the same load, under essentially the same conditions, approaching from the same direction (such as, disregarding hysteresis).
+
+==== Reproducibility
+Closeness of agreement of the indicated values when weighing of the same load are made over a period of time under essentially the same conditions but not limited to the same direction of approach (such as, hysteresis errors are included).
+
+====  Precision
+The smallest amount of weight difference between closely similar loads that a balance is capable of detecting. The limiting factor is either the size of the digital step of the indicator readout or the repeatability of the indicated values.
+
+==== Standard deviation
+Used as a quantitative figure of merit when making statements on the repeatability, reproducibility or precision of a balance.
+
+==== Readability
+The value of the smallest unit of weight that can be read without estimation. In the case of digital instruments, the readability is the smallest increment of the least significant digit (for example, 1, 2 or 5). Optical scales may have a vernier or micrometer for subdividing the smallest scale division. In that case, the smallest graduation of the vernier or micrometer represents the readability.
+
+==== Standard weight
+Any weight whose mass is given. Since weights are not always available with documented corrections, weights defined by class may be used if the class chosen has sufficiently small limits and there is an understanding that errors perceived as being instrumental in nature could be attributed to incorrectly adjusted weights.
+
+=== Abbreviations and Symbols
+
+=== Report Format
+
+
+Format the testing process and report the findings in the format mentioned below,
+
+
+[cols=">s,<a"]
+[frame="none",grid="none"]
+|=====================================
+|Report Number| TSD-XX-XXXX-YYMMDD
+|Model:|\................
+|Serial No:|\................
+|Test requirements:|  PR 100024/ Sec XX
+|Summary of the examination:|
+|Examiner:| Name, Contact details.
+|=====================================
+
+*Table of contents:*
+
+. *General information concerning the type of module:*
++
+Short description of the module, interfaces.
+
+.  *Functions, facilities and devices of the module:*
++
+Zero-setting devices, tare devices, multi-interval function, different weighing ranges, modes of operation, etc.
+. *Technical data:*
++
+Tare ranges, etc.
+. *Documents:*
++
+List of documents.
+. *Interfaces:*
++
+Interface types and numbers, for peripheral devices and for other devices.
+
+. *Connectable devices:*
++
+Terminal, printer, digital display, etc..
+
+. *Test equipment:*
++
+Information concerning the test equipment used for type evaluation of this module.
+. *Remarks on the tests:*
++
+Observations on the test conducted. Factual listings of environment, test set up etc.
+
+. *Measuring results:*
++
+Use Measurement Data Sheet (MDS) - Forms from PR 100028 - Sec XX
+
+. *The report number format :*
+
+****
+TSD-XX-XXXX-YYMMDD
+
+_where_:
+
+*_XXXX_* - Report Number, running number
+
+*_YY_* - year
+
+*_MM_* - Month
+
+*_DD_* - Date
+****
+
+[start=11]
+
+. Save MDS in PDF format and Report, S3: Prahari/Test Reports/TSD-XX
+. File Physical MDS under folder Prahari/TSD-XX
+
+
+== Determination of Change Over Point
+
+=== Scope
+
+The aim of this test is to find the Error at zero or at a load close to 10 _e_. This data is specific the test specimen and cannot be used as a general reference for all other similar devices. For Class II and above, the value can be determined only once and need not be checked for prior to each procedure.
+
+=== Apparatus
+
+To conduct this test, have the following apparatus set up and ready to conduct the test.
+
+. Analytical weights each equal to e / 10.
+. Weighing Scale
+
+
+=== Procedure or Methods
+
+. Switch ON the weighing scale.
+. Load the weighing scale with weight equal to e / 10.
+. Record the weight at which the Indicating Value changes from Zero to _e_ *or*  10 _e_ to 11 _e_
+. Unload the scale with weight equal to e /10.
+. Record the weight at which the Indicating Value changes from _e_ to Zero *or* 11 _e_ to 10 _e_.
+
+
+=== Result
+
+Record the, Changeover point, E~0~ = ........ g
+
+=== Inference and Remarks
+
+E~0-Loading~ - E~0-Unloading~ = _e / 10_ .
+
+Escalate if otherwise.
+
+=== MDS
+
+The Report Number is to be specified as *TSD-02*
+
+
+
+== Evaluation of Error
+
+
+
+
+== Warm Up Test
+
+
+=== Scope
+
+
+=== Apparatus
+
+=== Procedure or Methods
+. Check for duration of disconnection before switching on the device. Preferably the instrument using electric power shall be disconnected from the supply for a period of at least 8 hours prior to the test.
+
+. Record the temperature.
+
+. The instrument shall then be connected and switched on and as soon as the indication has stabilized, the instrument shall be set to zero and the error at zero shall be determined. Calculation of the error shall be made
+.. At a certain load, L, the indicated value, I, is noted.
+.. Additional weights of say 1/10 e are successively added until the indication of the instrument is increased unambiguously by one scale interval (I + e).
+.. The additional load ΔL added to the load receptor gives the indication P
+
+[stem]
+++++
+\begin{equation}
+P = I + \frac{1}{2}e - \Delta L
+\end{equation}
+++++
+
+****
+_where:_
+
+_I~w~_ = indication with the standard weight on the pan,
+
+_I~o~_ = indication with pan empty,
+
+_W_ = known or assumed value of the standard weight, and
+
+_k~t~_ = calibration factor for time _t_.
+
+****
+
+[start=4]
+. At the end of 1 min, read and record the indication with the pan empty.
+. At the center of the sample pan place a standard
+weight nearly equal to but not exceeding 98 % of the capacity of the scale. If the scale allows no weight readings above the stated nominal capacity, then this test should be performed with standard weights equal to 90 % of capacity. When the indication is steady, record the indication and remove the weight from the pan.
+. At the end of 5 min, repeat steps *3* and *4*
+without re-zeroing.
+. At the end of 30 min, repeat again.
+. At the end of 1 h, repeat again. Record the temperature.
+. Compute for each measurement as follows:
+
+
+[stem]
+++++
+\begin{equation}
+k_t = \frac{W}{(I_w - I_o)}
+\end{equation}
+++++
+
+****
+_where:_
+
+_I~w~_ = indication with the standard weight on the pan,
+
+_I~o~_ = indication with pan empty,
+
+_W_ = known or assumed value of the standard weight, and
+
+_k~t~_ = calibration factor for time _t_.
+
+****
+
+[start=10]
+. Plot the values of _k~t~_ against the time (1 min, 5 min, 30
+min, and 60 min). The time at which _k~t~_ apparently no longer
+drifts in one direction can be assumed to be the warm-up time
+required.
+. If there is a user-adjustable full-scale calibration
+procedure recommended by the manufacturer, this adjustment
+should be made after the warm-up time determined in *10*.
+. If the calibration cannot be adjusted by the user, the
+factor _k~t~_ can be used as a multiplier for an indicated weight to correct to true weight.
+. Plot _I~o~_ as a function of time to determine the zero
+drift. For individual measurements of weight, the zero can be
+monitored or corrected prior to a weighing. However, if the
+change in weight of a sample as a function of time is of
+importance, and if the sample cannot be removed for zeroing,
+it is also important to know the course of the zero as a function
+of time.
+
+
+
+=== Result
+
+. Plot the values of _k~t~_ against the time (1 min, 5 min, 30
+min, and 60 min).
+
+. Plot _I~o~_ as a function of time to determine the zero
+drift.
+
+
+
+
+
+=== Inference and Remarks
+
+
+
+
+=== Report
+
+
+
+
+
+== Sensitivity Test
+
+=== Scope
+
+=== Apparatus
+
+=== Procedure or Methods
+
+=== Result
+
+=== Inference and Remarks
+
+=== Report
+
+
+== Repeatability Test
+
+=== Scope
+
+=== Apparatus
+
+=== Procedure or Methods
+
+=== Result
+
+=== Inference and Remarks
+
+=== Report
+
+
+== Eccentricity Test
+
+=== Scope
+
+=== Apparatus
+
+=== Procedure or Methods
+
+=== Result
+
+=== Inference and Remarks
+
+=== Report
+
+
+== Accuracy or Linearity Test
+
+=== Scope
+
+=== Apparatus
+
+=== Procedure or Methods
+
+=== Result
+
+=== Inference and Remarks
+
+=== Report
+
+
+== Appendix
+
+=== Glossary
+
+=== Report Format

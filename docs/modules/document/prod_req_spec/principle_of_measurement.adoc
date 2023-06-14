@@ -1,0 +1,101 @@
+= Principle of Measurement - Prahari-RP
+:sectnums:
+:toc:
+:toc-title: Contents
+:toclevels:6
+
+== Model Specifications of *Prahari-RP*
+
+=== Classification of the Weighing Instrument
+
+*Prahari-RP* is a *Class III* platform scale which is a  *Non-Automatic Electronic Weighing Instrument* with digital indicator.
+
+
+=== Construction of *Prahari-RP*
+
+BOM table
+
+
+
+=== Metrological characteristics of *Prahari-RP*
+
+[cols="2a,^a,^a"]
+[options="header"]
+|===============================
+|Parameter | 100 | 300
+|Weighing capacity (Max) | 100 kg | 300 kg
+|Minimum capacity (Min) | 200g | 1000g
+|Actual Scale Interval (d)  | 10g | 50g
+|Verification Scale Interval (e)| e = d | e = 2d
+|Number of Verification Scale Intervals | 10000 | 6000
+|===============================
+
+== Principle of Measurement
+
+Figure (*) shows the functional blocks of the weighing scale.
+
+.Functional Blocks of Prahari-RP
+image::../00_images/PR-functional-block.svg[align=center]
+
+=== Principle of Load transfer
+The Single Point - Beam type Load cell, figure 2, is used as the  transducer in the receptor to receive the load, which results in deformation of the load cell. This deformation is captured by the strain gauges which in turn converts the gravitational force into proportionate electrical signal. The signal obtained is a voltage value measured across a Wheatstone Bridge, figure 3. This value is compared against a reference voltage value obtained for a calibrated weight to produce the output.
+
+.Single Point Beam Type Load Cell
+image::../00_images/get_image.svg[align=center, 320]
+
+
+.Wheatstone Bridge
+image::../00_images/get_image.svg[align=center, 320]
+
+
+=== Signal Conditioning
+The output of the transducer is first amplified, followed by a filtering stage to remove noise due to power supply and mechanical vibrations. Then this filtered output is sampled by a high resolution ADC. The ADC used is HX711.
+
+
+.Block Diagram of HX711 with other components
+image::../00_images/hx711-block-diagram.png[align=center]
+
+=== Processing Unit
+
+.Block Diagram of MCU with other components
+image::../00_images/mcu-block-dgm.png[align=center]
+
+----
+Details about microcontroller used
+Replace USB with Bluetooth
+
+What is terminal block?
+LCD or LED
+
+Is input filtering covered in previous section?
+
+----
+
+Refer to Appendix 2, for the Controller design layout.
+
+
+
+=== Units of Measurement
+The units of mass used in *Prahari-RP* is
+
+- kilogram (kg)
+- milligram (mg )
+- gram (g)
+- tonne (t)
+
+=== Accuracy Class
+*Prahari-RP* is *Class III - Medium Accuracy* weighing instrument.
+
+
+=== Calibration process
+
+The device is calibrated using a *Reference Weight* and *No Load* condition. At *No Load* condition, the ADC output is recorded keeping an empty pan and the value is set as *ZERO*. A known reference weight (Recommended - 30% of the rated weighing range of the scale) is placed on the pan and the corresponding ADC output is set to the Reference weight value. The slope of the curve is calculated and used as reference for all subsequent measurements.
+
+Accuracy of the slope depends on the True weight used for calibration. During the operation any accumulation of dust, affects the intercept, which will move the curve without affecting the slope.
+
+
+.Calibration of Prahari-RP
+image::../00_images/calibration_prahari_rp.svg[align=center]
+
+=== Tare
+

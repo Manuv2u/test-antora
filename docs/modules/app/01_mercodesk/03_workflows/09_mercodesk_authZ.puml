@@ -1,0 +1,57 @@
+@startuml
+
+
+actor USER as usr
+
+!pragma teoz true
+box "Mercotrace" #lightskyblue
+autonumber
+collections Features as ftr
+box "Mercodesk" #azure
+entity Firm_1 as f1
+entity Firm_2 as f2
+end box
+
+end box
+
+box "Keycloak:KB-India" #silver
+
+database Mercoctrace_Users as kcrc
+
+end box
+
+box "AWS" #sandybrown
+
+control api_gateway as apg
+control lambda_firm as lz1
+control lambda_resource as lz2
+control lambda_CRUD as lz3
+collections microservice as ms
+
+
+end box
+
+
+usr -> ftr : Login
+ftr --> kcrc: AuthN request
+kcrc --> usr: SMS - OTP
+usr -> kcrc : OTP
+kcrc --> ftr: AuthN JWT
+ftr -> apg: GET_ALL firm memberships for JWT
+apg -> lz1: Redirect
+lz1 --> ftr: List of Firms in "Mercodesk"
+
+usr -> f1 : Access Firm_1
+f1 --> apg: GET_ALL resources for firm matching in JWT
+apg -> lz2: Redirect
+lz2 --> f1: List of permitted resources
+
+usr -> f1 : Access permitted resource
+f1 --> apg: Authz access to resource and method permits in JWT
+apg -> lz3: Redirect
+lz3 --> apg: Authz Boolean
+apg --> ms : Access to microservice (CRUD)
+
+
+
+@enduml

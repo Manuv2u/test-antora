@@ -1,0 +1,52 @@
+@startuml
+state Legend{
+    state Green #lightgreen
+    Green: Swagger UI
+}
+
+    state Inventory {
+
+        Inventory: Reference Part Number
+        Inventory: Net Quantity in Stock
+        Inventory: User: Warehouse Supervisor
+        Inventory: Log changes in Component State
+
+        state "Component Book" as cb #lightgreen{
+            cb: Input: Part Number
+            cb: \n
+            cb: Output: Quantity in Stock
+            cb: Output: Storage Information
+        }
+
+        state "Inward Ticket" as invt #lightgreen{
+            invt : Input: Request ID
+            invt : Input: Acknowledgement
+        }
+
+        state "Outward Ticket" as outt #lightgreen{
+            outt : Input: Request Type [List]
+            outt : Input: Part Number
+            outt : Input: Quantity
+            outt : Input: Serial Number (if Exists)
+            outt : Input: Respondent
+            outt : \n
+            outt : Output: Request ID
+        }
+
+        state "Storage" as stor #lightgreen{
+            stor : Input: Storage Type [List]
+            stor : Input: Storage ID [Format]
+        }
+
+        cb --> outt
+        invt --> stor
+        stor -l-> cb
+    }
+
+    Component --> Inventory: Inward of Component \n1 .... 1
+    Inventory --> Component: Requisition for Component \n 1 .... n
+    Inventory --> Assembly: Outward of Component \nn .... 1
+    Assembly --> Inventory: Requisition for Component\n1 .... n
+    Assembly --> Inventory: Delivery of Assembly \nn .... 1
+    Sales --> Inventory: Requisition for Component\n1 .... n
+@enduml

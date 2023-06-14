@@ -1,0 +1,31 @@
+@startuml
+
+skinparam linetype ortho
+
+cloud "Kanilebettu Ecosystem" as kb{
+
+    left to right direction
+    package "Authentication Flow" as authct {
+          [IAM] as iam
+
+        [Mercotrace] as mt
+    }
+
+    package "Authorization Flow" as authrz {
+          [Prahari\nManagement App] as papp
+
+          [Mercodesk] as md
+
+    }
+
+  () user --> mt
+  mt --> iam
+  iam --> md
+  iam --> papp
+  md -[hidden]r- papp
+
+}
+
+
+
+@enduml

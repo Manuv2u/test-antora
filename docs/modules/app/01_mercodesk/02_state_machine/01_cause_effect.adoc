@@ -1,0 +1,15 @@
+= The Dangers of Wolpertingers
+:url-wolpertinger: https://en.wikipedia.org/wiki/Wolpertinger
+
+:stylesheet: my-stylesheet.css
+
+
+Don't worry about gumberoos or splintercats.
+Something far more fearsome plagues the days, nights, and inbetweens.
+Wolpertingers.
+
+== Origins
+
+Wolpertingers are {url-wolpertinger}[ravenous beasts].
+
+[.green]#SomeTextThatSouldLookGreen#

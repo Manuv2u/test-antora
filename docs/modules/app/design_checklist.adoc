@@ -1,0 +1,9 @@
+= Design Checklist
+
+. Is the error message rude?
+. Does the error message assumes user to be computer-literate?
+. does the design feels like it requires that a person change
+her thinking to be more like the way a computer works?
+. Does the design anticipate the user's needs?
+.. What are the needs?
+.. What are the possible appropriate actions that can be taken?

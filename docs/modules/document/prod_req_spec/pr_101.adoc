@@ -1,0 +1,20 @@
+= PR 100001: Product Requirement Specification for MERCODESK-Mandi
+:Revision: 1.0
+:revision-date: 14 June 2022
+
+:toc:
+:toc-title: Contents
+:toclevels: 5
+
+== Definition
+This document defines the requirement specification for *MERCODESK*. Mercodesk is a SaaS application intended to be used for B2B purposes.
+
+
+
+
+
+
+
+
+
+

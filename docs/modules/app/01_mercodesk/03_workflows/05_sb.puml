@@ -1,0 +1,166 @@
+@startuml
+<style>
+     ' define a new style, using CSS class syntax
+     .appStyle {
+        BackGroundColor #3083A7
+        FontColor White
+        FontStyle Bold
+     }
+     .homeStyle {
+        BackGroundColor #springgreen
+        FontColor black
+        FontStyle Bold
+     }
+     .noteStyle {
+        BackGroundColor #oldlace
+        FontColor black
+        FontStyle Bold
+     }
+
+</style>
+!theme vibrant
+
+skinparam NoteBackgroundColor papayawhip
+skinparam NoteFontColor black
+skinparam NoteFontStyle Bold
+
+
+
+    start
+        <<appStyle>>:Mercodesk Home;
+        :Select Sales Bill;
+
+        repeat :Start Activity;
+
+         if (Create Bill) then (<b> Yes)
+             :New Bill;
+         else (<b> No)
+             :Select Existing;
+             if(Add or Modify?) then (<b> Yes)
+             else (<b> No)
+                (A)
+             endif
+
+         endif
+
+         repeat :Get SPiD;
+
+         split
+             :Scan QR Code for SPiD;
+
+         split again
+             :Enter SPiD;
+
+         end split
+
+         if (Ready for Billing?) then (<b> Yes)
+             :Get Weight;
+         else (<b> No)
+             :Show Failure;
+             Kill
+         endif
+
+         if (Brokerage Applied?) then (<b> Yes)
+            :Enter Broker Phone Number;
+            :Enter Brokerage Type;
+            :Enter Brokerage Value;
+
+          note
+            Brokerage Voucher
+            ----
+            //Towards: // Brokerage
+            //Ref:// Sales Bill Number
+            //Paid To: // Broker
+            //Method: // Mode and Paid By
+            //Status: // Closed or Open
+          end note
+         else (<b> No)
+         endif
+         if (Discount Applied?) then (<b> Yes)
+            :Enter Discount Type;
+            :Enter Discount Value;
+             if (Brokerage Applied?) then (<b> Yes)
+                :Discount to Broker;
+              note
+                Brokerage Discount Voucher
+                ----
+                //Towards: // Brokerage Discount
+                //Ref:// Sales Bill Number
+                //Paid To: // Broker
+                //Method: // Mode and Paid By
+                //Status: // Closed or Open
+              end note
+             else (<b> No)
+                :Discount to Buyer;
+
+
+
+              note right
+                Buyer Discount Voucher
+                ----
+                //Towards: // Buyer Discount
+                //Ref:// Sales Bill Number
+                //Paid To: // Buyer
+                //Method: // Deduction in Bill
+                //Status: // Closed or Open
+              end note
+             endif
+         else (<b> No)
+         endif
+         if (Coolie Applied?) then (<b> Yes)
+            :Enter Amount;
+              note
+                Coolie Voucher
+                ----
+                //Towards: // Coolie
+                //Ref:// Sales Bill Number
+                //Paid To: // Username
+                //Method: // Mode and Paid By
+                //Status: // Closed or Open
+              end note
+         else (<b> No)
+         endif
+         if (Misc. Charges Applied?) then (<b> Yes)
+            :Enter Voucher Number;
+         else (<b> No)
+         endif
+         :Get Standard Charges;
+         if(Close Bill?) then (<b> Yes)
+           (A)
+         else (<b> No)
+            if (Start New?) then (<b> Yes)
+               (B)
+               kill
+            else (<b> No)
+            endif
+
+         endif
+
+         repeat while
+
+
+    stop
+
+
+    (A)
+    :Close Bill: Total Receivables;
+    note
+     SB Receipt
+     ----
+     //Towards: // Sales Bill
+     //Ref:// Sales Bill Number
+     //Received from: // Buyer
+     //Method: // Mode and Received By
+     //Status: // Closed or Open
+     end note
+    :Print;
+    (B)
+
+
+
+
+
+
+
+
+@enduml

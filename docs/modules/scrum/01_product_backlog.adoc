@@ -1,0 +1,84 @@
+= Product Backlog of Merco Ecosystem
+
+== About
+This document intends to list all the requirements without order or merit of the entire project of Merco Ecosystem.
+
+
+== The List
+
+
+
+
+
+
+
+
+
+[qanda]
+
+Mercotrace::
+Free App
+
+Mercodesk:: Business management suite, subscription application.
+
+Seller:: User who owns the goods to be sold.
+
+Trader or Commission Agent:: User or owner of a firm who sells the goods on behalf of the seller.
+
+Firm:: Firm is entity, which has an employer and employees, who all work together to conduct the business of sale of goods.
+
+Buyer:: User who bids and buys the goods from CA.
+
+Sale Order (SO):: Order issued by Seller to Trader to sell the goods on their behalf.
+
+Sale Order Feature in Mercotrace:: *FEATURE*  to Create SO using Mercotrace application by Seller.
+
+Sale Order Feature in Mercodesk:: *FEATURE*  to Create SO in Mercodesk by Trader or CA.
+
+Freight Component of SO:: Data of vehicle transporting goods are identified in the SO. Data includes,
+. Vehicle Number
+. Driver information
+. Freight Type
+. Freight Rate
+. Freight Origin
+. Load quantum
+
+Vehicle Number:: Store vehicle number in valid format. All further activity is identified by the arrival (timestamp) of this vehicle number to the CA.
+
+Driver Information:: A user who is the recipient of the freight amount.
+
+Freight Type:: Freight is negotiated between the transporter and the Seller, and the method of calculating the rental could be any of the following,
+. By Weight of the goods
+. By Count of the items
+. By a lump-sum amount
+
+Freight Rate:: Rate is specified on the basis of Freight type. And the final charges are calculated.
+
+Freight Origin:: Origin of the transportation is considered to be the origin of the goods.
+
+Load Quantum as weight:: Calculated based on the loaded and unloaded weight of the vehicle. Used to calculate freight charges.
+
+Load Quantum as count:: Total quantity of all the units delivered as load.
+
+Goods Component of SO:: Data of goods being sold. Data includes,
+. Owner of the Goods, i.e. Seller (One or many)
+. Lots with names, each lot based on Commodity and Packaging (One or many)
+. Variant of the commodity (one for each lot)
+. Quantity of each lot
+
+Owner of the Goods:: One or many Seller exists for a given SO. Identified by Phone Number and Name.
+
+Lots:: Lots are based on Commodity and the packaging type. Each lot has name, quantity and variant of the commodity.
+
+Commodity:: Goods sold are commodity. Example, Onion, potato and garlic etc.
+
+Variant:: Each commodity can have any number of standardised or locally identified  variant name.
+
+Packaging:: Commodities are transported in either in some form of packaging or in bulk. Types of packaging include,
+. Load
+. Bags
+. Box
+. Crate etc.
+
+
+

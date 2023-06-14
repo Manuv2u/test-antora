@@ -1,0 +1,17 @@
+@startuml
+skinparam componentStyle rectangle
+
+
+[01] as a
+[2345] as b
+[AB] as c
+[C001] as d
+
+a -> [Document Type]
+b -> [Document Number]
+c -> [Tabulation]
+d -> [Item Code]
+
+
+
+@enduml

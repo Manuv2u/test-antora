@@ -1,0 +1,100 @@
+= JAVA:  Technical Interview Questions – L2
+
+:Revision: 1.0
+:revision-date: 22 June 2022
+:toc:
+:toc-title: Contents
+:toclevels: 6
+:sectnums:
+
+
+.	Apart from the security aspect, what are the reasons behind making strings immutable in Java?
+
+.	Which of the below generates a compile-time error? State the reason.
+----
+01 int[] n1 = new int[0];
+02 boolean[] n2 = new boolean[-200];
+03 double[] n3 = new double[2241423798];
+04 char[] ch = new char[20];
+----
+[start=3]
+.	Using relevant properties highlight the differences between interfaces and abstract classes.
+.	What is a Comparator in java?
+
+.	What makes a HashSet different from a TreeSet?
+
+
+.	What are the differences between JVM, JRE and JDK in Java?
+.	What are the differences between HashMap and HashTable in Java?
+.	What is the importance of reflection in Java?
+.	What are the different ways of threads usage?
+
+.	What is the difference between the ‘throw’ and ‘throws’ keyword in java?
+.	What are the differences between constructor and method of a class in Java?
+.	Identify the output of the below java program and Justify your answer.
+
+----
+01 class Main {
+02 public static void main(String args[]) {
+03  Scaler s = new Scaler(5);
+04  }
+05 }
+06 class InterviewBit{
+07  InterviewBit(){
+08      System.out.println(" Welcome to InterviewBit ");
+09  }
+10 }
+11 class Scaler extends InterviewBit{
+12      Scaler(){
+13          System.out.println(" Welcome to Scaler Academy ");
+14  }
+15  Scaler(int x){
+16      this();
+17      super();
+18      System.out.println(" Welcome to Scaler Academy 2");
+19  }
+20 }
+----
+
+[start=13]
+.	Java works as “pass by value” or “pass by reference” phenomenon?
+
+.	Which among String or String Buffer should be preferred when there are lot of updates required to be done in the data?
+.	How to disallow serialization of attributes of a class in Java?
+.	What happens if the static modifier is not included in the main method signature in Java?
+.	Consider the below program, identify the output, and also state the reason for that.
+
+----
+01 public class Main{
+02 public static void main(String[] args) {
+03      System.out.println(" Hello. Main Method. ");
+04  }
+05 public static void main(int[] args) {
+06      System.out.println(" Hello. Main Method2. ");
+07  }
+08 }
+----
+
+
+[start=18]
+
+.	What happens if there are multiple main methods inside one class in Java?
+
+.	How does an exception propagate in the code?
+
+.	Is it mandatory for a catch block to be followed after a try block?
+.	Will the finally block get executed when the return statement is written at the end of try block and catch block as shown below?
+
+----
+01 public int someMethod(int i){
+02   try{
+03      //some statement
+04       return 1;
+05    }catch(Exception e){
+06       //some statement
+07       return 999;
+08    }finally{
+09       //finally block statements
+10    }
+11   }
+----

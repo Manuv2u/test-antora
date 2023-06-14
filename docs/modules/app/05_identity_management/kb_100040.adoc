@@ -1,0 +1,56 @@
+= KB 100040: Identity and Access Management
+:Revision: 2.0
+:revision-date: 25 Feb 2023
+:sectnums:
+:toc:
+:toc-title: Contents
+:toclevels: 5
+:author: Sridhar K L
+
+
+== Glossary
+
+Authenticate::
+A process wherein, the credentials of a User is validated and certified as authentic.
+
+
+Authorize::
+A process wherein the privileges of a User is validated to authorize access to resources.
+
+
+Entity::
+A firm or business organisation, that can be recognized individually and can function independently.
+
+Mercotrace::
+It is an mobile application distributed free, and acts as the entry gateway for all users and entities.
+
+Mercodesk::
+It is a mobile and web application, which functions on paid subscription. The app is used to manage the business entity.
+
+OpenID Provider::
+The identity provider which is authenticating the user, such as *Keycloak* or *AWS Cognito and IAM*.
+
+Prahari::
+It is the hardware manufacturing entity of Kanilbettu. A management app will be deployed on mobile and web to assist production, manage inventory and maintenance.
+
+
+Relying Party::
+The application which is relying on the OpenID Connect Provider to verify the identity of the End User.
+
+Role::
+A role can any user setting that the user is assigned to conduct activity within the websphere. The user can have more than one role across the entities. And can have a composite role within the same entity. Examples of roles +
+. Owner
+. Accountant
+. Cashier
+. Writer
+. Shopfloor Supervisor
+. Service Technician etc.
+
+
+User or End User::
+A User is an individual who can access the applications within the scope of the role assigned.
+
+
+
+== Scope
+This document is intended to guide the reader on the fundamentals of Identity Access and Management (IAM) used for  Kanilebettu Ecosystem.

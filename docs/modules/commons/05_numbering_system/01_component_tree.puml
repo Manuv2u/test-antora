@@ -1,0 +1,223 @@
+@startuml
+
+map WeighingScale {
+ Model Name => TR10
+ Part Number => PR 100004
+}
+
+package PART_LIST{
+
+ package ELECTRICAL{
+  object BATTERY{
+     Part Number
+     Serial Number
+  }
+  object DISPLAY{
+     Part Number
+     Serial Number
+  }
+  object KEYPAD{
+     Part Number
+     Serial Number
+  }
+  object PUSH_BUTTON{
+     Part Number
+     Serial Number
+  }
+  object ROCKER_SWITCH{
+     Part Number
+     Serial Number
+  }
+  object RIBBON_CABLE{
+     Part Number
+     Serial Number
+  }
+  object CABLE_2{
+     Part Number
+     Serial Number
+  }
+  object CONNECTOR_1{
+     Part Number
+     Serial Number
+  }
+  object CONNECTOR_2{
+     Part Number
+     Serial Number
+  }
+  object CONNECTOR_3{
+     Part Number
+     Serial Number
+  }
+  object LED{
+     Part Number
+     Serial Number
+  }
+  object TRANSFORMER{
+     Part Number
+     Serial Number
+  }
+  object LOADCELL_CABLE{
+     Part Number
+     Serial Number
+  }
+  object LOADCELL{
+     Part Number
+     Serial Number
+  }
+  object AC_POWER_CABLE{
+     Part Number
+     Serial Number
+  }
+  object ROUNDSHELL_CONNECTOR{
+     Part Number
+     Serial Number
+  }
+   object CONTROLLER{
+      Part Number
+      Serial Number
+   }
+ }
+
+ package MECHANICAL{
+  object FASTENERS_1{
+     Part Number
+     Serial Number
+  }
+  object BSO_1{
+     Part Number
+     Serial Number
+  }
+  object COVER_PLATE{
+     Part Number
+     Serial Number
+  }
+  object BOX_UNIT{
+     Part Number
+     Serial Number
+  }
+  object SEAL_BOLT{
+     Part Number
+     Serial Number
+  }
+  object SEAL_WIRE{
+     Part Number
+     Serial Number
+  }
+  object SEAL_LEAD{
+     Part Number
+     Serial Number
+  }
+  object GROMMET{
+     Part Number
+     Serial Number
+  }
+  object BATTERY_COVER{
+     Part Number
+     Serial Number
+  }
+  object FASTENERS_2{
+     Part Number
+     Serial Number
+  }
+  object MOUNT_FRAME{
+     Part Number
+     Serial Number
+  }
+  object FASTENERS_3{
+     Part Number
+     Serial Number
+  }
+  object FASTENERS_4{
+     Part Number
+     Serial Number
+  }
+
+  object PAN{
+     Part Number
+     Serial Number
+  }
+  object LOADCELL_MOUNT_FRAME{
+     Part Number
+     Serial Number
+  }
+  object BASE_STRUCTURE{
+     Part Number
+     Serial Number
+  }
+  object LEVEL_ADJUSTER{
+     Part Number
+     Serial Number
+  }
+  object REAR_SUPPORT_FRAME{
+     Part Number
+     Serial Number
+  }
+  object FASTENERS_5{
+     Part Number
+     Serial Number
+  }
+
+
+  object GASKET{
+     Part Number
+     Serial Number
+  }
+
+
+ }
+
+  package LABELS{
+    object FRONT_LABEL{
+       Part Number
+       Serial Number
+    }
+    object REAR_LABEL{
+       Part Number
+       Serial Number
+    }
+    object NAMEPLATE{
+       Part Number
+       Serial Number
+    }
+    object KEYPAD_LABELS{
+       Part Number
+       Serial Number
+    }
+    object DEVICE_ID_QRCODE{
+       Part Number
+       Serial Number
+    }
+    object DISPLAY_COVER{
+       Part Number
+       Serial Number
+    }
+
+  }
+
+ package CONTROLLER_PART_LIST{
+  object PCB{
+     Part Number
+     Serial Number
+  }
+  object ADC{
+     Part Number
+     Serial Number
+  }
+  object MICROCONTROLLER{
+     Part Number
+     Serial Number
+  }
+  object EPROM{
+     Part Number
+     Serial Number
+  }
+ }
+}
+
+
+WeighingScale --> PART_LIST
+CONTROLLER -> CONTROLLER_PART_LIST
+
+
+@enduml
+

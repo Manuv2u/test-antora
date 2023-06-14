@@ -1,0 +1,139 @@
+= Design of Enclosure - Kanilebettu Technologies
+:author: Sridhar K L
+:email: sridhar@kanilebettu.com
+:version: 1.0.1
+:revdate: 31 July 2022
+
+
+
+== Requirements
+
+
+. *It must house the following items*
+.. 6V Battery
+.. Transformer
+.. Rocker Switch
+.. Push Button
+.. Keypad
+.. Display x 2 (front and back)
+.. Controller
+.. Cables
+.. Bluetooth Module
+.. Metal Round Shell Connector (MRS)
+.. LED indicator
+
+. *External connection*
+.. Connected to AC mains
+.. Load cell connection via MRS
+
+. *Mounting*
+.. *Use Case 1:* Platform - Mounted on top of a pole (square pipe with brackets).
+.. *Use Case 2:* Table Top/ Bench - Placed next to the weighing pan on the table.
+.. *Use case 3:* Open Platform - Mounted underneath the weighing pan.
+
+. *External Attachments*
+.. Name Plate
+.. Seal wire and Seal
+
+. *Operating Environment*
+.. Subjected to rouch handling
+.. Prone smear and smudge
+.. Possibility of liquid splash
+.. Outdoor and dusty environment
+.. Indoor and humid environment
+.. Direct exposure to sunlight
+.. Exposed to Impact loading and Shocks
+.. Must be protected against condensation
+.. Lower impedance for Bluetooth transmission
+
+. *Others*
+.. Aesthetically pleasing
+.. Secured tamper-proof assembly
+.. Easy to assemble
+
+. *Important decisions from design standpoint*
+.. Touch keypad or Mechanical keypad?
+.. 6 Digit 7 Segment display - Buy COTS or custom production?
+.. Enclosure material selection
+
+. *Notes for Use Case 1*
+.. Tare (Push Button) is used frequently
+.. 4 keys are required for device settings
+.. The weighing scale can be installed at floor level or on a pedestal (approximately 3 ft high), for visibility consideration.
+.. The mounting pole can be designed based on the enclosure specification.
+
+. *Notes for Use Case 2*
+.. Tare (Push Button) is used frequently
+.. Connectors for peripherals (USB + Additional Display + scanners + camera + Barcode scanner)
+.. Figure 1 shows the keypad layout for Use Case 2
+
+.Keypad Layout
+image::../00_images/KEYPAD.png[width=350, align=center ]
+
+== Components to be housed within the enclosure
+
+The components are listed below along with their approximate size. Verify the sizes for design.
+
+---
+
+=== Battery
+Commercially bought.
+
+
+.Battery
+image::../00_images/battery.png[width=350, align=center ]
+
+---
+
+=== Transformer
+Commercially bought.
+
+.Transformer
+image::../00_images/transformer.png[width=650, align=center ]
+
+---
+
+=== Display
+
+6 Digit 7 Segment Display are to be used for front and back each. If the COTS board is an impediment to the design, there is flexibility to redesign the board.
+
+
+.6 Digit 7 Segment Display
+image::../00_images/display.png[width=350, align=center ]
+
+---
+
+=== Controller
+
+Additional space must be allocated for the advanced version. The PCB layout will be redesigned as per mechanical constraint.
+
+.Controller
+image::../00_images/controller.png[width=350, align=center, title-align=center]
+
+---
+
+=== Rocker Switch
+
+Commercially bought.
+
+.Rocker Switch
+image::../00_images/switch.png[width=350, align=center ]
+
+---
+
+=== Push Button
+
+Commercially bought.
+
+.Push Button
+image::../00_images/tare.png[width=350, align=center ]
+
+---
+
+=== LED Indicator
+
+Commercially bought.
+
+.LED
+image::../00_images/led.png[width=220, align=center ]
+

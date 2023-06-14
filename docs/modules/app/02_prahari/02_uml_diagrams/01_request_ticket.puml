@@ -1,0 +1,61 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor Buyer
+
+entity Prahari_Sales
+
+
+
+group Purchase Request
+    Buyer -> Prahari_Sales: Purchase order
+
+    Prahari_Sales --> Buyer: Sales Invoice
+
+end
+
+group Sales Closure
+
+    Buyer -> Prahari_Sales: Makes Payment
+
+    Prahari_Sales --> Buyer: Sales Receipt
+
+    Prahari_Sales -> Inventory: Model Code \nQuantity
+end
+
+
+
+group Production
+
+    Inventory -> Assembly: Assembly Requisition
+    Assembly --> Inventory: Component Requisition
+    Inventory --> Inventory: Check Stock
+
+
+    group Stock low
+    Inventory -> Part_Production: Component Requisition
+    Part_Production --> Inventory: Component Supply
+    end
+end
+
+
+
+group Delivery
+
+    Assembly -> Inventory: Prepare for Dispatch
+    Inventory --> Prahari_Sales: Dispatch ready
+    Prahari_Sales -> Service: Installation Requisition
+
+    actor Technician
+    Service --> Technician: Service Assignment
+    Technician -> Buyer: Installation and Registration
+
+end
+
+
+
+
+
+@enduml

@@ -1,0 +1,102 @@
+@startuml
+
+state "Sales Bill" as sb {
+
+    state "Bill ID" as sbid {
+    sbid: Input: Create id
+    sbid: OR
+    sbid: Input: Enter sbid
+    sbid: \n
+    sbid: Output: sbid
+    }
+
+    state "Sales Items" as spid{
+        spid: Input: spid
+        spid: \n
+        spid: Output:
+        spid: Buyer id
+    }
+
+    state "Sales Pad" as sp{
+        sp: Input: spid
+        sp: \n
+        sp: Output:
+        sp: Lot
+        sp: Quantity
+        sp: Net Weight
+        sp: Rate
+        sp: Token Advance
+    }
+
+    state "Bill Details" as bd{
+        bd: sbid :: Buyer id
+        bd: \n
+        bd: Output: Sales receivable receipt
+    }
+
+    state bspace <<choice>>
+
+    state "Brokerage" as bk{
+        bk: Input: spid
+        bk: Input: broker id
+        bk: Input: brokerage type
+        bk: Input: value
+        bk: \n
+        bk: Output: brokerage id
+        bk: Output: broker payable voucher
+    }
+
+    state "Discount" as dsc {
+        dsc: sbid :: spid :: Discount_to
+        dsc: Input: spid
+        dsc: Input: discount type
+        dsc: Input: value
+        dsc: \n
+        dsc: Output: discount id
+        dsc: Output: discount payable voucher
+    }
+
+    state "Standard charges" as sc {
+        sc: Input: bill id
+        sc: \n
+        sc: Output: user fee value
+        sc: Output: commission
+    }
+    state Coolie{
+        Coolie: Input: bill id
+        Coolie: Input: coolie rate
+        Coolie: \n
+        Coolie: Output: coolie value
+        Coolie: Output: coolie payable voucher
+    }
+
+    state "Misc. charges" as ms{
+        ms: Input: Voucher no
+        ms: \n
+        ms: Output: value
+    }
+
+    [*] --> sbid
+    sbid -d-> bd : 1...1
+    spid --> bspace : 1...1
+    bspace -r-> bd : Buyer id Accpeted
+    bspace -u-> spid : 1...1
+    bd --> sp : get details \n 1...1
+    bd -r-> bk : assign brokerage \n n...1
+    bk -l-> bd : patch Discount_to: broker id
+    bd --> dsc : n...1
+    bd --> Coolie : n...1
+    bd --> ms : 1...n
+    bd --> sc : 1...1
+    sc --> [*]
+ 
+@enduml
+
+/* 
+
+: Input:
+: Output:
+: \n
+
+
+*/

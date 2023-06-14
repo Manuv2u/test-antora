@@ -1,0 +1,28 @@
+= Naming Conventions
+:toc:
+:toc-title: Contents
+:toclevels: 5
+:sectnums:
+
+== Domain URL
+
+. Convention
+
+ host.subdomain.subdomain.rootdomain::
+_e.g. saleorder.md.kanilebettu.com_
+
+. Registered Domains
+
+ @Hostinger::
+.. kanilebettu.com
+
+ @AWS::
+.. kanilebettu.in
+.. kanilebettu.org
+.. kanilebettu.net
+.. kanilebettugroup.com
+
+
+
+
+

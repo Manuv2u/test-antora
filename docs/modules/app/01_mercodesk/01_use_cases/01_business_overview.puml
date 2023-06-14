@@ -1,0 +1,51 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+
+
+
+:Commission Agent / Trader: as CA
+
+
+
+package Sellers {
+ actor Seller_n
+ actor Seller_1
+ }
+
+package Trading_Firm {
+    usecase "Receive Goods" as arriv
+    usecase "Auction Goods" as acut
+    usecase "Receive Bids" as bids
+    usecase "Record Weights" as weigh
+    usecase "Create Sales Bill" as salebill
+    usecase "Sales Bill Payments" as payca
+    usecase "Create Sales Invoice" as salesinvo
+    usecase "Make Payments" as payseller
+}
+
+package Buyers {
+  actor Buyer_n
+  actor Buyer_1
+ }
+
+
+
+Sellers --> arriv :send goods
+CA --> arriv
+arriv --> acut
+acut --> bids
+Buyers --> bids :make bids
+bids --> weigh
+weigh --> salebill
+salebill --> payca
+Buyers --> payca :make payments
+salebill --> salesinvo
+salesinvo --> payseller
+payseller --> Sellers
+
+
+
+
+
+@enduml

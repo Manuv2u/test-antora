@@ -1,0 +1,74 @@
+@startuml
+<style>
+     ' define a new style, using CSS class syntax
+     .appStyle {
+        BackGroundColor #3083A7
+        FontColor White
+        FontStyle Bold
+     }
+     .homeStyle {
+        BackGroundColor #springgreen
+        FontColor black
+        FontStyle Bold
+     }
+
+</style>
+!theme vibrant
+
+    start
+
+        <<appStyle>>:Mercodesk Home;
+        :Select Writers Pad;
+        :List Prahari Devices;
+        if (device available?) then (<b> Yes)
+            :Pair to device;
+        else (<b> No)
+            :Wait to Refresh;
+            kill
+        endif
+
+
+
+        #cyan:repeat :Start Activity;
+
+
+
+        if (Want to Exit?) then (<b> No)
+        else (<b> Yes)
+            Stop
+        endif
+
+
+        split
+            :Add new buyer;
+            :Scan QR Code for BidiD;
+            :Get info from Backend;
+            :Update info;
+
+        split again
+
+        end split
+        :Get Weight;
+
+        while (Ready to Tag?) is (<b> Yes)
+
+            split
+                :Select from List;
+            split again
+                :Scan for BidiD;
+            end split
+
+            :Get confirmation from Backend;
+
+            if (Is data valid?) then (<b> Yes)
+                :Show Success;
+            else (<b> No)
+                :Show Failure;
+            endif
+
+            :Update info;
+
+        endwhile
+        repeat while -> <b> No
+
+@enduml

@@ -1,0 +1,37 @@
+@startuml
+<style>
+     ' define a new style, using CSS class syntax
+     .appStyle {
+        BackGroundColor #3083A7
+        FontColor White
+        FontStyle Bold
+     }
+</style>
+!theme vibrant
+
+    start
+    <<appStyle>>:Mercodesk Home;
+    :Select Sales Summary;
+    :Select from Vehicle List;
+    split
+    :Read Main Summary;
+    split again
+    :Select from Sellers List;
+    :Read Sub Summary;
+    end split
+
+    switch ( Data modified?)
+    case ( Weight Adjusted )
+        :Summary Modified: YES;
+    case ( Rate Adjusted )
+        :Summary Modified: YES;
+    endswitch
+
+    if (Summary Modified?) then (<b> Yes)
+    :Create Copy;
+    else (<b> No)
+    endif
+
+    stop
+
+@enduml

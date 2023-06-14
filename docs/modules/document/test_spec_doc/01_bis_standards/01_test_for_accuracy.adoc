@@ -1,0 +1,122 @@
+= BIS01: Test for Accuracy
+:Revision: 1.0
+:revision-date: 14 June 2022
+:toc:
+:toc-title: Contents
+:toclevels: 5
+:sectnums:
+
+== Scope
+This test is performed to meet the IS9281requirement.
+
+=== Definition
+*Accuracy* is the degree of agreement of the measurement with the true value of the quantity measured.
+
+----
+Requirement:
+
+± 0.25% of Rated Output/ Load
+----
+
+
+
+
+
+== Procedure
+
+
+
+
+
+== Report
+
+Date
+
+[cols="a,2a,2a"]
+[options="header"]
+|================
+|Sl No|Parameter|Value
+|1|Model Name |
+|2|Part Number|
+|3|Serial Number|
+|4|Actual Scale interval, *_d_* |
+|5|Verification scale interval, *_e_*|
+
+|================
+
+Max Capacity Settings of the device = 100 kg
+Verification scale interval, e =
+
+No of verification scale intervals, n = Max/e
+
+Class III
+
+Max~Capacity~ = 100 kg
+
+Maximum Permissible Error, MPE
+
+
+n~minimum~ @ 100
+
+stem:[ e = 100000 / 100 = 1000 ]
+
+n~maximum~ = 10,000
+
+stem:[ \alpha + e = 100000 / 10000 = 10 ]
+
+e = 10 g
+
+
+
+latexmath:[C = \alpha * \beta Y^{\gamma} + \epsilon]
+
+n~maximum~ = 10,000
+
+Minimum Capacity = 20 e = 100 g
+
+
+Max~Capacity~ = 300 kg
+
+
+latexmath:[e = 100000 / 100 = 1000]
+
+
+
+
+
+
+
+Definitions:
+
+. Actual Scale interval, *_d_*
+
+ the difference between two consecutive indicated values, for digital indication. The smallest change that can be observed.
+
+. Verification scale interval, *_e_*
+
+ Value, expressed in units of mass, used for the classification and verification of an instrument.
+
+. Scale interval used for numbering
+
+ Value of the difference between two consecutive numbered scale marks.
+
+. Number of verification scale intervals, *_n_*
+
+ Quotient of the maximum capacity and the verification scale interval:
+n = Max / e
+
+. Multi-interval instrument
+
+ Instrument having one weighing range which is divided into partial weighing ranges each with
+different scale intervals, with the partial weighing range determined automatically according to the
+load applied, both on increasing and decreasing loads.
+
+. Multiple range instrument
+
+ Instrument having two or more weighing ranges with different maximum capacities and different scale
+intervals for the same load receptor, each range extending from zero to its maximum capacity.
+
+
+Test performed by
+Results
+Inference and remarks

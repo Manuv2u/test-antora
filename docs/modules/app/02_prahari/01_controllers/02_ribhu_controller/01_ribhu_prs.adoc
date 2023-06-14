@@ -1,0 +1,19 @@
+= Product Requirement Specifications for RIBHU Family Controller
+:toc:
+:toc-title: Contents
+:toclevels: 5
+:sectnums:
+
+
+== Introduction
+
+
+== Block Diagrams
+
+.Block Diagram
+image::../02_ribhu_controller/images/ribhu_block_dgm.png[]
+
+.Functional Block Diagram
+image::../02_ribhu_controller/images/ribhu_functional_dgm.png[]
+
+

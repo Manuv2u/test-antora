@@ -1,0 +1,74 @@
+extends: base
+page:
+  layout: portrait
+  margin: [1in, 1in, 1in, 1in]
+  size: A4
+  
+
+font:
+  catalog:
+    merge: false
+    Poppin: poppins-regular.ttf
+    Poppin_sb: poppins-semibold.ttf
+
+base:
+  font-color: #333333
+  font-family: Poppin
+  font-size: 12
+  line-height-length: 17
+  line-height: $base-line-height-length / $base-font-size
+role:
+  removed:
+    font-style: italic
+    text-decoration: line-through
+    text-decoration-color: #FF0000
+
+ 
+
+heading:
+  font-color: #06A77D
+  font-family: Poppin_sb
+  font-size: 17
+  
+  line-height: 1.2
+  margin-bottom: 10
+
+    
+title_page:
+  align: center
+  title_top: 8%
+  title_font_size: 40
+  title_font_color: #381D2A
+  title_line_height: 0.9
+  title_font_style: bold
+  revision:
+    align: right
+    font_size: 24
+    margin-bottom: 5
+    margin-top: 13.125
+
+
+  
+link:
+  font-color: #002FA7
+list:
+  indent: $base-font-size * 1.5
+
+header:
+  height: 0.75in
+  recto:
+    right:
+      content: 'Employee Handbook {revnumber}'
+  verso:
+    left:
+      content: $header-recto-right-content
+
+footer:
+  height: 0.75in
+  recto:
+    center:
+      content: 'Kanilebettu Technologies'
+  verso:
+    center:
+      content: 'Kanilebettu Technologies'
+

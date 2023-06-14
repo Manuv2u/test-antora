@@ -1,0 +1,44 @@
+@startuml
+    start
+        :Open Prahari APP;
+        if (User Login Authorized) then (<b> True)
+            :Allow Access;
+        else (<b> False)
+            :Exit;
+            Kill
+        endif
+
+        :Get Device ID [QR Code Scan];
+        :Look up SAP;
+
+        split
+        :Registration / Calibration;
+        :Request OTP;
+        if (OTP Approved) then (<b> True)
+        :Access to Configuration Menu;
+        else (<b> False)
+            :Exit;
+            Kill
+        endif
+
+        split again
+        :Initiate Factory Reset;
+        if (Admin Approved) then (<b> True)
+            :Look up AAP;
+            :Complete Reset \n in Background;
+            kill
+
+        else (<b> False)
+            :Exit;
+            Kill
+        endif
+        end split
+
+
+    stop
+
+
+
+
+
+@enduml

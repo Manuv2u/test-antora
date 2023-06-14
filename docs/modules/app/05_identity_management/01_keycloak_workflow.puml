@@ -1,0 +1,45 @@
+@startuml
+
+    |User|
+    start
+    :Click Login;
+    |#AntiqueWhite|Mercotrace (Client Application)|
+    :Redirect to Keycloak;
+
+    |#LightBlue|Keycloak (IAM)|
+    :Login Form;
+
+
+    while (user authenticated?) is (no)
+        |User|
+        :Enter Mobile Number\n and Password;
+    endwhile(yes)
+        |#LightBlue|Keycloak (IAM)|
+        :Auth code;
+
+    |#AntiqueWhite|Mercotrace (Client Application)|
+    :Request Tokens;
+
+    |#LightBlue|Keycloak (IAM)|
+    if (auth code verified?) is (no) then
+        |#AntiqueWhite|Mercotrace (Client Application)|
+        :Unauthorized;
+        |User|
+        :Access Denied;
+        kill
+    else (yes)
+       |#LightBlue|Keycloak (IAM)|
+       :JWT;
+    endif
+
+    |#AntiqueWhite|Mercotrace (Client Application)|
+    :Access Resource;
+
+   |User|
+   :Read/ Write;
+
+
+    stop
+
+@enduml
+

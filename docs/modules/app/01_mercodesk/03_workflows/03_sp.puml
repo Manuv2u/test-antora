@@ -1,0 +1,59 @@
+@startuml
+<style>
+     ' define a new style, using CSS class syntax
+     .appStyle {
+        BackGroundColor #3083A7
+        FontColor White
+        FontStyle Bold
+     }
+</style>
+!theme vibrant
+skinparam NoteBackgroundColor papayawhip
+skinparam NoteFontColor black
+skinparam NoteFontStyle Bold
+
+    start
+     <<appStyle>>:Mercodesk Home;
+      :Select Sales Pad;
+      :Select from Vehicle List;
+      :Select from Sellers List;
+
+      if (Split a Lot) then (<b> Yes)
+        :Select Lot;
+      else (<b> No)
+      endif
+
+      :Select from Lot List;
+
+      if (Buyer is Regular?) then ( <b> Yes)
+        :Enter Phone Number;
+        if (Phone Number Registered?) then ( <b> Yes)
+            :Get Name;
+            :Get Mark;
+        else (<b> No)
+            :Register User;
+        endif
+
+      else (<b> No)
+        :Flag Temporary;
+        :Enter Mark;
+      endif
+        :Enter Bid Quantity*;
+        :Enter Bid Rate*;
+        :Enter Token Advance;
+
+      note right
+        Buyer's Advance Receipt
+        ----
+        //Towards: // Token Advance
+        //Ref:// SPiD
+        //Received From: // Buyer's Info
+        //Method: // Mode and Received By
+        //Status: // Closed or Open
+      end note
+
+    stop
+@enduml
+
+
+

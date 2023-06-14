@@ -1,0 +1,135 @@
+= Secure Access to Prahari Weighing Scale
+:Revision: 1.0
+:revision-date: 08 June 2022
+
+----
+Glossary
+
+TAP = Temporary Access Password [4 digit - Numeric]
+SAP = Serial Access Password [alphanumeric]
+AAP = Admin Access Password [alphanumeric]
+Device ID = Unique Identifier for the Controller
+OTP = One Time Password
+----
+
+== Roles and Access
+
+The configuration settings can be accessed by users based on the roles. Table 1, shows the different types of users (roles) and their authorization to access configuration settings.
+
+
+.Limitation of Access based on Roles
+[cols="a,a,a,2a"]
+[options="header"]
+|=====================
+|Role|Permission|Access Mode| Description
+|End User/ Customer | Read only|Keypad only| Device Configuration settings
+|Govt. Lab| Read/Write|Keypad only|
+. Access via TAP
+
+. Device Configuration Settings
+
+. Device Configuration Modification
+| Legal Metrology Officer/ Licensee
+
+Prahari Service Technician
+
+|Read/Write |APP Only|
+. Access via OTP (App Connects to device via SAP)
+
+. Device Configuration Settings
+
+. Device Configuration Modification
+
+|Prahari Admin| Read/Write| APP Only|
+. Access via OTP (App Connects to device via AAP)
+
+. Device Configuration Settings
+
+. Device Configuration Modification
+|=====================
+
+== Access to the Device
+
+The access flowchart shown Figure 1, has three workflow path, namely
+
+. Approval process
+. Post Production: Keypad Access
+. Post Production: Prahari Access
+
+
+
+.Access Flowchart
+[plantuml, allaccess, png]
+----
+include::./../02_diagrams/01_access_control.puml[]
+----
+
+
+
+== Approval Process
+
+For the Model Approval Process, APP based configuration setting is not allowed. And hence, the following steps are to be followed.
+
+. *A Single model for approval* is built with a Temporary Access Password (TAP)
+. TAP is disclosed to the Lab for approval process
+. TAP gives unrestricted access to all configuration settings
+. *TAP is limited to this Single Model only*
+
+Flowchart in Figure 2, shows the Model Approval Process.
+
+.Access for Model Approval
+[plantuml, mapaccess, png]
+----
+include::./../02_diagrams/02_model_approval_process.puml[]
+----
+
+== Post Production: Keypad Only Access
+
+Post-production, access to view configuration setting is done using keypad without any password. Settings are displayed under READ Only mode.,
+
+. Last Calibration Date
+. Capacity of the Load cell
+. Accuracy of the weighing scale
+. Firm name
+. Device ID
+
+Figure 3 shows the flowchart of Keypad access to the device.
+
+.Access via Keypad in Post-production
+[plantuml, keyaccess, png]
+----
+include::./../02_diagrams/03_pp_keypad_access.puml[]
+----
+
+== Post Production: Prahari APP Only Access
+
+To set or modify configuration settings, the access is only through Prahari APP. Procedure to access configuration menu using the app are as mentioned below,
+
+==== APP based Registration/ Calibration
+. User has to be registered and authorized to log in to the app.
+. Registered User receives OTP to access configuration menu.
+. APP internally obtains password (SAP) through look up tables on secured database.
+. Upon log in Registered User can
+.. Register Device to End Customer
+.. Calibrate Device
+
+
+==== APP based Factory Reset
+. User has to be registered and authorized to log in to the app.
+. APP internally obtains password (SAP) through look up tables on secured database.
+. Registered User initiates Factory Reset via APP, this would trigger request to Admin for the approval.
+. On successful approval (internally accessed using AAP), Reset operation runs in the background, updating the new password on the device and on the secured database as well.
+. Upon successful completion, only success message is displayed.
+
+
+Figure 4, shows the flowchart for access via Prahari APP.
+
+.Access via Prahari APP in Post-production
+[plantuml, appaccess, png]
+----
+include::./../02_diagrams/04_pp_app_access.puml[]
+----
+
+
+
+

@@ -1,0 +1,358 @@
+= Software Engineering
+:toc:
+:toc-title: Contents
+:toclevels: 5
+
+
+
+
+== Java
+
+
+
+=== Job Description
+
+==== Experience
+// tag::se-java-jd-exp[]
+Candidate is expected to develop Microservices based on Java and Springboot.
+
+// end::se-java-jd-exp[]
+
+==== Fresher
+
+// tag::se-java-jd-fresh[]
+
+Candidate is expected to develop Microservices based on Java and Springboot.
+
+// end::se-java-jd-fresh[]
+
+
+
+=== Proficiency
+==== Experience
+// tag::se-java-prof-exp[]
+. Candidate is expected to be proficient in JAVA, Springboot, JUnit, Maven, RDBMS (PostgreSQL), Git and GitLab.
+. REST and SpringJPA.
+. Good understanding of Design Patterns.
+. Good debugging and analytical skills and a thorough understanding of Microservices Architecture.
+. Understanding Continuous Integration and Continuous Deployment.
+. Know-how about Docker and AWS Services.
+. Comfortable in using IntelliJ IDEA IDE.
+
+// end::se-java-prof-exp[]
+
+==== Fresher
+// tag::se-java-prof-fresh[]
+
+. Candidate is expected to be proficient in JAVA, Springboot, JUnit, Maven, RDBMS (PostgreSQL), Git and GitLab.
+. Good debugging and analytical skills.
+. Know-how of Design Patterns
+. Understanding Continuous Integration.
+
+
+// end::se-java-prof-fresh[]
+
+
+
+=== Roles and Responsibilities
+
+==== Experience
+
+// tag::se-java-rr-exp[]
+. Design and develop Microservices based on Java and Springboot.
+. Automating unit and system testing.
+. Understand business requirements and create software artefacts accordingly.
+. Work in an agile environment (adhering to SCRUM)
+. Mentoring and Coaching team.
+. Low level design (Sequence Diagram, Class Diagram)
+. Understanding of High Level Design (Building Blocks, Context View)
+
+// end::se-java-rr-exp[]
+
+==== Fresher
+// tag::se-java-rr-fresh[]
+
+.	Adhering to design and coding guidelines.
+.	Automating unit and system testing.
+. Understand business requirements and create software artefacts accordingly.
+. Work in an agile environment (adhering to SCRUM)
+. Understand Low-level designs (Sequence Diagram, Class Diagram)
+
+// end::se-java-rr-fresh[]
+
+
+
+
+=== Years of Experience
+
+==== Experience
+// tag::se-java-yr-exp[]
+1-2 years
+
+// end::se-java-yr-exp[]
+
+==== Fresher
+// tag::se-java-yr-fresh[]
+
+Fresher
+
+// end::se-java-yr-fresh[]
+
+
+
+
+== App Developer (Android)
+
+=== Job Description
+==== Experience
+// tag::se-android-jd-exp[]
+
+Candidate is expected to design and develop user interface,  using the latest version of Android  and integrate with backend using Retrofit.
+
+// end::se-android-jd-exp[]
+
+==== Fresher
+// tag::se-android-jd-fresh[]
+
+Candidate is expected to develop user interface using the latest version of Android and integrate with backend using Retrofit.
+
+// end::se-android-jd-fresh[]
+
+
+=== Proficiency
+==== Experience
+// tag::se-android-prof-exp[]
+. Candidate is expected to be proficient in JAVA, Retrofit, JUnit, Gradle, Git and GitLab.
+. Basic Understanding of REST API and RDBMS (PostgreSQL).
+.	Candidate is expected to have rich UI experience with Android frameworks (Fragments, Layouts, Listeners, Threads).
+.	Good debugging skills and thorough understanding of MVC, MVVM and Responsive Design.
+.	Must be comfortable in using IntelliJ IDEA.
+. Understanding Continuous Integration and Continuous Deployment.
+
+
+
+// end::se-android-prof-exp[]
+
+==== Fresher
+// tag::se-android-prof-fresh[]
+. Candidate is expected to be proficient in JAVA, Retrofit, JUnit, Gradle, Git and GitLab.
+. Basic Understanding of REST API and RDBMS (PostgreSQL).
+.	Candidate is expected to be aware of Android frameworks (Fragments, Layouts, Listeners, Threads).
+.	Good debugging skills and aware of MVC, MVVM and Responsive Design.
+.	Must be comfortable in using IntelliJ IDEA.
+. Understanding Continuous Integration.
+
+
+// end::se-android-prof-fresh[]
+
+
+=== Roles and Responsibilities
+
+==== Experience
+// tag::se-android-rr-exp[]
+.	Design User Interfaces adhering to MVC, MVVM patterns.
+. Automating unit, UI and User Acceptance testing.
+. Adhering to standard design patterns to interface with the backend REST component(Retrofit).
+. Understand business requirements and create software artefacts accordingly.
+. Work in an agile environment (adhering to SCRUM)
+. Mentoring and Coaching team.
+. Low level design (Sequence Diagram, Class Diagram)
+. Understanding of High Level Design (Building Blocks, Context View)
+
+// end::se-android-rr-exp[]
+
+==== Fresher
+// tag::se-android-rr-fresh[]
+
+.	Implement User Interfaces adhering to MVC, MVVM patterns.
+. Automating unit and UI testing.
+. Adhering to standard design patterns to interface with the backend REST component(Retrofit).
+. Understand business requirements and create software artefacts accordingly.
+. Work in an agile environment (adhering to SCRUM)
+. Understanding Low level design (Sequence Diagram, Class Diagram)
+
+
+// end::se-android-rr-fresh[]
+
+
+=== Years of Experience
+==== Experience
+// tag::se-android-yr-exp[]
+1-2 years
+
+// end::se-android-yr-exp[]
+
+==== Fresher
+// tag::se-android-yr-fresh[]
+
+Fresher
+
+// end::se-android-yr-fresh[]
+
+
+
+
+
+== App Developer (Web)
+
+
+=== Job Description
+==== Experience
+// tag::se-flutter-jd-exp[]
+Candidate is expected to design and develop  webpages using the latest web stack.
+
+
+// end::se-flutter-jd-exp[]
+
+
+// tag::se-flutter-jd-fresh[]
+
+Candidate is expected to develop  webpages using the latest web stack.
+
+// end::se-flutter-jd-fresh[]
+
+
+
+// tag::se-flutter-prof-exp[]
+
+. Candidate is expected to be proficient in Angular, JavaScript, HTML 5, CSS3,  Git and GitLab.
+. Basic Understanding of REST API, JSON.
+.	Candidate is expected to have thorough understanding of MVC, MVVM and experience with Responsive design frameworks (Bootstrap)
+. Good understanding and experience in creating Cross-Platform application (Android, iOS)
+.	Must be comfortable in using IntelliJ IDEA.
+. Good knowledge in Automation of UI testing, User Acceptance Testing.
+. Understanding Continuous Integration.
+
+
+
+
+// end::se-flutter-prof-exp[]
+
+==== Fresher
+// tag::se-flutter-prof-fresh[]
+. Candidate should be knowledgeable in  Angular, JavaScript, HTML 5, CSS3,  Git and GitLab.
+. Basic Understanding of REST API, JSON.
+.	Candidate is expected to have know-how of MVC, MVVM and Responsive design frameworks (Bootstrap)
+.	Must be comfortable in using IntelliJ IDEA.
+. Good knowledge in Automation of UI testing, User Acceptance Testing.
+. Understanding Continuous Integration.
+
+
+// end::se-flutter-prof-fresh[]
+
+
+=== Roles and Responsibilities
+==== Experience
+
+// tag::se-flutter-rr-exp[]
+
+. Design and develop Webpages adhering to UI frameworks and design patterns.
+. Automating UI and User Acceptance testing.
+. Carrying out Performance and Load Tests.
+. Understand business requirements and create software artefacts accordingly.
+. Work in an agile environment (adhering to SCRUM)
+. Mentoring and Coaching team.
+. Enable CI/CD for the web application.
+
+. Understanding of B2C and B2B environment.
+. Work in an agile environment (adhering to SCRUM)
+
+// end::se-flutter-rr-exp[]
+
+==== Fresher
+// tag::se-flutter-rr-fresh[]
+. Develop Webpages adhering to UI frameworks and design patterns.
+. Automating UI and User Acceptance testing.
+
+. Understand business requirements and create software artefacts accordingly.
+. Work in an agile environment (adhering to SCRUM)
+
+. Enable CI/CD for the web application.
+
+. Understanding of B2C and B2B environment.
+. Work in an agile environment (adhering to SCRUM)
+
+
+// end::se-flutter-rr-fresh[]
+
+
+=== Years of Experience
+==== Experience
+// tag::se-flutter-yr-exp[]
+1 - 2 years
+
+// end::se-flutter-yr-exp[]
+
+==== Fresher
+// tag::se-flutter-yr-fresh[]
+
+Fresher
+// end::se-flutter-yr-fresh[]
+
+
+
+
+
+
+
+
+== DevOps
+
+=== Job Description
+==== Experience
+
+// tag::se-devops-jd[]
+
+Candidate is expected to perform Continuous Integration and Continuous Deployment of Microservices, Web Application on AWS cloud platform.
+
+
+// end::se-devops-jd[]
+
+
+=== Proficiency
+
+
+// tag::se-devops-prof[]
+
+
+.	Hands on experience in AWS (S3, EC2, VPC,  ECS, EKS, ECR, Lambda, Networking, API Gateway, RDS, Monitoring, ELB (Application and Server), Route53).
+. User Management, Policies, Authentication and Authorization (Cognito, IAM)
+. Good knowledge in scripting like Bash, Terraform, Ansible, Linux (Basic Commands), Shell, Shell Scripting, SSH.
+. Cloud Watch, Health Monitoring, Logging using  Prometheus, Grafana
+.	Understanding of Orchestration Platform like Kubernetes and Docker.
+. Understanding of workflow engine like Gitlab, Jenkins, AWS Codepipeline.
+.	Comfortable in Source Code Configuration Management System (GitLab, GitHub).
+
+
+
+
+// end::se-devops-prof[]
+
+
+
+=== Roles and Responsibilities
+
+
+// tag::se-devops-rr[]
+. Development, Deployment and Automation of Infrastructure for SAAS Application.
+. Ensuring highly available, secured, scalable AWS systems.
+. Enabling CI/CD for different environments (Dev, Test, Stage and Prod)
+. Preparing and adhering to SLAs.
+. System Troubleshooting and problem resolution.
+. Evaluation of new technologies and alternatives.
+.	Perform Monitoring and On-Call, Incident Response and Incident  Management.
+. Definition and deployment of systems for metrics and billing.
+
+// end::se-devops-rr[]
+
+
+
+=== Years of Experience
+
+// tag::se-devops-yr[]
+2-3 years
+
+// end::se-devops-yr[]
+
+
+

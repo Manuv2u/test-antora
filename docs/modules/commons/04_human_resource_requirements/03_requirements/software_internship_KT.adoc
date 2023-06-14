@@ -1,0 +1,91 @@
+== Software Engineering Internship @ Kanilebettu Technologies
+....
+Location: Bangalore
+
+Start date: Immediate
+
+Duration: 6 Months
+
+Pay: INR 10,000/ month
+
+....
+
+=== *About Kanilebettu Technologies*
+
+
+
+Kanilebettu Technologies is a start-up based in Bangalore. We are a product development company focussed on developing a SAAS based product for our customers. Our product is focussed on data digitization  through IoT device, process control and management, and CRM.
+
+
+
+=== *About the Internship*
+
+
+
+_Intern's day-to-day activities include:_
+
+.	Adhering to design and coding guidelines to build applications/components using open source technology.
+
+.	Automating unit and system testing for robustness, including edge cases, usability, and general reliability.
+
+. Collaborate with cross-functional teams to understand business requirements and create software artefacts accordingly.
+
+. Work in an agile environment (adhering to SCRUM)
+
+. Understand Low-level designs (Sequence Diagram, Class Diagram)
+
+
+
+=== *Skills Required*
+
+
+- JAVA
+- Spring Boot
+- JUnit
+- Maven
+- RDBMS (PostgreSQL)
+- Git and GitLab
+
+<<<
+
+=== *Who can apply?*
+
+_Candidates who..._
+
+. are available to work at office during internship.
+. are available for 6 months duration.
+. have relevant skill and interests.
+. want to restart their careers.
+
+
+
+=== *Other Requirements*
+
+
+. Bachelor's degree in computer science or equivalent.
+. Students in their final year degree can also apply.
+. Knowledge of Java is must.
+. Must be aware of OpenAPI specs.
+. Good debugging and analytical skills.
+. Know-how of Design Patterns
+. Understanding Continuous Integration.
+
+
+
+=== *Perks*
+
+- Certificate
+- Letter of recommendation
+- Flexible working hours
+- Informal dress code
+
+
+
+=== *How to Apply?*
+
+[cols="a,a"]
+[frame="topbot",grid="none"]
+|=============================================
+|include::04_contact.adoc[tags=bdm-contact]
+|include::04_contact.adoc[tags=location-contact]
+|=============================================
