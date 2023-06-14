@@ -6,5 +6,5 @@ asciidoc:
     source-language: asciidoc@
     table-caption: false
 nav:
-  - modules/document/prod-req-spec/nav.adoc
+  - modules/document/prod/nav.adoc
   - modules/ROOT/nav.adoc

@@ -5,7 +5,7 @@ site:
 content:
   sources:
     - url: https://github.com/Manuv2u/test-antora.git
-      branches: antora
+      branches: test
       start_path: docs
 
 asciidoc:
